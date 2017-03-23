@@ -1,3 +1,17 @@
-admin dashboard
 
-<p>add an item</p>
+<div class="container">
+  admin dashboard
+
+<h2>Organizations</h2>
+<% @organizations.each do |organization| %>
+  <h3><%= organization.name %> Offerings:</h3>
+  <% organization.offerings.each do |offering| %>
+  <p><%= offering.name %></p>
+  <% end %>
+  <h4><%= link_to "Add an offering for this organization", admin_new_offering_path(organization) %></h4>
+<% end %>
+
+<h4><%= link_to "Add an organization", new_admin_organization_path %></h4>
+
+
+</div>

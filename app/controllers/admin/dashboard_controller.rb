@@ -7,7 +7,7 @@ class Admin::DashboardController < ApplicationController
   end
 
   def show
-
+    @organizations = Organization.all
   end
 
 end
