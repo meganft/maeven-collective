@@ -15,6 +15,16 @@
   </head>
 
   <body>
+    <%#= render partial: "layouts/navbar" %>
+      <div class="every-page">
+        <% flash.each do |type, message| %>
+        <div class="alert alert-<%= type %> alert-dismissible text-center", role: "alert">
+        <%= content_tag :div, sanitize(message), class: "alert alert-#{type} alert-dismissible", role: "alert" do %>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+         <strong><%= message %></strong>
+       </div>
+        <% end %>
+        <% end %>
     <%= yield %>
   </body>
 </html>

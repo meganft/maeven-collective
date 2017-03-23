@@ -10,19 +10,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170323163919) do
+ActiveRecord::Schema.define(version: 20170323194846) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "offerings", force: :cascade do |t|
+    t.string  "name"
+    t.string  "date"
+    t.string  "format"
+    t.string  "location"
+    t.string  "price"
+    t.integer "organization_id"
+    t.index ["organization_id"], name: "index_offerings_on_organization_id", using: :btree
+  end
+
+  create_table "organizations", force: :cascade do |t|
+    t.string   "name"
+    t.string   "website"
+    t.string   "instagram"
+    t.string   "twitter"
+    t.string   "facebook"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
     t.string   "password"
-    t.string   "password_confirmation"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.string   "password_digest"
+    t.integer  "role",            default: 0
   end
 
 end

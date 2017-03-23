@@ -14,6 +14,9 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
 gem 'pry'
+gem 'bcrypt', '~> 3.1.7'
+gem 'rb-readline'
+
 
 group :development, :test do
   gem 'byebug', platform: :mri
