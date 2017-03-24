@@ -15,15 +15,12 @@
   </head>
 
   <body>
-    <%#= render partial: "layouts/navbar" %>
-      <div class="every-page">
+    <%= render partial: "layouts/navbar" %>
         <% flash.each do |type, message| %>
-        <div class="alert alert-<%= type %> alert-dismissible text-center", role: "alert">
-        <%= content_tag :div, sanitize(message), class: "alert alert-#{type} alert-dismissible", role: "alert" do %>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-         <strong><%= message %></strong>
-       </div>
-        <% end %>
+          <%= content_tag :div, sanitize(message), class: "alert alert-#{type} alert-dismissible", role: "alert" do %>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong style="text-align:center"><%= message %></strong>
+          <% end %>
         <% end %>
     <%= yield %>
   </body>
