@@ -10,19 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170328151340) do
+ActiveRecord::Schema.define(version: 20170328155625) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "offerings", force: :cascade do |t|
-    t.string  "name"
-    t.string  "date"
-    t.string  "format"
-    t.string  "location"
-    t.string  "price"
-    t.integer "organization_id"
-    t.string  "description"
+    t.string   "name"
+    t.string   "format"
+    t.string   "location"
+    t.string   "price"
+    t.integer  "organization_id"
+    t.string   "description"
+    t.datetime "date"
     t.index ["organization_id"], name: "index_offerings_on_organization_id", using: :btree
   end
 
