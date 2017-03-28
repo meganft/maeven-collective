@@ -16,6 +16,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'pry'
 gem 'bcrypt', '~> 3.1.7'
 gem 'rb-readline'
+gem 'paperclip'
+gem 'aws-sdk', '~> 2.3'
 
 
 group :development, :test do
