@@ -1,0 +1,6 @@
+<div class="container">
+  <h3>Organizations Index</h3>
+  <% @organizations.each do |organization| %>
+  <h5><%= link_to organization.name, organization_path(organization) %></h5>
+  <% end %>
+</div>

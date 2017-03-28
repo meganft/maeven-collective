@@ -1,16 +1,19 @@
-
 <div class="container">
-  admin dashboard
+  <h2 id="admin-header-dashboard"> Welcome to your admin dashboard, <%= @current_user.first_name.capitalize %>!</h2>
 
-<h2>Organizations</h2>
-<% @organizations.each do |organization| %>
-  <h3><%= organization.name %> Offerings:</h3>
-  <% organization.offerings.each do |offering| %>
-  <p><%= offering.name %></p>
-  <% end %>
-  <h4><%= link_to "Add an offering for this organization", admin_new_offering_path(organization) %></h4>
-<% end %>
+  <h4><%= link_to "Add An Organization Here", new_admin_organization_path, class: "btn btn-success" %></h4>
 
-<h4><%= link_to "Add an organization", new_admin_organization_path %></h4>
-
+  <h3>Current Organizations:</h3>
+  <div class="row">
+    <% @organizations.each do |organization| %>
+    <div class="col-md-3">
+      <h3><%= organization.name.capitalize %></h3>
+      <h4><%= organization.name.capitalize %>'s Current Offerings are:</h4>
+      <% organization.offerings.each do |offering| %>
+      <p><%= offering.name %></p>
+      <% end %>
+      <h5><%= link_to "Add an offering for this organization", admin_new_offering_path(organization), class: "btn btn-info" %></h5>
+    </div>
+    <% end %>
+  </div>
 </div>

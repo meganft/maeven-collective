@@ -20,5 +20,14 @@ a.navbar-brand {
 }
 
 .carousel-inner {
-  max-height: 550px;
+  max-height: 580px;
+  margin-top: -18px;
+}
+
+.carousel-caption {
+  color: red !important;
+}
+
+#admin-header-dashboard {
+  text-align: center;
 }

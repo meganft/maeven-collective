@@ -1,0 +1,6 @@
+<div class="container">
+  <h3><%= @organization.name %></h3>
+  <% @organization.offerings.each do |offering| %>
+  <h6><%= offering.name %></h6>
+  <% end %>
+</div>
