@@ -18,6 +18,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'rb-readline'
 gem 'paperclip'
 gem 'aws-sdk', '~> 2.3'
+gem 'figaro'
 
 
 group :development, :test do
