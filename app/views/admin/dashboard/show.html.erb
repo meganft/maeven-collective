@@ -8,6 +8,7 @@
     <% @organizations.each do |organization| %>
     <div class="col-md-3">
       <h3><%= organization.name.capitalize %></h3>
+      <%= image_tag organization.avatar.url(:square) %>
       <h4><%= organization.name.capitalize %>'s Current Offerings are:</h4>
       <% organization.offerings.each do |offering| %>
       <p><%= offering.name %></p>

@@ -16,7 +16,7 @@ class Admin::OrganizationsController < ApplicationController
 
   private
     def organization_params
-      params.require(:organization).permit(:name, :website, :twitter, :instagram, :facebook)
+      params.require(:organization).permit(:name, :website, :twitter, :instagram, :facebook, :avatar)
     end
 
 end
