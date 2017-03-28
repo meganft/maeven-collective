@@ -10,7 +10,6 @@ Rails.application.routes.draw do
 
   resources :organizations, only: [:index, :show]
 
-
   namespace :admin do
     get '/dashboard', to: 'dashboard#show'
     patch '/dashboard', to: 'dashboard#update'
