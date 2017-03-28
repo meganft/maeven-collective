@@ -1,8 +1,14 @@
 <div class="container">
-  <h2 style="text-align:center"><%= @organization.name.capitalize %></h2>
-  <h2 style="text-align:center"><%= @organization.avatar(:medium) %></h2>
+  <h2 style="text-align:center; color: pink;"><%= @organization.name.capitalize %></h2>
+  <hr>
+  <div class="row">
+    <div class="col-md-6">
+  <%= image_tag @organization.avatar.url(:square) %>
+</div>
+<div class="col-md-6">
   <h4>Offerings:</h4>
   <% @organization.offerings.each do |offering| %>
   <h5><%= offering.name %>: <%= offering.date %></h5>
   <% end %>
+</div>
 </div>
