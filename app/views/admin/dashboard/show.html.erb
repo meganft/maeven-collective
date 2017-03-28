@@ -5,11 +5,16 @@
 
   <h3 style="text-align:center;">Current Organizations:</h3>
     <% @organizations.each do |organization| %>
-      <h3><%= organization.name.capitalize %></h3>
+      <h3><%= organization.name.capitalize%></h3>
       <%= image_tag organization.avatar.url(:square) %>
+      <h5><%= organization.description %></h5>
+      <%= link_to "Edit", edit_admin_organization_path(organization), class: "btn btn-warning" %>
       <h4><%= organization.name.capitalize %>'s Current Offerings are:</h4>
       <% organization.offerings.each do |offering| %>
-      <p><%= offering.name %></p>
+      <h5><%= offering.name %></h5>
+      <p><%= offering.price %></p>
+      <p><%= offering.location %></p>
+      <p><%= offering.format %></p>
       <% end %>
       <h5><%= link_to "Add an offering for this organization", admin_new_offering_path(organization), class: "btn btn-info" %></h5>
     <% end %>

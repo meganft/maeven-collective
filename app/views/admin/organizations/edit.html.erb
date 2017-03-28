@@ -1,0 +1,45 @@
+<body class="login-page">
+  <div class="container extra-pad">
+    <div class ="row">
+      <div class = "text-center">
+        <div class="col-sm-3">
+        </div>
+        <div class="col-sm-6">
+          <div class="panel panel-default">
+            <div class="panel-body less-padding">
+              <h3 class="form-title">Update <%= @organization.name.capitalize %></h3>
+            </div>
+            <div class="panel-footer panel-pad">
+              <%= form_for [:admin, @organization], class: "form-group" do |f| %>
+                <div class="form-group">
+                  <%= f.text_field :name, class: "form-control login-items", placeholder: "Name", id: "Name" %>
+                </div>
+                <div class="form-group">
+                  <%= f.text_field :website, class: "form-control login-items", placeholder: "Website", id: "Website" %>
+                </div>
+                <div class="form-group">
+                  <%= f.text_field :twitter, class: "form-control login-items", placeholder: "Twitter", id: "Twitter" %>
+                </div>
+                <div class="form-group">
+                  <%= f.text_field :instagram, class: "form-control login-items", placeholder: "Instagram", id: "Instagram" %>
+                </div>
+                <div class="form-group">
+                  <%= f.text_field :facebook, class: "form-control login-items", placeholder: "Facebook", id: "Facebook" %>
+                </div>
+                <div class="form-group">
+                  <%= f.text_area :description, class: "form-control login-items", placeholder: "Description", id: "Description" %>
+                </div>
+
+                <p>Add a photo for this organization:</p>
+                  <%= f.file_field :avatar %>
+
+                <button type="submit" class="btn btn-default submit-button login-items" id="submitnewbutton">Update Organization</button></p>
+              <% end %>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+          </div>
+        </div>
+      </div>
+    </body>
