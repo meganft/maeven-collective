@@ -1,3 +1,8 @@
 <div class="container">
   <h2 id="admin-header-dashboard">Offering Show Page
   </h2>
+  <%= @offering.name %>
+  <% @offering.tags.each do |tag| %>
+  <p><%= tag.name %></p>
+  <% end %>
+</div>
