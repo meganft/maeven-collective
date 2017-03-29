@@ -13,6 +13,7 @@ describe "A user visits signup page" do
     click_on "Create Account"
 
     expect(page).to have_content("Successfully created an account!")
+    expect(User.last.first_name).to eq("first_name")
     expect(current_path).to eq(root_path)
   end
 

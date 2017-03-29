@@ -1,4 +1,5 @@
 class Admin::OfferingsController < ApplicationController
+
   def new
     @organization = Organization.find(params[:organization])
     @offering = @organization.offerings.new

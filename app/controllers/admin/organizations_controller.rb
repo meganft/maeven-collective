@@ -9,7 +9,7 @@ class Admin::OrganizationsController < ApplicationController
       redirect_to admin_dashboard_path(current_user)
       flash[:success] = "Created new organization #{@organization.name}"
     else
-      flash.now[:error] = "Please try again."
+      flash.now[:error] = @organization.errors.full_messages.first
       render :new
     end
   end
@@ -21,6 +21,7 @@ class Admin::OrganizationsController < ApplicationController
   def update
     @organization = Organization.find(params[:id])
     @organization.update(organization_params)
+    flash[:success] = "Successfully updated #{@organization.name}"
     redirect_to admin_dashboard_path
   end
 

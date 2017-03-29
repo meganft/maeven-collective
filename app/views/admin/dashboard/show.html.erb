@@ -1,10 +1,10 @@
 <div class="container">
-  <h2 id="admin-header-dashboard"> Welcome to your admin dashboard, <%= @current_user.first_name.capitalize %>!</h2>
+  <h2 id="admin-header-dashboard"> Welcome to your Admin Dashboard</h2>
 
   <h4 style="text-align:center; padding-top:20px;"><%= link_to "Add An Organization Here", new_admin_organization_path, class: "btn btn-success" %></h4>
   <h4 style="text-align:center; padding-top:20px;"><%= link_to "Manage Tags Here", new_admin_tag_path, class: "btn btn-success" %></h4>
 
-
+  <div id="current-organizations">
   <h3 style="text-align:center;">Current Organizations:</h3>
     <% @organizations.each do |organization| %>
       <h3><%= organization.name.capitalize%></h3>
@@ -13,11 +13,12 @@
       <%= link_to "Edit", edit_admin_organization_path(organization), class: "btn btn-warning" %>
       <h4><%= organization.name.capitalize %>'s Current Offerings are:</h4>
       <% organization.offerings.each do |offering| %>
-      <h5><%= offering.name %></h5>
+      <h5><%= link_to offering.name, admin_offering_path(offering) %></h5>
       <p><%= offering.price %></p>
       <p><%= offering.location %></p>
       <p><%= offering.format %></p>
       <% end %>
       <h5><%= link_to "Add an offering for this organization", admin_new_offering_path(organization), class: "btn btn-info" %></h5>
     <% end %>
+  </div>
 </div>

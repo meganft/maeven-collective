@@ -1,6 +1,8 @@
 class Organization < ApplicationRecord
   has_many :offerings
 
+  validates :name, presence: true
+
   has_attached_file :avatar, styles: {
     thumb: '100x100>',
     square: '200x200#',

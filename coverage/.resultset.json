@@ -1,10 +1,21 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/megantalbot/maeven/maeven-collective/app/controllers/concerns/landing_controller.rb": [
+      "/Users/megantalbot/maeven/maeven-collective/app/models/user.rb": [
         1,
         1,
         null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/megantalbot/maeven/maeven-collective/app/models/application_record.rb": [
+        1,
+        1,
         null
       ],
       "/Users/megantalbot/maeven/maeven-collective/app/controllers/application_controller.rb": [
@@ -16,19 +27,125 @@
         1,
         null,
         1,
-        28,
+        45,
         null,
         null,
         1,
-        13,
+        40,
+        null,
+        null,
+        1,
+        3,
+        1,
+        null,
+        2,
+        null,
+        null,
+        null
+      ],
+      "/Users/megantalbot/maeven/maeven-collective/app/controllers/admin/organizations_controller.rb": [
+        1,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
         null,
         null,
         1,
         1,
-        0,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        3,
+        null,
+        null,
+        null
+      ],
+      "/Users/megantalbot/maeven/maeven-collective/app/models/organization.rb": [
+        1,
+        1,
         null,
         1,
         null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/megantalbot/maeven/maeven-collective/app/controllers/admin/dashboard_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        7,
+        null,
+        null,
+        1,
+        5,
+        null,
+        null,
+        null
+      ],
+      "/Users/megantalbot/maeven/maeven-collective/app/models/offering.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/megantalbot/maeven/maeven-collective/app/controllers/sessions_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        4,
+        4,
+        2,
+        2,
+        2,
+        null,
+        2,
+        2,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/megantalbot/maeven/maeven-collective/app/controllers/concerns/landing_controller.rb": [
+        1,
+        1,
         null,
         null
       ],
@@ -56,25 +173,8 @@
         6,
         null,
         null
-      ],
-      "/Users/megantalbot/maeven/maeven-collective/app/models/user.rb": [
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/megantalbot/maeven/maeven-collective/app/models/application_record.rb": [
-        1,
-        1,
-        null
       ]
     },
-    "timestamp": 1490752317
+    "timestamp": 1490802794
   }
 }
