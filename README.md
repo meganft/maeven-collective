@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+The maeven collective is an online database and community  for the female creative entrepreneur.
 
-* Ruby version
+The staging app can be accessed at https://themaevencollective.herokuapp.com/
 
-* System dependencies
+To run locally:
+```
+git@github.com:meganft/maeven-collective.git
+rake db:create db:migrate
+rails s
+```
 
-* Configuration
+The test suite is uses rspec and capybara: `rspec`
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This app is written in Rails v5.0.0.1
