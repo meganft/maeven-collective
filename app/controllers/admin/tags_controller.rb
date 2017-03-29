@@ -1,0 +1,1 @@
+class Admin::TagssController < ApplicationController

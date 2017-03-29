@@ -9,9 +9,9 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       redirect_to determine_authorization(@user)
-      flash[:success] = "Logged in as #{@user.first_name}"
+      flash[:success] = "Successfully created an account!"
     else
-      flash.now[:error] = "Please try again."
+      flash.now[:error] = @user.errors.full_messages.first
       render :new
     end
   end
