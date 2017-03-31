@@ -7,6 +7,10 @@ class Admin::OrganizationsController < ApplicationController
 
   def create
     @organization = Organization.new(organization_params)
+    categories = params[:organization][:organizations_category]
+    categories.values.each do |id|
+      @organization.categories << Category.find(id)
+    end
     if @organization.save
       redirect_to admin_dashboard_path(current_user)
       flash[:success] = "Created new organization #{@organization.name}"
@@ -29,7 +33,7 @@ class Admin::OrganizationsController < ApplicationController
 
   private
     def organization_params
-      params.require(:organization).permit(:name, :website, :twitter, :instagram, :facebook, :description, :avatar)
+      params.require(:organization).permit(:name, :website, :twitter, :instagram, :facebook, :description, :avatar,  :organizations_category, category_ids:[])
     end
 
 end
