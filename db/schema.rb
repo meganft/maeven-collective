@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170328233706) do
+ActiveRecord::Schema.define(version: 20170331200740) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "offerings", force: :cascade do |t|
     t.string   "name"
@@ -46,6 +52,14 @@ ActiveRecord::Schema.define(version: 20170328233706) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.string   "history"
+  end
+
+  create_table "organizations_categories", force: :cascade do |t|
+    t.integer "organization_id"
+    t.integer "category_id"
+    t.index ["category_id"], name: "index_organizations_categories_on_category_id", using: :btree
+    t.index ["organization_id"], name: "index_organizations_categories_on_organization_id", using: :btree
   end
 
   create_table "tags", force: :cascade do |t|
@@ -67,4 +81,6 @@ ActiveRecord::Schema.define(version: 20170328233706) do
 
   add_foreign_key "offerings_tags", "offerings"
   add_foreign_key "offerings_tags", "tags"
+  add_foreign_key "organizations_categories", "categories"
+  add_foreign_key "organizations_categories", "organizations"
 end
