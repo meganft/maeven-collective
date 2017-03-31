@@ -33,6 +33,15 @@
                   <%= f.text_area :history, class: "form-control login-items", placeholder: "Company Background", id: "History" %>
                 </div>
 
+                <%= f.fields_for @organizations_categories do |u| %>
+                <p> Choose categories for this organization</p>
+                  <p class="form-group second">
+                    <%= u.collection_radio_buttons :category_id, @categories, :id, :name do |u| %>
+                    <%= u.radio_button %> <%= u.label %>
+                  <% end %></p>
+                <% end %>
+
+
                 <p>Add a photo for this organization:</p>
                   <%= f.file_field :avatar %>
 

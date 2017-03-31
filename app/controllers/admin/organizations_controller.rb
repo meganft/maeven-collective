@@ -1,6 +1,8 @@
 class Admin::OrganizationsController < ApplicationController
   def new
     @organization = Organization.new
+    @organizations_categories = @organization.organizations_categories.new
+    @categories = Category.all
   end
 
   def create

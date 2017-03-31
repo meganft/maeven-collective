@@ -1,5 +1,7 @@
 class Organization < ApplicationRecord
   has_many :offerings
+  has_many :organizations_categories
+  has_many :categories, through: :organizations_categories
 
   validates :name, presence: true
 
