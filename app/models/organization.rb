@@ -10,5 +10,8 @@ class Organization < ApplicationRecord
   }
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
+  def self.search(search)
+    where("name LIKE ?", "%#{search.downcase}%")
+  end
 
 end
