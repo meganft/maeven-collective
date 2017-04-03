@@ -1,0 +1,14 @@
+<div class="container">
+  <h2 style="text-align:center; color: pink;"><%= @offering.name.capitalize %></h2>
+  <hr>
+  <div class="row">
+    <div class="col-md-6">
+  <%#= image_tag @offering.avatar.url(:square) %>
+</div>
+<div class="col-md-6">
+  <% @offering.organization.name %>
+</div>
+  <% @offering.tags.each do |tag| %>
+    <h4><span class="label label-default"><%= tag.name %></span></h4>
+  <% end %>
+</div>

@@ -3,6 +3,8 @@ class Organization < ApplicationRecord
   has_many :organizations_categories
   has_many :categories, through: :organizations_categories
 
+  scope :by_letter, ->(initial) {where("LOWER(name) LIKE \'#{initial.downcase}%\'").order(:name) }
+
   validates :name, presence: true
 
   has_attached_file :avatar, styles: {

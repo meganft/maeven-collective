@@ -19,6 +19,7 @@ gem 'rb-readline'
 gem 'paperclip'
 gem 'aws-sdk', '~> 2.3'
 gem 'figaro'
+gem 'alphabetical_paginate'
 
 
 group :development, :test do

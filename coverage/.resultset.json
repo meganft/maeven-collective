@@ -31,7 +31,7 @@
         null,
         null,
         1,
-        40,
+        37,
         null,
         null,
         1,
@@ -47,16 +47,22 @@
         1,
         1,
         2,
+        2,
+        2,
         null,
         null,
         1,
         2,
         2,
-        1,
-        1,
+        2,
+        2,
         null,
-        1,
-        1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
         null,
         null,
         null,
@@ -81,17 +87,34 @@
       "/Users/megantalbot/maeven/maeven-collective/app/models/organization.rb": [
         1,
         1,
-        null,
+        1,
         1,
         null,
         1,
         null,
+        1,
+        null,
         null,
         null,
         null,
         1,
         null,
+        1,
+        0,
         null,
+        null,
+        null
+      ],
+      "/Users/megantalbot/maeven/maeven-collective/app/models/organizations_category.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/megantalbot/maeven/maeven-collective/app/models/category.rb": [
+        1,
+        1,
+        1,
         null
       ],
       "/Users/megantalbot/maeven/maeven-collective/app/controllers/admin/dashboard_controller.rb": [
@@ -100,16 +123,22 @@
         1,
         null,
         1,
-        7,
+        6,
         null,
         null,
         1,
-        5,
+        4,
+        0,
+        null,
+        4,
+        null,
         null,
         null,
         null
       ],
       "/Users/megantalbot/maeven/maeven-collective/app/models/offering.rb": [
+        1,
+        1,
         1,
         1,
         null
@@ -175,6 +204,6 @@
         null
       ]
     },
-    "timestamp": 1490802898
+    "timestamp": 1491172541
   }
 }

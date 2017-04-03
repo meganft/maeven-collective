@@ -3,6 +3,6 @@
   </h2>
   <%= @offering.name %>
   <% @offering.tags.each do |tag| %>
-  <p><%= tag.name %></p>
+  <span class="label label-default"><%= tag.name %></span>
   <% end %>
 </div>

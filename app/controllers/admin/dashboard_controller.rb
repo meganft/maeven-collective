@@ -7,11 +7,16 @@ class Admin::DashboardController < ApplicationController
   end
 
   def show
-    if params[:search]
-      @organizations = Organization.search(params[:search])
+    if params[:letter]
+      @organizations = Organization.by_letter(params[:letter])
     else
       @organizations = Organization.all
     end
+    # if params[:search]
+    #   @organizations = Organization.search(params[:search])
+    # else
+    #   @organizations = Organization.all
+    # end
   end
 
 end

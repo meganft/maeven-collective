@@ -8,8 +8,10 @@ class Admin::OrganizationsController < ApplicationController
   def create
     @organization = Organization.new(organization_params)
     categories = params[:organization][:organizations_category]
-    categories.values.each do |id|
-      @organization.categories << Category.find(id)
+    if !categories == ""
+      categories.values.each do |id|
+        @organization.categories << Category.find(id)
+      end
     end
     if @organization.save
       redirect_to admin_dashboard_path(current_user)
