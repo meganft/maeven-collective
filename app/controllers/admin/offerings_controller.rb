@@ -28,6 +28,13 @@ class Admin::OfferingsController < ApplicationController
     @offering = Offering.find(params[:id])
   end
 
+  def destroy
+    @offering = Offering.find(params[:id])
+    @offering.delete
+    redirect_to admin_dashboard_path
+    flash[:success] = "Successfully deleted #{@offering.name}."
+  end
+
   private
     def offering_params
       params.require(:offering).permit(:name, :date, :format, :location, :price, :organization, :offerings_tag, tag_ids:[])
