@@ -20,8 +20,9 @@
             </div>
             <h3>Current Tags:</h3>
             <% @tags.each do |tag| %>
-            <%= tag.name %>
+            <p><%= tag.name %></p>
             <% end %>
+            <p style ="padding-top:50px"><%= link_to " << Back to Your Dashboard", admin_dashboard_path, class: "btn btn-success btn-sm"%></p>
           </div>
           <div class="col-sm-3">
           </div>

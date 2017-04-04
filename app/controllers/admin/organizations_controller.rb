@@ -22,6 +22,10 @@ class Admin::OrganizationsController < ApplicationController
     end
   end
 
+  def show
+    @organization = Organization.find(params[:id])
+  end
+
   def edit
     @organization = Organization.find(params[:id])
   end

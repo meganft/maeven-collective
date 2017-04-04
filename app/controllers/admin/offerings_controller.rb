@@ -28,6 +28,21 @@ class Admin::OfferingsController < ApplicationController
     @offering = Offering.find(params[:id])
   end
 
+  def edit
+    @offering = Offering.find(params[:id])
+    @offerings_tags = @offering.offerings_tags.new
+    @tags = Tag.all
+  end
+
+  def update
+    @tags = Tag.all
+    @offering = Offering.find(params[:id])
+    @offerings_tags = @offering.offerings_tags.new
+    @offering.update(offering_params)
+    flash[:success] = "Successfully updated #{@offering.name}"
+    redirect_to admin_offering_path(@offering)
+  end
+
   def destroy
     @offering = Offering.find(params[:id])
     @offering.delete
@@ -37,7 +52,7 @@ class Admin::OfferingsController < ApplicationController
 
   private
     def offering_params
-      params.require(:offering).permit(:name, :date, :format, :location, :price, :organization, :offerings_tag, tag_ids:[])
+      params.require(:offering).permit(:name, :date, :format, :location, :price, :organization, :avatar, :offerings_tag, tag_ids:[])
     end
 
 end

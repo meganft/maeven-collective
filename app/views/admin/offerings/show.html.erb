@@ -2,10 +2,10 @@
   <h2 id="admin-header-dashboard">Offering Show Page
   </h2>
   <%= @offering.name %>
-  <%= link_to "Delete this offering", admin_offering_path(@offering), method: :delete, data: {confirm: "Are you sure you want to delete this?"} %>
+  <p><%= link_to "Delete this offering", admin_offering_path(@offering), method: :delete, data: {confirm: "Are you sure you want to delete this?"} %></p>
+  <p><%= link_to "Edit this offering", edit_admin_offering_path(@offering) %></p>
   <% @offering.tags.each do |tag| %>
   <span class="label label-default"><%= tag.name %></span>
-</ul>
 
   <% end %>
 </div>

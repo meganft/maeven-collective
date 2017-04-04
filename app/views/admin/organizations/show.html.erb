@@ -1,0 +1,15 @@
+<div class="container">
+<div class="panel panel-danger">
+  <h2 id="admin-header-dashboard">Organization <%= @organization.name.capitalize %></h2></div>
+  <div class="well">
+    <h4>Offerings:</h4>
+    <% @organization.offerings.each do |offering| %>
+    <h5><%= link_to offering.name, admin_offering_path(offering) %></h5>
+    <% end %>
+    <% @organization.categories.each do |category| %>
+    <span class="label label-default"><%= category.name %></span>
+    <% end %>
+    <p><%= link_to "Edit This organization", edit_admin_organization_path(@organization), class: "btn btn-warning btn-sm"%></p>
+    <p><%= link_to " << Back to Your Dashboard", admin_dashboard_path, class: "btn btn-success btn-sm"%></p>
+  </div>
+</div>

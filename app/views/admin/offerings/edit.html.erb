@@ -7,10 +7,10 @@
         <div class="col-sm-6">
           <div class="panel panel-default">
             <div class="panel-body less-padding">
-              <h3 class="form-title">Create a new offering for organization <%= @organization.name %></h3>
+              <h3 class="form-title">Update <%= @offering.name %></h3>
             </div>
             <div class="panel-footer panel-pad">
-              <%= form_for [:admin, @offering], url: {action: "create", organization_id: @organization.id}, class: "form-group" do |f| %>
+              <%= form_for [:admin, @offering], url: {action: "create", organization_id: @offering.organization.id}, class: "form-group" do |f| %>
                 <div class="form-group">
                   <%= f.text_field :name, class: "form-control login-items", placeholder: "Name of Offering", id: "Name" %>
                 </div>
@@ -41,13 +41,14 @@
                 <div class="form-group">
                   <%= f.text_area :description, class: "form-control login-items", placeholder: "Description", id: "description" %>
                 </div>
-                <div class="panel panel-info">
-                  <div class="panel-heading">Add a photo for this offering:</div>
+
+                <div class="panel panel-warning">
+                  <div class="panel-heading">Upload a new photo for this offering:</div>
                     <div class="panel-body"><%= f.file_field :avatar %></div>
                 </div>
-                <div class="panel panel-info">
+                <div class="panel panel-warning">
                 <%= f.fields_for @offerings_tags do |u| %>
-                <div class="panel-heading">Choose tags for this offering</div>
+                <div class="panel-heading">Choose new tags for this offering</div>
                   <p class="form-group second">
                     <div class="panel-body">
                     <%= u.collection_radio_buttons :tag_id, @tags, :id, :name do |u| %>
@@ -56,7 +57,8 @@
                   </div>
                 <% end %>
                 </div>
-                <button type="submit" class="btn btn-default submit-button login-items" id="submitnewbutton">Create Offering</button></p>
+
+                <button type="submit" class="btn btn-default submit-button login-items" id="submitnewbutton">Update Offering</button></p>
               <% end %>
               </div>
             </div>
