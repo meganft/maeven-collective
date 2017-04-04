@@ -17,11 +17,11 @@
 a.navbar-brand {
   font-size: 2em !important;
   font-weight: 200;
+  font-family: 'Raleway', sans-serif;
 }
 
 .carousel-inner {
-  max-height: 580px;
-  margin-top: -18px;
+  max-height: 300px;
 }
 
 .carousel-caption {
@@ -50,4 +50,16 @@ a.navbar-brand {
 
 .btn-warning:hover {
   background-color: #E4A651 !important;
+}
+
+#index-header {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  color: #F08080;
+}
+
+.jumbotron {
+  background-image: none;
+  background-color: #F4F6F6 !important;
 }
