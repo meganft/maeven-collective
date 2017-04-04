@@ -11,8 +11,10 @@ class Admin::OfferingsController < ApplicationController
     @organization = Organization.find(params[:organization])
     @offering = @organization.offerings.new(offering_params)
     tags = params[:offering][:offerings_tag]
-    tags.values.each do |id|
-      @offering.tags << Tag.find(id)
+    if !tags == ""
+      tags.values.each do |id|
+        @offering.tags << Tag.find(id)
+      end
     end
     if @offering.save
       redirect_to admin_dashboard_path(current_user)
