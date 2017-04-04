@@ -10,7 +10,7 @@
               <h3 class="form-title">Update <%= @offering.name %></h3>
             </div>
             <div class="panel-footer panel-pad">
-              <%= form_for [:admin, @offering], url: {action: "create", organization_id: @offering.organization.id}, class: "form-group" do |f| %>
+              <%= form_for [:admin, @offering], class: "form-group" do |f| %>
                 <div class="form-group">
                   <%= f.text_field :name, class: "form-control login-items", placeholder: "Name of Offering", id: "Name" %>
                 </div>

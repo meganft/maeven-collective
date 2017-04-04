@@ -12,11 +12,6 @@ class Admin::DashboardController < ApplicationController
     else
       @organizations = Organization.all
     end
-    # if params[:search]
-    #   @organizations = Organization.search(params[:search])
-    # else
-    #   @organizations = Organization.all
-    # end
   end
 
 end

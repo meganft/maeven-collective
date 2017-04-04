@@ -28,10 +28,14 @@ class Admin::OrganizationsController < ApplicationController
 
   def edit
     @organization = Organization.find(params[:id])
+    @organizations_categories = @organization.organizations_categories.new
+    @categories = Category.all
   end
 
   def update
+    @categories = Category.all
     @organization = Organization.find(params[:id])
+    @organizations_categories = @organization.organizations_categories
     @organization.update(organization_params)
     flash[:success] = "Successfully updated #{@organization.name}"
     redirect_to admin_dashboard_path
