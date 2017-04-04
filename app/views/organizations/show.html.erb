@@ -3,15 +3,18 @@
   <hr>
   <div class="row">
     <div class="col-md-6">
-  <%= image_tag @organization.avatar.url(:square) %>
-</div>
-<div class="col-md-6">
-  <h4>Offerings:</h4>
-  <% @organization.offerings.each do |offering| %>
-  <h5><%= link_to offering.name, organizations_offering_path(offering) %>: <%= offering.date %></h5>
-  <% end %>
-</div>
-  <% @organization.categories.each do |category| %>
-    <h4><span class="label label-default"><%= category.name %></span></h4>
-  <% end %>
+      <%= image_tag @organization.avatar.url(:square) %>
+      <% @organization.categories.each do |category| %>
+        <h4><span class="label label-default"><%= category.name %></span></h4>
+      <% end %>
+    </div>
+    <div class="col-md-6">
+      <h4>Offerings:</h4>
+      <% @organization.offerings.each do |offering| %>
+      <h5><%= link_to offering.name, organizations_offering_path(offering) %>: <%= offering.date %></h5>
+      <% end %>
+    </div>
+  </div>
+  <hr>
+  <%= link_to "Back to The Main Index", organizations_path, class: "btn btn-success btn-sm" %>
 </div>
