@@ -14,7 +14,6 @@ class Admin::OfferingsController < ApplicationController
     tags.values.each do |id|
       @offering.tags << Tag.find(id)
     end
-
     if @offering.save
       redirect_to admin_dashboard_path(current_user)
       flash[:success] = "Created new offering #{@offering.name}"
