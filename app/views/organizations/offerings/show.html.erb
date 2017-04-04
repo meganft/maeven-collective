@@ -3,12 +3,31 @@
   <hr>
   <div class="row">
     <div class="col-md-6">
-  <%#= image_tag @offering.avatar.url(:square) %>
-</div>
-<div class="col-md-6">
-  <% @offering.organization.name %>
-</div>
-  <% @offering.tags.each do |tag| %>
-    <h4><span class="label label-default"><%= tag.name %></span></h4>
-  <% end %>
+      <h4>This offering is from <%= link_to @offering.organization.name.capitalize, organization_path(@offering.organization) %></h4>
+      <% if @offering.avatar_file_name == nil  %>
+        <%= image_tag @offering.organization.avatar.url(:square) %>
+      <% else %>
+        <%= image_tag @offering.avatar.url(:square) %>
+        <% end %>
+      </div>
+    <div class="col-md-6">
+      <h4><strong><%= @offering.name.capitalize %></strong></h4>
+      <h5>Description: <%= @offering.description %></h5>
+      <h5>Location: <%= @offering.location %></h5>
+      <h5>Date: <%= @offering.date %></h5>
+      <h5>Length: <%= @offering.length %></h5>
+      <h5>Format: <%= @offering.format %></h5>
+      <h5>Price: <%= @offering.price %></h5>
+      <h5>Payment Info: <%= @offering.payment_options %></h5>
+      <h5>Materials and Resources: <%= @offering.materials %></h5>
+      <h5>Website: <%= link_to "Website", @offering.website, target: :_blank %></h5>
+      <h5>From <%= @offering.organization.name %></h5>
+
+      <% @offering.tags.each do |tag| %>
+        <h4><span class="label label-default"><%= tag.name %></span></h4>
+      <% end %>
+    </div>
+  </div>
+  <hr>
+  <%= link_to "Back to The Main Index", organizations_path, class: "btn btn-success btn-sm" %>
 </div>
