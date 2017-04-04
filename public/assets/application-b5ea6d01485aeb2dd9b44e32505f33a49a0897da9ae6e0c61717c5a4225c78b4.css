@@ -32,3 +32,23 @@ a.navbar-brand {
 #admin-header-dashboard {
   text-align: center;
 }
+
+.btn-success {
+  background-color: #D6707D !important;
+  background-image: none !important;
+  border: 1px solid #D6707D  !important;
+}
+
+.btn-success:hover {
+  background-color: #BB5C68 !important;
+}
+
+.btn-warning {
+  background-color: #F9B961 !important;
+  background-image: none !important;
+  border: 1px solid #F9B961  !important;
+}
+
+.btn-warning:hover {
+  background-color: #E4A651 !important;
+}
