@@ -50,8 +50,8 @@
                 <div class="panel-heading">Choose tags for this offering</div>
                   <p class="form-group second">
                     <div class="panel-body">
-                    <%= u.collection_radio_buttons :tag_id, @tags, :id, :name do |u| %>
-                    <p><%= u.radio_button %> <%= u.label %></p>
+                    <%= u.collection_check_boxes :tag_id, @tags, :id, :name,  {:multiple => true} do |u| %>
+                    <p><%= u.check_box %> <%= u.label %></p>
                   <% end %></p>
                   </div>
                 <% end %>

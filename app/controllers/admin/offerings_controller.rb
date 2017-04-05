@@ -10,9 +10,10 @@ class Admin::OfferingsController < ApplicationController
   def create
     @organization = Organization.find(params[:organization])
     @offering = @organization.offerings.new(offering_params)
-    tags = params[:offering][:offerings_tag]
-    if !tags == ""
-      tags.values.each do |id|
+    tags = params[:offering][:offerings_tag][:tag_id]
+    tags = tags.reject {|t| t.empty? }
+    if !tags.empty?
+      tags.each do |id|
         @offering.tags << Tag.find(id)
       end
     end
