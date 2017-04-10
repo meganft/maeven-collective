@@ -24,10 +24,6 @@ a.navbar-brand {
   max-height: 300px;
 }
 
-.carousel-caption {
-  color: red !important;
-}
-
 #admin-header-dashboard {
   text-align: center;
 }
@@ -65,14 +61,14 @@ a.navbar-brand {
   background-position: center;
   -webkit-background-size: cover;
   background-size: cover;
-  height: 30em;
+  height: 27em;
   z-index: -1;
 }
 
 .search-form-landing{
   background-color: none;
   opacity: 80%;
-  margin-top: 10%;
+  margin-top: 9%;
   margin-right: 30%;
   margin-left: 30%;
 }
@@ -101,4 +97,13 @@ input#site_search_term {
 
 .toggle-input-topic {
   color: #5bc0de;
+}
+
+.icon-globe {
+  color: pink;
+  height: 300px;
+}
+
+#laptop-pic {
+  margin-top: -20px;
 }
