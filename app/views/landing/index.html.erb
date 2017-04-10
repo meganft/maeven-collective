@@ -36,17 +36,23 @@
     <div class="col-md-2">
     </div>
     <div class="col-md-4">
-        <%= image_tag "mouse.png", size: "250x220" %>
-      <h5 style="padding-top:15px;">How does it work?</h5>
+        <%= image_tag "computer-location.png", size: "200x200" %>
+      <h5 style="padding-top:-35px;">How does it work?</h5>
       <span class="hidden">Icon made by Freepik from www.flaticon.com </span>
     </div>
     <div class="col-md-4">
-      <label id="laptop-pic"><%= image_tag "laptop.png", size: "290x280" %></label>
-        <h5 style="margin-top:-20px;">About the maeven collective</h5>
+      <label id="laptop-pic"> <%= image_tag "computer-lock.png", size: "200x200"  %></label>
+        <h5 style="margin-top:">About the maeven collective</h5>
       <span class="hidden">Icon made by Freepik from www.flaticon.com </span>
     </div>
     <div class="col-md-2">
     </div>
   </div>
+  <hr>
+  <div class="well">
+    <div class="get-started"><%= link_to "Get Started", new_user_path, class: "btn btn-primary" %></div>
+  </div>
+  <hr>
 
+  <%= render partial: "landing/carousel" %>
 </div>

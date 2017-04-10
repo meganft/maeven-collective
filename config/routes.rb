@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   get '/search/results', to: 'search#index'
 
   resources :users, only: [:new, :create, :show]
-
   resources :organizations, only: [:index, :show]
 
   namespace :organizations, only: [:show] do

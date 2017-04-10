@@ -48,6 +48,16 @@ a.navbar-brand {
   background-color: #E4A651 !important;
 }
 
+.btn-primary {
+  background-color: #7aaf4b !important;
+  background-image: none !important;
+  border: 1px solid #7aaf4b  !important;
+}
+
+.btn-primary:hover {
+  background-color: #458226 !important;
+}
+
 #index-header {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
@@ -61,8 +71,9 @@ a.navbar-brand {
   background-position: center;
   -webkit-background-size: cover;
   background-size: cover;
-  height: 27em;
+  height: 29em;
   z-index: -1;
+  margin-top: -1.5em;
 }
 
 .search-form-landing{
@@ -99,11 +110,21 @@ input#site_search_term {
   color: #5bc0de;
 }
 
-.icon-globe {
-  color: pink;
-  height: 300px;
+.get-started {
+  text-align: center;
 }
 
 #laptop-pic {
-  margin-top: -20px;
+  display: inline-block;;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.col-md-4 {
+  text-align: center;
+}
+
+.carousel-control {
+  padding-top:10%;
+  width:5%;
 }
