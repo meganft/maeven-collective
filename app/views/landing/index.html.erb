@@ -1,36 +1,29 @@
 <div class="jumbotron">
-  <div class="newer-layout typeahead-container search-component">
+  <div class="search-form-landing">
 
     <form accept-charset="UTF-8" action="/search/results" id="new_site_search" method="get" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
       <div class="input-group">
-
+        <div class="pull-left">
         <div class="company-search-input-container">
           <input id="site_search_term" name="q" placeholder="Enter a Company Name" size="50" style="float: none; position: relative; vertical-align: top;" type="text" autocomplete="off" spellcheck="false" dir="auto">
         </div>
-
-        <div class="location-search-input-container js-search-by-name hidden">
-          <span class="twitter-typeahead" style="position: relative; display: inline-block;"><input class="string required form-control search-term js-listing-name typeahead tt-input" id="site_search_listing_name" name="qv" placeholder="Enter a Business Name" size="50" style="float: none; position: relative; vertical-align: top;" type="text" autocomplete="off" spellcheck="false" dir="auto"></span>
-        </div>
-
+      </div>
         <div class="pull-right">
           <input class="hidden bb-dropdown-select-field js-listing-type" data-required-field="required-field" id="site_search_listing_type" name="listing_type" type="hidden">
-        </div>
-      </button>
-
       <input class="js-search-by-type" id="search_by_type" name="search_by_type" type="hidden" value="by_location">
       <input id="enhanced" name="enhanced" type="hidden" value="">
-      <div class="input-group-btn">
-        <input class="btn btn-default btn btn-gradient-blue js-form-require-fields search-submit js-search-submit" name="commit" type="submit" value="Search">
+        <input class="btn btn-info" name="commit" type="submit" value="Search">
       </div>
     </div>
+
     <div class="error-message hidden">
       <div class="hint has-error">
         <div class="help-block message"></div>
       </div>
     </div>
   </form>
-  <div class="dark-bg toggle-input-container">
-    <a href="#" class="js-toggle-input">Search by Business Name Instead</a>
+  <div class="toggle-input-container">
+    <a href="#" class="toggle-input-topic">Search by Topic Instead</a>
   </div>
 </div>
 </div>
