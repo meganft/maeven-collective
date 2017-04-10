@@ -1,48 +1,38 @@
 <div class="jumbotron">
-  <h4 id="index-header">The female entrepreneur's comprehensive catalogue of the best business education, resources, tools and networks.</h4>
-</div>
+  <div class="newer-layout typeahead-container search-component">
 
-<div class="panel panel-default">
+    <form accept-charset="UTF-8" action="/search/results" id="new_site_search" method="get" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+      <div class="input-group">
 
-</div>
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-  </ol>
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <%= image_tag("pink-juice.jpg") %>
-      <div class="carousel-caption">
-        <h1>the maeven collective</h1>
+        <div class="company-search-input-container">
+          <input id="site_search_term" name="q" placeholder="Enter a Company Name" size="50" style="float: none; position: relative; vertical-align: top;" type="text" autocomplete="off" spellcheck="false" dir="auto">
+        </div>
+
+        <div class="location-search-input-container js-search-by-name hidden">
+          <span class="twitter-typeahead" style="position: relative; display: inline-block;"><input class="string required form-control search-term js-listing-name typeahead tt-input" id="site_search_listing_name" name="qv" placeholder="Enter a Business Name" size="50" style="float: none; position: relative; vertical-align: top;" type="text" autocomplete="off" spellcheck="false" dir="auto"></span>
+        </div>
+
+        <div class="pull-right">
+          <input class="hidden bb-dropdown-select-field js-listing-type" data-required-field="required-field" id="site_search_listing_type" name="listing_type" type="hidden">
+        </div>
+      </button>
+
+      <input class="js-search-by-type" id="search_by_type" name="search_by_type" type="hidden" value="by_location">
+      <input id="enhanced" name="enhanced" type="hidden" value="">
+      <div class="input-group-btn">
+        <input class="btn btn-default btn btn-gradient-blue js-form-require-fields search-submit js-search-submit" name="commit" type="submit" value="Search">
       </div>
     </div>
-    <div class="item">
-      <%= image_tag("/assets/floral-vase.jpg") %>
-      <div class="carousel-caption">
+    <div class="error-message hidden">
+      <div class="hint has-error">
+        <div class="help-block message"></div>
       </div>
     </div>
-    <div class="item">
-      <%= image_tag("/assets/computer-tea.jpg") %>
-      <div class="carousel-caption">
-        ...
-      </div>
-    </div>
-    <div class="item">
-      <%= image_tag("/assets/sunglasses.jpg") %>
-      <div class="carousel-caption">
-        ...
-      </div>
-    </div>
+  </form>
+  <div class="dark-bg toggle-input-container">
+    <a href="#" class="js-toggle-input">Search by Business Name Instead</a>
   </div>
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+</div>
+</div>
+
 </div>

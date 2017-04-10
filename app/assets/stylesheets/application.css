@@ -60,6 +60,10 @@ a.navbar-brand {
 }
 
 .jumbotron {
-  background-image: none;
-  background-color: #F4F6F6 !important;
+  background-image: url("pink-green-flowers.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 35em;
 }
