@@ -49,6 +49,7 @@ a.navbar-brand {
 }
 
 .btn-primary {
+  font-family: 'Caveat', cursive;
   background-color: #7aaf4b !important;
   background-image: none !important;
   border: 1px solid #7aaf4b  !important;
@@ -59,10 +60,15 @@ a.navbar-brand {
 }
 
 #index-header {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Caveat', cursive;
   font-weight: 400;
   text-align: center;
-  color: #7aaf4b;
+  font-size: 2.5em;
+  color: grey;
+}
+
+#maeven-landing {
+  color: #D6707D;
 }
 
 .jumbotron {
@@ -138,4 +144,12 @@ input#site_search_topic {
 
 .hidden  {
   display: none;
+}
+
+ul.nav.navbar-nav.navbar-left {
+  padding-top: 0.8em;
+}
+
+.footer-icon {
+  padding-left: 0.5em;
 }
