@@ -12172,6 +12172,17 @@ return jQuery;
   App.cable = ActionCable.createConsumer();
 
 }).call(this);
+$(document).ready(function() {
+	$('#myCarousel').carousel({
+	interval: 10000
+	})
+
+    $('#myCarousel').on('slid.bs.carousel', function() {
+    	//alert("slid");
+	});
+
+
+});
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
