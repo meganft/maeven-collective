@@ -94,12 +94,15 @@ a.navbar-brand {
   margin-top: 5px;
 }
 
-input#site_search_term {
+input#site_search_company {
+  height: 2.5em;
+}
+
+input#site_search_topic {
   height: 2.5em;
 }
 
 .toggle-input-container {
-
   margin-left: 1em !important;
   margin-top: 1em !important;
   font-weight: bold;
@@ -107,7 +110,11 @@ input#site_search_term {
 }
 
 .toggle-input-topic {
-  color: #5bc0de;
+  color: white;
+}
+
+.toggle-input-company {
+  color: white;
 }
 
 .get-started {
@@ -127,4 +134,8 @@ input#site_search_term {
 .carousel-control {
   padding-top:10%;
   width:5%;
+}
+
+.hidden  {
+  display: none;
 }

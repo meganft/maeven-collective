@@ -5,15 +5,16 @@
       <div class="input-group">
         <div class="pull-left">
         <div class="company-search-input-container">
-          <input id="site_search_term" name="q" placeholder="Enter a Company Name" size="50" style="float: none; position: relative; vertical-align: top;" type="text" autocomplete="off" spellcheck="false" dir="auto">
+          <input id="site_search_company" name="q" placeholder="Enter a Company Name" size="50" style="float: none; position: relative; vertical-align: top;" type="text" autocomplete="off" spellcheck="false" dir="auto">
+        </div>
+        <div class="topic-search-input-container hidden">
+          <input id="site_search_topic" name="qt" placeholder="Enter a Topic" size="50" style="float: none; position: relative; vertical-align: top;" type="text" autocomplete="off" spellcheck="false" dir="auto">
         </div>
       </div>
         <div class="pull-right">
-          <input class="hidden bb-dropdown-select-field js-listing-type" data-required-field="required-field" id="site_search_listing_type" name="listing_type" type="hidden">
-      <input class="js-search-by-type" id="search_by_type" name="search_by_type" type="hidden" value="by_location">
-      <input id="enhanced" name="enhanced" type="hidden" value="">
-        <input class="btn btn-info" name="commit" type="submit" value="Search">
-      </div>
+          <input id="enhanced" name="enhanced" type="hidden" value="">
+          <input class="btn btn-info" name="commit" type="submit" value="Search">
+        </div>
     </div>
     <div class="error-message hidden">
       <div class="hint has-error">
@@ -23,6 +24,7 @@
   </form>
     <div class="toggle-input-container">
       <a href="#" class="toggle-input-topic">Search by Topic Instead</a>
+      <a href="#" class="toggle-input-company hidden">Search by Company Instead</a>
     </div>
   </div>
 </div>
