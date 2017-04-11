@@ -173,3 +173,7 @@ nav.navbar.navbar-default.navbar-bottom {
 .blog-attend {
   padding-top: 100px;
 }
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
