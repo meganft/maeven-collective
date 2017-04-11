@@ -50,10 +50,31 @@
     <div class="col-md-2">
     </div>
   </div>
-  <hr>
 
+  <hr>
     <div class="get-started"><%= link_to "Get Started", new_user_path, class: "btn btn-primary btn-lg" %></div>
   <hr>
 
   <%= render partial: "landing/carousel" %>
+</div>
+
+<div class="container">
+  <div class="blog-attend">
+    <div class="row">
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-4">
+          <%= image_tag "sunglasses.jpg", size: "300x200" %>
+        <h4 style="padding-top:-35px;">BlOG</h4>
+        <span class="hidden">Icon made by Freepik from www.flaticon.com </span>
+      </div>
+      <div class="col-md-4">
+        <label id="laptop-pic"> <%= image_tag "computer-tea.jpg", size: "300x200"  %></label>
+          <h4 style="margin-top:">ATTEND</h4>
+        <span class="hidden">Icon made by Freepik from www.flaticon.com </span>
+      </div>
+      <div class="col-md-2">
+      </div>
+    </div>
+  </div>
 </div>
