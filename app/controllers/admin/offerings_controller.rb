@@ -54,7 +54,7 @@ class Admin::OfferingsController < ApplicationController
 
   private
     def offering_params
-      params.require(:offering).permit(:name, :date, :format, :location, :price, :organization, :avatar, :offerings_tag, tag_ids:[])
+      params.require(:offering).permit(:name, :date, :format, :location, :description, :website, :payment_options, :length, :materials, :price, :organization, :avatar, :offerings_tag, tag_ids:[])
     end
 
 end
