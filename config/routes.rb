@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get '/search/results', to: 'search#index'
 
+  get '/discover/topics', to: 'discover#index'
+
   resources :users, only: [:new, :create, :show]
   resources :organizations, only: [:index, :show]
 
