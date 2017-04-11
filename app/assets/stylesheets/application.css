@@ -49,6 +49,7 @@ a.navbar-brand {
 }
 
 .btn-primary {
+  font-family: 'Caveat', cursive;
   background-color: #7aaf4b !important;
   background-image: none !important;
   border: 1px solid #7aaf4b  !important;
@@ -59,10 +60,15 @@ a.navbar-brand {
 }
 
 #index-header {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Caveat', cursive;
   font-weight: 400;
   text-align: center;
-  color: #7aaf4b;
+  font-size: 2.5em;
+  color: grey;
+}
+
+#maeven-landing {
+  color: #D6707D;
 }
 
 .jumbotron {
@@ -94,12 +100,15 @@ a.navbar-brand {
   margin-top: 5px;
 }
 
-input#site_search_term {
+input#site_search_company {
+  height: 2.5em;
+}
+
+input#site_search_topic {
   height: 2.5em;
 }
 
 .toggle-input-container {
-
   margin-left: 1em !important;
   margin-top: 1em !important;
   font-weight: bold;
@@ -107,7 +116,11 @@ input#site_search_term {
 }
 
 .toggle-input-topic {
-  color: #5bc0de;
+  color: white;
+}
+
+.toggle-input-company {
+  color: white;
 }
 
 .get-started {
@@ -127,4 +140,35 @@ input#site_search_term {
 .carousel-control {
   padding-top:10%;
   width:5%;
+}
+
+.hidden  {
+  display: none;
+}
+
+div.nav.navbar-nav.navbar-left {
+  padding-top: 0.8em;
+}
+
+div.nav.navbar-nav.navbar-right.footer {
+  padding-top: 0.1em;
+  color: grey;
+  font-size: 2.5em;
+  font-weight: lighter;
+}
+
+nav.navbar.navbar-default.navbar-bottom {
+  margin-top: 100px;
+}
+
+.footer-icon {
+  padding-left: 0.5em;
+}
+
+#featured-courses {
+  font-family: 'Raleway', sans-serif;
+}
+
+.blog-attend {
+  padding-top: 100px;
 }

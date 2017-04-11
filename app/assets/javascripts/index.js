@@ -7,5 +7,26 @@ $(document).ready(function() {
     	//alert("slid");
 	});
 
+  $(function() {
+    $('.toggle-input-topic').click(function(e){
+      e.preventDefault();
+      $('.topic-search-input-container').toggleClass('hidden');
+      $('.company-search-input-container').toggleClass('hidden');
+      $('.toggle-input-topic').toggleClass('hidden');
+      $('.toggle-input-company').toggleClass('hidden');
+    });
+  });
+
+  $(function() {
+    $('.toggle-input-company').click(function(e){
+      e.preventDefault();
+      $('.topic-search-input-container').toggleClass('hidden');
+      $('.company-search-input-container').toggleClass('hidden');
+      $('.toggle-input-topic').toggleClass('hidden');
+      $('.toggle-input-company').toggleClass('hidden');
+    });
+  });
+
+
 
 });

@@ -5,15 +5,16 @@
       <div class="input-group">
         <div class="pull-left">
         <div class="company-search-input-container">
-          <input id="site_search_term" name="q" placeholder="Enter a Company Name" size="50" style="float: none; position: relative; vertical-align: top;" type="text" autocomplete="off" spellcheck="false" dir="auto">
+          <input id="site_search_company" name="q" placeholder="Enter a Company Name" size="50" style="float: none; position: relative; vertical-align: top;" type="text" autocomplete="off" spellcheck="false" dir="auto">
+        </div>
+        <div class="topic-search-input-container hidden">
+          <input id="site_search_topic" name="qt" placeholder="Enter a Topic" size="50" style="float: none; position: relative; vertical-align: top;" type="text" autocomplete="off" spellcheck="false" dir="auto">
         </div>
       </div>
         <div class="pull-right">
-          <input class="hidden bb-dropdown-select-field js-listing-type" data-required-field="required-field" id="site_search_listing_type" name="listing_type" type="hidden">
-      <input class="js-search-by-type" id="search_by_type" name="search_by_type" type="hidden" value="by_location">
-      <input id="enhanced" name="enhanced" type="hidden" value="">
-        <input class="btn btn-info" name="commit" type="submit" value="Search">
-      </div>
+          <input id="enhanced" name="enhanced" type="hidden" value="">
+          <input class="btn btn-info" name="commit" type="submit" value="Search">
+        </div>
     </div>
     <div class="error-message hidden">
       <div class="hint has-error">
@@ -23,13 +24,14 @@
   </form>
     <div class="toggle-input-container">
       <a href="#" class="toggle-input-topic">Search by Topic Instead</a>
+      <a href="#" class="toggle-input-company hidden">Search by Company Instead</a>
     </div>
   </div>
 </div>
 
 <div class="container">
   <div class="panel panel-info" style:"margin-top:-10px;">
-    <h4 id="index-header">The Maeven Collective a comprehensive online catalogue of the best resources, tools and networks for the female creative entrepreneur.</h4>
+    <h4 id="index-header"><label id="maeven-landing">The Maeven Collective</label> a comprehensive online catalogue of the best resources, tools and networks for the female creative entrepreneur.</h4>
   </div>
 
   <div class="row">
@@ -37,22 +39,42 @@
     </div>
     <div class="col-md-4">
         <%= image_tag "computer-location.png", size: "200x200" %>
-      <h5 style="padding-top:-35px;">How does it work?</h5>
+      <h4 style="padding-top:-35px;">How does it work?</h4>
       <span class="hidden">Icon made by Freepik from www.flaticon.com </span>
     </div>
     <div class="col-md-4">
       <label id="laptop-pic"> <%= image_tag "computer-lock.png", size: "200x200"  %></label>
-        <h5 style="margin-top:">About the maeven collective</h5>
+        <h4 style="margin-top:">About The Maeven Collective</h4>
       <span class="hidden">Icon made by Freepik from www.flaticon.com </span>
     </div>
     <div class="col-md-2">
     </div>
   </div>
+
   <hr>
-  <div class="well">
-    <div class="get-started"><%= link_to "Get Started", new_user_path, class: "btn btn-primary" %></div>
-  </div>
+    <div class="get-started"><%= link_to "Get Started", new_user_path, class: "btn btn-primary btn-lg" %></div>
   <hr>
 
   <%= render partial: "landing/carousel" %>
+</div>
+
+<div class="container">
+  <div class="blog-attend">
+    <div class="row">
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-4">
+          <%= image_tag "sunglasses.jpg", size: "300x200" %>
+        <h4 style="padding-top:-35px;">BlOG</h4>
+        <span class="hidden">Icon made by Freepik from www.flaticon.com </span>
+      </div>
+      <div class="col-md-4">
+        <label id="laptop-pic"> <%= image_tag "computer-tea.jpg", size: "300x200"  %></label>
+          <h4 style="margin-top:">ATTEND</h4>
+        <span class="hidden">Icon made by Freepik from www.flaticon.com </span>
+      </div>
+      <div class="col-md-2">
+      </div>
+    </div>
+  </div>
 </div>
