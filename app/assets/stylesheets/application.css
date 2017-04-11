@@ -146,10 +146,25 @@ input#site_search_topic {
   display: none;
 }
 
-ul.nav.navbar-nav.navbar-left {
+div.nav.navbar-nav.navbar-left {
   padding-top: 0.8em;
+}
+
+div.nav.navbar-nav.navbar-right.footer {
+  padding-top: 0.1em;
+  color: grey;
+  font-size: 2.5em;
+  font-weight: lighter;
+}
+
+nav.navbar.navbar-default.navbar-bottom {
+  margin-top: 100px;
 }
 
 .footer-icon {
   padding-left: 0.5em;
+}
+
+#featured-courses {
+  font-family: 'Raleway', sans-serif;
 }
