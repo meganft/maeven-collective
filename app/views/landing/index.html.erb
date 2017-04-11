@@ -1,48 +1,58 @@
 <div class="jumbotron">
-  <h4 id="index-header">The female entrepreneur's comprehensive catalogue of the best business education, resources, tools and networks.</h4>
-</div>
+  <div class="search-form-landing">
 
-<div class="panel panel-default">
-
-</div>
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-  </ol>
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <%= image_tag("pink-juice.jpg") %>
-      <div class="carousel-caption">
-        <h1>the maeven collective</h1>
+    <form accept-charset="UTF-8" action="/search/results" id="new_site_search" method="get" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+      <div class="input-group">
+        <div class="pull-left">
+        <div class="company-search-input-container">
+          <input id="site_search_term" name="q" placeholder="Enter a Company Name" size="50" style="float: none; position: relative; vertical-align: top;" type="text" autocomplete="off" spellcheck="false" dir="auto">
+        </div>
+      </div>
+        <div class="pull-right">
+          <input class="hidden bb-dropdown-select-field js-listing-type" data-required-field="required-field" id="site_search_listing_type" name="listing_type" type="hidden">
+      <input class="js-search-by-type" id="search_by_type" name="search_by_type" type="hidden" value="by_location">
+      <input id="enhanced" name="enhanced" type="hidden" value="">
+        <input class="btn btn-info" name="commit" type="submit" value="Search">
       </div>
     </div>
-    <div class="item">
-      <%= image_tag("/assets/floral-vase.jpg") %>
-      <div class="carousel-caption">
+    <div class="error-message hidden">
+      <div class="hint has-error">
+        <div class="help-block message"></div>
       </div>
     </div>
-    <div class="item">
-      <%= image_tag("/assets/computer-tea.jpg") %>
-      <div class="carousel-caption">
-        ...
-      </div>
-    </div>
-    <div class="item">
-      <%= image_tag("/assets/sunglasses.jpg") %>
-      <div class="carousel-caption">
-        ...
-      </div>
+  </form>
+    <div class="toggle-input-container">
+      <a href="#" class="toggle-input-topic">Search by Topic Instead</a>
     </div>
   </div>
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+</div>
+
+<div class="container">
+  <div class="panel panel-info" style:"margin-top:-10px;">
+    <h4 id="index-header">The Maeven Collective a comprehensive online catalogue of the best resources, tools and networks for the female creative entrepreneur.</h4>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-4">
+        <%= image_tag "computer-location.png", size: "200x200" %>
+      <h5 style="padding-top:-35px;">How does it work?</h5>
+      <span class="hidden">Icon made by Freepik from www.flaticon.com </span>
+    </div>
+    <div class="col-md-4">
+      <label id="laptop-pic"> <%= image_tag "computer-lock.png", size: "200x200"  %></label>
+        <h5 style="margin-top:">About the maeven collective</h5>
+      <span class="hidden">Icon made by Freepik from www.flaticon.com </span>
+    </div>
+    <div class="col-md-2">
+    </div>
+  </div>
+  <hr>
+  <div class="well">
+    <div class="get-started"><%= link_to "Get Started", new_user_path, class: "btn btn-primary" %></div>
+  </div>
+  <hr>
+
+  <%= render partial: "landing/carousel" %>
 </div>

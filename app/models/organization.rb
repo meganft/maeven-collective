@@ -5,6 +5,8 @@ class Organization < ApplicationRecord
 
   scope :by_letter, ->(initial) {where("LOWER(name) LIKE \'#{initial.downcase}%\'").order(:name) }
 
+  scope :by_search, ->(term) {where("LOWER(name) LIKE \'#{term.downcase}%\'").order(:name) }
+
   validates :name, presence: true
 
   has_attached_file :avatar, styles: {

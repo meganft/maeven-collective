@@ -6,8 +6,9 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
 
-  resources :users, only: [:new, :create, :show]
+  get '/search/results', to: 'search#index'
 
+  resources :users, only: [:new, :create, :show]
   resources :organizations, only: [:index, :show]
 
   namespace :organizations, only: [:show] do
