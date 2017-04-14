@@ -3,6 +3,10 @@ require 'rails_helper'
 describe "A user visits login page" do
   it "and they can login to their account" do
     user = User.create(first_name: "Bob", last_name: "Smith", email: "bob@example.com", password: "password", password_confirmation: "password")
+    organization = Organization.create(name: "Megan")
+    featured = Offering.create(name: "Offering")
+    organization.offerings << featured
+    
     visit login_path
 
     fill_in "email", with: user.email

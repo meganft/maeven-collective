@@ -3,6 +3,7 @@ require 'rails_helper'
 describe "As a logged in admin" do
   scenario "I can add a new organization" do
     user = User.create(first_name: "Bob", last_name: "Smith", email: "bob@example.com", password: "password", password_confirmation: "password", role: "admin")
+    category = Category.create(name: "Instagram")
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
@@ -13,8 +14,7 @@ describe "As a logged in admin" do
     fill_in "organization[twitter]", with: "@example"
     fill_in "organization[instagram]", with: "@exampleinstagram"
     fill_in "organization[facebook]", with: "organization"
-    fill_in "organization[facebook]", with: "organization"
-
+    find(:css, ".category-selection").set(true)
     click_on "Create Organization"
 
     expect(page).to have_content("Created new organization Example")

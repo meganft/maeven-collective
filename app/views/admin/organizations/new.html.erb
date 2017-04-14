@@ -41,7 +41,7 @@
                 <div class="panel-heading">Choose categories for this organization:</div>
                   <p class="form-group second">
                     <div class="panel-body"><%= u.collection_radio_buttons :category_id, @categories, :id, :name do |u| %>
-                    <p><%= u.radio_button %> <%= u.label %></p>
+                    <p class="category-selection"><%= u.radio_button %> <%= u.label %></p>
                   </div>
                   <% end %>
                 </div>

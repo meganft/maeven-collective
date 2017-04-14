@@ -6,6 +6,7 @@ class Admin::OrganizationsController < ApplicationController
   end
 
   def create
+
     @organization = Organization.new(organization_params)
     categories = params[:organization][:organizations_category]
     if !categories == ""

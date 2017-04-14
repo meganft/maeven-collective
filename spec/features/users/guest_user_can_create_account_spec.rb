@@ -2,6 +2,9 @@ require 'rails_helper'
 
 describe "A user visits signup page" do
   it "and they can create an account with all information" do
+    organization = Organization.create(name: "Megan")
+    featured = Offering.create(name: "Offering")
+    organization.offerings << featured
     visit new_user_path
 
     fill_in "user[first_name]", with: "first_name"
