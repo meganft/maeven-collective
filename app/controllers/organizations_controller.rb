@@ -6,6 +6,7 @@ class OrganizationsController < ApplicationController
 
   def index
     @organizations = Organization.all
+    @featured = Organization.last
   end
 
 end
