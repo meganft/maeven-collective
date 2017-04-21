@@ -40,8 +40,8 @@
                 <%= f.fields_for @organizations_categories do |u| %>
                 <div class="panel-heading">Choose categories for this organization:</div>
                   <p class="form-group second">
-                    <div class="panel-body"><%= u.collection_radio_buttons :category_id, @categories, :id, :name do |u| %>
-                    <p class="category-selection"><%= u.radio_button %> <%= u.label %></p>
+                    <div class="panel-body"><%= u.collection_check_boxes :category_id, @categories, :id, :name, {multiple: true} do |u| %>
+                    <p class="category-selection"><%= u.check_box %> <%= u.label %></p>
                   </div>
                   <% end %>
                 </div>

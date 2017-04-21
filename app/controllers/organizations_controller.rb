@@ -5,8 +5,13 @@ class OrganizationsController < ApplicationController
   end
 
   def index
-    @organizations = Organization.all
+    if params[:category]
+      @organizations = Organization.filter(params[:category][:category_id])
+    else
+      @organizations = Organization.all
+    end
     @featured = Organization.last
+
   end
 
 end

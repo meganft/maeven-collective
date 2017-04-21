@@ -23,4 +23,13 @@ class Organization < ApplicationRecord
     where("name LIKE ?", "%#{search.downcase}%")
   end
 
+  def self.filter(filter)
+    companies = []
+    result = OrganizationsCategory.where(category_id: 1)
+    result.each do |r|
+      companies << Organization.find(r.organization_id)
+    end
+    companies
+  end
+
 end

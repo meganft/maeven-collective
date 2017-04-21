@@ -1,14 +1,26 @@
 <div class="container">
 
-  <h3 style="text-align:center; padding-bottom: 20px;">Featured Company</h3>
-  <h3><%= @featured.name %></h3>
-  <%= image_tag @featured.avatar.url(:medium) %>
+  <div class="well">
+    <div class="featured-company">
+      <h3 style="text-align:center; padding-bottom: 20px;">FEATURED COMPANY</h3>
+      <h3><%= @featured.name %></h3>
+      <p><%= image_tag @featured.avatar.url(:medium) %></p>
+    </div>
+  </div>
+
+  <%= form_tag organizations_path, method: "get" do %>
+    <%= select("category", "category_id", Category.all.collect {|p| [ p.name, p.id ] }, {prompt: 'Select Category'}) %>
+    <%= submit_tag "Filter" %>
+  <% end %>
+
+  <button><%= link_to "Show all Organizations", organizations_path %></button>
 
   <div class="row">
     <% @organizations.each do |organization| %>
     <div class="col-md-4">
     <h4 style="font-weight:200; padding-bottom:10px;"><%= link_to organization.name.capitalize, organization_path(organization) %></h4>
     <%= image_tag organization.avatar.url(:square) %>
+    <%= organization.description %>
     </div>
     <% end %>
   </div>

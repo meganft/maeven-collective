@@ -176,3 +176,8 @@ nav.navbar.navbar-default.navbar-bottom {
 .dropdown:hover .dropdown-menu {
   display: block;
 }
+
+.featured-company {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}

@@ -6,11 +6,11 @@ class Admin::OrganizationsController < ApplicationController
   end
 
   def create
-
     @organization = Organization.new(organization_params)
-    categories = params[:organization][:organizations_category]
-    if !categories == ""
-      categories.values.each do |id|
+    categories = params[:organization][:organizations_category][:category_id]
+    categories = categories.reject {|t| t.empty? }
+    if !categories.empty?
+      categories.each do |id|
         @organization.categories << Category.find(id)
       end
     end
@@ -44,7 +44,7 @@ class Admin::OrganizationsController < ApplicationController
 
   private
     def organization_params
-      params.require(:organization).permit(:name, :website, :twitter, :instagram, :facebook, :description, :avatar,  :organizations_category, category_ids:[])
+      params.require(:organization).permit(:name, :website, :twitter, :instagram, :facebook, :description, :history, :avatar, :categories, category_ids: [:id, :name])
     end
 
 end
