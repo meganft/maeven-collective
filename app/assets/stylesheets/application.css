@@ -185,3 +185,7 @@ nav.navbar.navbar-default.navbar-bottom {
 .search-results-right {
   border-left: 1px solid grey;
 }
+
+.search-results-left {
+  font-family: Raleway;
+}

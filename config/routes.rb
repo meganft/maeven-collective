@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create, :show]
   resources :organizations, only: [:index, :show]
+  resources :categories, only: [:index, :show]
 
   namespace :organizations, only: [:show] do
     resources :offerings, only: [:show]
