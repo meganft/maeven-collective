@@ -15,6 +15,18 @@
 
   <button><%= link_to "Show all Organizations", organizations_path %></button>
 
+
+  <div class="search-form-company-index">
+    <form accept-charset="UTF-8" action="/companies/search/results" id="company_search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+      <div class="input-group">
+        <div class="company-search-input">
+          <input id="index_search_company" name="q" placeholder="Search Companies Here" size="50" style="float: none; position: relative; vertical-align: top;">
+        </div>
+        <input class="btn btn-info" name="commit" type="submit" value="Search">
+      </div>
+    </form>
+  </div>
+
   <div class="row">
     <% @organizations.each do |organization| %>
     <div class="col-md-4">

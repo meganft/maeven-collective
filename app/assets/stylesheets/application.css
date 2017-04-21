@@ -181,3 +181,7 @@ nav.navbar.navbar-default.navbar-bottom {
   text-align: center;
   font-family: 'Raleway', sans-serif;
 }
+
+.search-results-right {
+  border-left: 1px solid grey;
+}
