@@ -38,6 +38,13 @@ class Admin::OrganizationsController < ApplicationController
     @organization = Organization.find(params[:id])
     @organizations_categories = @organization.organizations_categories
     @organization.update(organization_params)
+    categories = params[:organization][:organizations_category][:category_id]
+    categories = categories.reject {|t| t.empty? }
+    if !categories.empty?
+      categories.each do |id|
+        @organization.categories << Category.find(id)
+      end
+    end
     flash[:success] = "Successfully updated #{@organization.name}"
     redirect_to admin_dashboard_path
   end

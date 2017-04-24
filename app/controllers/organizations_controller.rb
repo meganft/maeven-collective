@@ -8,8 +8,9 @@ class OrganizationsController < ApplicationController
     @categories = Category.all
     if params[:category]
       @organizations = Organization.filter(params[:category][:category_id])
+      @organizations = @organizations.paginate(:page => params[:page], :per_page => 15)
     else
-      @organizations = Organization.paginate(:page => params[:page], :per_page => 12)
+      @organizations = Organization.paginate(:page => params[:page], :per_page => 15)
     end
     @featured = Organization.last
   end

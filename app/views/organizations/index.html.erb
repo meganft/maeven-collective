@@ -38,12 +38,12 @@
     <div class="col-md-4">
     <h4 style="font-weight:200; padding-bottom:10px;"><%= link_to organization.name.capitalize, organization_path(organization) %></h4>
     <%= image_tag organization.avatar.url(:square) %>
-    <%= organization.description %>
+    <p><%= organization.description %></p>
     </div>
     <% end %>
 
   </div>
-  <div class="pagination">
+  <div class="pagination-orgs">
     <%= will_paginate @organizations %>
   </div>
 </div>

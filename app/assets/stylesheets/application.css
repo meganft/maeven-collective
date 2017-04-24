@@ -194,19 +194,19 @@ nav.navbar.navbar-default.navbar-bottom {
   margin-left: 5em;
 }
 
-.pagination {
+.pagination-orgs {
   padding-top: 1em;
-  padding-left: 30em !important;
+  padding-left: 60em !important;
 }
 
-.pagination a {
+.pagination-orgs a {
   text-decoration: none;
   color: #105cb6;
   border: 1px solid #9aafe5;
   padding: 0.2em 0.5em;
 }
 
-.pagination .current {
+.pagination-orgs .current {
   padding: 0.2em 0.5em;
   font-style: normal;
   font-weight: bold;
@@ -215,7 +215,7 @@ nav.navbar.navbar-default.navbar-bottom {
   border: 1px solid #2e6ab1;
 }
 
-.pagination .disabled {
+.pagination-orgs .disabled {
   padding: 0.2em 0.5em;
   color: #999999;
   border: 1px solid #dddddd;
@@ -232,4 +232,8 @@ button#show-all-orgs.btn.btn-success a {
 select#category_category_id {
   height: 2.2em;
   width: 25em;
+}
+
+.label a {
+  color: white
 }

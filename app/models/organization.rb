@@ -24,8 +24,10 @@ class Organization < ApplicationRecord
   end
 
   def self.filter(filter)
+
+    # OrganizationsCategory.joins(:organization).where(category: filter)
     companies = []
-    result = OrganizationsCategory.where(category_id: 1)
+    result = OrganizationsCategory.where(category_id: filter)
     result.each do |r|
       companies << Organization.find(r.organization_id)
     end
