@@ -187,5 +187,49 @@ nav.navbar.navbar-default.navbar-bottom {
 }
 
 .search-results-left {
-  font-family: Raleway;
+  font-family: 'Raleway', sans-serif;
+}
+
+.search-form-company-index {
+  margin-left: 5em;
+}
+
+.pagination {
+  padding-top: 1em;
+  padding-left: 30em !important;
+}
+
+.pagination a {
+  text-decoration: none;
+  color: #105cb6;
+  border: 1px solid #9aafe5;
+  padding: 0.2em 0.5em;
+}
+
+.pagination .current {
+  padding: 0.2em 0.5em;
+  font-style: normal;
+  font-weight: bold;
+  background: #2e6ab1;
+  color: white;
+  border: 1px solid #2e6ab1;
+}
+
+.pagination .disabled {
+  padding: 0.2em 0.5em;
+  color: #999999;
+  border: 1px solid #dddddd;
+}
+
+input#index-search-company {
+  width: 1em !important;
+}
+
+button#show-all-orgs.btn.btn-success a {
+  color: white ;
+}
+
+select#category_category_id {
+  height: 2.2em;
+  width: 25em;
 }

@@ -8,24 +8,30 @@
     </div>
   </div>
 
-  <%= form_tag organizations_path, method: "get" do %>
-    <%= select("category", "category_id", Category.all.collect {|p| [ p.name, p.id ] }, {prompt: 'Select Category'}) %>
-    <%= submit_tag "Filter" %>
-  <% end %>
+  <div class="row">
+    <div class="col-md-6">
+      <%= form_tag organizations_path, method: "get" do %>
+        <%= select("category", "category_id", @categories.collect {|p| [ p.name, p.id ] }, {prompt: 'Filter By Category'}) %>
+        <%= submit_tag "Filter", class: "btn btn-success" %>
+        <button id="show-all-orgs" class="btn btn-success"><%= link_to "Show All", organizations_path %></button>
+      <% end %>
+    </div>
 
-  <button><%= link_to "Show all Organizations", organizations_path %></button>
-
-
-  <div class="search-form-company-index">
-    <form accept-charset="UTF-8" action="/companies/search/results" id="company_search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
-      <div class="input-group">
-        <div class="company-search-input">
-          <input id="index_search_company" name="q" placeholder="Search Companies Here" size="50" style="float: none; position: relative; vertical-align: top;">
-        </div>
-        <input class="btn btn-info" name="commit" type="submit" value="Search">
+    <div class="col-md-6">
+      <div class="search-form-company-index">
+        <form accept-charset="UTF-8" action="/companies/search/results" id="company_search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+          <div class="input-group">
+            <div class="company-search-input">
+              <input id="index_search_company" name="q" placeholder="Search Companies" size="50" style="float: none; position: relative; vertical-align: top; height:36px;">
+              <input class="btn btn-info" name="commit" type="submit" value="Search">
+            </div>
+          </div>
+        </form>
       </div>
-    </form>
+    </div>
+
   </div>
+  <hr>
 
   <div class="row">
     <% @organizations.each do |organization| %>
@@ -35,5 +41,9 @@
     <%= organization.description %>
     </div>
     <% end %>
+
+  </div>
+  <div class="pagination">
+    <%= will_paginate @organizations %>
   </div>
 </div>
