@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   get '/search/results', to: 'search#index'
 
-  get '/discover/topics', to: 'discover#index'
+  get '/topics', to: 'tags#index'
 
   resources :users, only: [:new, :create, :show]
   resources :organizations, only: [:index, :show]
