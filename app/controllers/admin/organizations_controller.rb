@@ -38,7 +38,7 @@ class Admin::OrganizationsController < ApplicationController
     @organization = Organization.find(params[:id])
     @organizations_categories = @organization.organizations_categories
     @organization.update(organization_params)
-    categories = params[:organization][:organizations_category][:category_id]
+    categories = params[:organization][:organizations_categories][:category_id]
     categories = categories.reject {|t| t.empty? }
     if !categories.empty?
       categories.each do |id|
