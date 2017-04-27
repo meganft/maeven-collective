@@ -245,3 +245,9 @@ select#category_category_id {
   display: flex;
   flex-wrap: wrap;
 }
+
+.col-md-4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
