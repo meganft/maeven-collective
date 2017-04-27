@@ -29,7 +29,7 @@ class Admin::OrganizationsController < ApplicationController
 
   def edit
     @organization = Organization.find(params[:id])
-    @organizations_categories = @organization.organizations_categories.new
+    @organizations_categories = @organization.organizations_categories
     @categories = Category.all
   end
 
