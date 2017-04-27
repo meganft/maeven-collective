@@ -22,9 +22,9 @@ describe "As a logged in admin" do
     expect(Organization.last.name).to eq("Example")
   end
 
-  scenario "I can add a new organization without a name" do
+  xit "I cannot add a new organization without a name" do
     user = User.create(first_name: "Bob", last_name: "Smith", email: "bob@example.com", password: "password", password_confirmation: "password", role: "admin")
-    organization_1 = Organization.create(name: "Sample Org 1", website: "www.sample1.com", twitter: "@example1", instagram: "@exampleinstagram1", facebook: "@facebook1")
+    category = Category.create(name: "Instagram")
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
@@ -35,6 +35,7 @@ describe "As a logged in admin" do
     fill_in "organization[instagram]", with: "@exampleinstagram"
     fill_in "organization[facebook]", with: "organization"
     fill_in "organization[facebook]", with: "organization"
+    find(:css, ".category-selection").set(true)
 
     click_on "Create Organization"
 

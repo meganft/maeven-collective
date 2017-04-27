@@ -6,11 +6,11 @@ class Admin::OrganizationsController < ApplicationController
   end
 
   def create
-
     @organization = Organization.new(organization_params)
-    categories = params[:organization][:organizations_category]
-    if !categories == ""
-      categories.values.each do |id|
+    categories = params[:organization][:organizations_category][:category_id]
+    categories = categories.reject {|t| t.empty? }
+    if !categories.empty?
+      categories.each do |id|
         @organization.categories << Category.find(id)
       end
     end
@@ -38,13 +38,20 @@ class Admin::OrganizationsController < ApplicationController
     @organization = Organization.find(params[:id])
     @organizations_categories = @organization.organizations_categories
     @organization.update(organization_params)
+    categories = params[:organization][:organizations_category][:category_id]
+    categories = categories.reject {|t| t.empty? }
+    if !categories.empty?
+      categories.each do |id|
+        @organization.categories << Category.find(id)
+      end
+    end
     flash[:success] = "Successfully updated #{@organization.name}"
     redirect_to admin_dashboard_path
   end
 
   private
     def organization_params
-      params.require(:organization).permit(:name, :website, :twitter, :instagram, :facebook, :description, :avatar,  :organizations_category, category_ids:[])
+      params.require(:organization).permit(:name, :website, :twitter, :instagram, :facebook, :description, :history, :avatar, :categories, category_ids: [:id, :name])
     end
 
 end

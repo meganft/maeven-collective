@@ -20,6 +20,8 @@ gem 'paperclip'
 gem 'aws-sdk', '~> 2.3'
 gem 'figaro'
 gem 'alphabetical_paginate'
+gem 'will_paginate', '~> 3.1.0'
+
 
 
 group :development, :test do

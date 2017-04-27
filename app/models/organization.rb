@@ -9,15 +9,29 @@ class Organization < ApplicationRecord
 
   validates :name, presence: true
 
-  has_attached_file :avatar, styles: {
-    thumb: '100x100>',
-    square: '200x200#',
-    medium: '300x300>'
-  }
+  has_attached_file :avatar,
+    styles: {
+      thumb: '100x100>',
+      square: '200x200#',
+      medium: '300x300>'
+    },
+    :default_url => '/assets/icon-missing.png'
+
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
   def self.search(search)
     where("name LIKE ?", "%#{search.downcase}%")
+  end
+
+  def self.filter(filter)
+
+    # OrganizationsCategory.joins(:organization).where(category: filter)
+    companies = []
+    result = OrganizationsCategory.where(category_id: filter)
+    result.each do |r|
+      companies << Organization.find(r.organization_id)
+    end
+    companies
   end
 
 end

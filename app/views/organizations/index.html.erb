@@ -1,13 +1,49 @@
 <div class="container">
-  <table class="table table-striped">
-  <thead>
-  <h3 style="text-align:center; padding-bottom: 20px;">Organizations Index</h3>
-</thead>
-  <% @organizations.each do |organization| %>
-  <tr>
-  <th><h4 style="font-weight:200; padding-bottom:10px;"><%= link_to organization.name.capitalize, organization_path(organization) %></h4></th>
-  <th><h4 style="font-weight:200; padding-bottom:10px;"><%= organization.website %></h4></th>
-  <% end %>
-</tr>
-</table>
+
+  <div class="well">
+    <div class="featured-company">
+      <h3 style="text-align:center; padding-bottom: 20px;">FEATURED COMPANY</h3>
+      <h3><%= @featured.name %></h3>
+      <p><%= image_tag @featured.avatar.url(:medium) %></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <%= form_tag organizations_path, method: "get" do %>
+        <%= select("category", "category_id", @categories.collect {|p| [ p.name, p.id ] }, {prompt: 'Filter By Category'}) %>
+        <%= submit_tag "Filter", class: "btn btn-success" %>
+        <button id="show-all-orgs" class="btn btn-success"><%= link_to "Show All", organizations_path %></button>
+      <% end %>
+    </div>
+
+    <div class="col-md-6">
+      <div class="search-form-company-index">
+        <form accept-charset="UTF-8" action="/companies/search/results" id="company_search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+          <div class="input-group">
+            <div class="company-search-input">
+              <input id="index_search_company" name="q" placeholder="Search Companies" size="50" style="float: none; position: relative; vertical-align: top; height:36px;">
+              <input class="btn btn-info" name="commit" type="submit" value="Search">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+  <hr>
+
+  <div class="row">
+    <% @organizations.each do |organization| %>
+    <div class="col-md-4">
+    <h4 style="font-weight:200; padding-bottom:10px;"><%= link_to organization.name.capitalize, organization_path(organization) %></h4>
+    <%= image_tag organization.avatar.url(:square) %>
+    <p><%= organization.description %></p>
+    </div>
+    <% end %>
+  </div>
+
+  <div class="pagination-orgs">
+    <%= will_paginate @organizations %>
+  </div>
 </div>
