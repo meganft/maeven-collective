@@ -237,10 +237,3 @@ select#category_category_id {
 .label a {
   color: white
 }
-
-.row-eq-height{
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
