@@ -38,7 +38,7 @@
     <div class="col-md-4">
     <h4 style="font-weight:200; padding-bottom:10px;"><%= link_to organization.name.capitalize, organization_path(organization) %></h4>
     <%= image_tag organization.avatar.url(:square) %>
-    <p><%= organization.description %></p>
+    <p><%= organization.website %></p>
     </div>
     <% end %>
   </div>
