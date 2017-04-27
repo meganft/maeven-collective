@@ -54,15 +54,15 @@
                   <p class="form-group second">
                     <div class="panel-body"><%= u.collection_check_boxes :category_id, @categories, :id, :name, {multiple: true} do |u| %>
                     <p><%= u.check_box %> <%= u.label %></p>
-                  </div>
                   <% end %>
+                </div>
                 </div>
                 <% end %>
                 <button type="submit" class="btn btn-info" id="submitnewbutton" >Update Organization</button></p>
               <% end %>
               </div>
-              <p><%= link_to " << Back to Your Dashboard", admin_dashboard_path, class: "btn btn-success btn-sm"%></p>
             </div>
+            <p><%= link_to " << Back to Your Dashboard", admin_dashboard_path, class: "btn btn-success btn-sm"%></p>
           </div>
           <div class="col-sm-3">
           </div>
