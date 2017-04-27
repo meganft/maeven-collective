@@ -33,7 +33,7 @@
   </div>
   <hr>
 
-  <div class="row equal">
+  <div class="row row-eq-height">
     <% @organizations.each do |organization| %>
     <div class="col-md-4">
     <h4 style="font-weight:200; padding-bottom:10px;"><%= link_to organization.name.capitalize, organization_path(organization) %></h4>
