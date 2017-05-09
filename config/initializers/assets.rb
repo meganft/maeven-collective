@@ -11,3 +11,7 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 
 Rails.application.config.assets.precompile += %w( alphabetical_paginate.js )
+Rails.application.config.assets.precompile += %w( autocomplete-rails.js )
+Rails.application.config.assets.precompile += %w( jquery.js )
+Rails.application.config.assets.precompile += %w( jquery-ui.js )
+Rails.application.config.assets.precompile += %w( jquery-ui.css )

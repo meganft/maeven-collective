@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root 'landing#index'
+  get 'landing/autocomplete_organization_name'
 
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'

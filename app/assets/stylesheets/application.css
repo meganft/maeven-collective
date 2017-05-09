@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require jquery-ui
  */
 
 a.navbar-brand {
@@ -250,4 +251,8 @@ select#category_category_id {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+div.tt-menu.tt-open {
+  background-color: white !important:
 }

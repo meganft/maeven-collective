@@ -24,8 +24,6 @@ class Organization < ApplicationRecord
   end
 
   def self.filter(filter)
-
-    # OrganizationsCategory.joins(:organization).where(category: filter)
     companies = []
     result = OrganizationsCategory.where(category_id: filter)
     result.each do |r|

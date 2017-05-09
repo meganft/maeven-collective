@@ -13,7 +13,7 @@
       <%= form_tag organizations_path, method: "get" do %>
         <%= select("category", "category_id", @categories.collect {|p| [ p.name, p.id ] }, {prompt: 'Filter By Category'}) %>
         <%= submit_tag "Filter", class: "btn btn-success" %>
-        <button id="show-all-orgs" class="btn btn-success"><%= link_to "Show All", organizations_path %></button>
+        <button id="show-all-orgs" class="btn btn-success"><%= link_to "All", organizations_path %></button>
       <% end %>
     </div>
 

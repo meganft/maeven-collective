@@ -21,7 +21,10 @@ gem 'aws-sdk', '~> 2.3'
 gem 'figaro'
 gem 'alphabetical_paginate'
 gem 'will_paginate', '~> 3.1.0'
-
+gem 'rails3-jquery-autocomplete'
+gem 'nifty-generators'
+gem 'jquery-ui-rails'
+gem 'twitter-typeahead-rails'
 
 
 group :development, :test do

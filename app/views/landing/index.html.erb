@@ -4,10 +4,16 @@
       <div class="input-group">
         <div class="pull-left">
         <div class="company-search-input-container">
-          <input id="site_search_company" name="q" placeholder="Enter a Company Name" size="50" style="float: none; position: relative; vertical-align: top;" type="text" autocomplete="off" spellcheck="false" dir="auto">
+          <%= content_tag :div, id: "site_search_company", data: {source: @organizations.to_json} do %>
+            <input class="typeahead" type="text" placeholder="Enter a Company Name", name="q" size="50" style="float: none; position: relative; vertical-align: top; height:36px">
+          <% end %>
         </div>
+
         <div class="topic-search-input-container hidden">
-          <input id="site_search_topic" name="qt" placeholder="Enter a Topic" size="50" style="float: none; position: relative; vertical-align: top;" type="text" autocomplete="off" spellcheck="false" dir="auto">
+          <%= content_tag :div, id: "site_search_company", data: {source: @organizations.to_json} do %>
+            <input class="typeahead" type="text" placeholder="Enter a Topic", name="qt", size="50" style="float: none; position: relative; vertical-align: top; height:36px">
+          <% end %>
+
         </div>
       </div>
         <div class="pull-right">
@@ -15,11 +21,7 @@
           <input class="btn btn-info" name="commit" type="submit" value="Search">
         </div>
     </div>
-    <div class="error-message hidden">
-      <div class="hint has-error">
-        <div class="help-block message"></div>
-      </div>
-    </div>
+
   </form>
     <div class="toggle-input-container">
       <a href="#" class="toggle-input-topic">Search by Topic Instead</a>
