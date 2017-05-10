@@ -253,6 +253,8 @@ select#category_category_id {
   text-overflow: ellipsis;
 }
 
-div.tt-menu.tt-open {
-  background-color: white !important:
+div.tt-menu {
+  background-color: white;
+  width: 100%;
+  opacity: 50%;
 }
