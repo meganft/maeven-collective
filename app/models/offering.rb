@@ -9,5 +9,10 @@ class Offering < ApplicationRecord
     medium: '300x300>'
   }
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
-  
+
+  def self.search(term)
+    tag = Tag.find_by(name: term)
+    includes(:tags).where('tags.id' => tag)
+  end
+
 end

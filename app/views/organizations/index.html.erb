@@ -18,13 +18,10 @@
 
     <div class="col-md-6">
       <div class="search-form-company-index">
-        <form accept-charset="UTF-8" action="/companies/search/results" id="company_search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
-          <div class="input-group">
-            <div class="company-search-input">
-              <input id="index_search_company" name="q" placeholder="Search Companies" size="50" style="float: none; position: relative; vertical-align: top; height:36px;">
-              <input class="btn btn-info" name="commit" type="submit" value="Search">
-            </div>
-          </div>
+        <%= form_tag organizations_path, :method => :get do %>
+          <%= text_field_tag :search, params[:search], id: "index_search_company", size: "50", style: "float: none; position: relative; vertical-align: top; height:36px;", placeholder: "Search Companies" %>
+          <%= submit_tag "Search", :class => 'btn btn-info' %>
+        <% end %>
         </form>
       </div>
     </div>

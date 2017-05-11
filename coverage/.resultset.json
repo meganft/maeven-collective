@@ -136,8 +136,6 @@
         null,
         null,
         1,
-        null,
-        null,
         0,
         0,
         0,
@@ -219,7 +217,9 @@
       ],
       "/Users/megantalbot/maeven/maeven-collective/app/controllers/landing_controller.rb": [
         1,
+        null,
         1,
+        5,
         5,
         null,
         null
@@ -250,6 +250,6 @@
         null
       ]
     },
-    "timestamp": 1493837727
+    "timestamp": 1494510211
   }
 }
