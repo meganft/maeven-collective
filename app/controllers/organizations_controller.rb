@@ -24,7 +24,7 @@ class OrganizationsController < ApplicationController
   private
 
     def sort_orgs
-      if params[:sort][:sort_order] == "Z-A"
+      if params[:sort][:sort_order] == "Alphabetical (Z-A)"
         @organizations = Organization.paginate(:page => params[:page], :per_page => 15).order('name DESC')
       else
         @organizations = Organization.paginate(:page => params[:page], :per_page => 15).order('name ASC')
