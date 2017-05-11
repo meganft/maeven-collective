@@ -12,6 +12,10 @@ class OrganizationsController < ApplicationController
     else
       @organizations = Organization.paginate(:page => params[:page], :per_page => 15)
     end
+    if params[:search]
+      @organizations = Organization.by_search(params[:search])
+      @organizations = @organizations.paginate(:page => params[:page], :per_page => 15)
+    end
     @featured = Organization.last
   end
 

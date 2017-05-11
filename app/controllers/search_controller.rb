@@ -2,7 +2,7 @@ class SearchController < ApplicationController
 
   def index
     if params["qt"]
-      @topics = Offering.where(tag: params["qt"])
+      @topics = Offering.search(params["qt"])
     end
     if params["q"]
       @organizations = Organization.by_search(params["q"])
@@ -10,3 +10,4 @@ class SearchController < ApplicationController
   end
 
 end
+ 

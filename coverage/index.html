@@ -14,26 +14,26 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-05-03T12:55:27-06:00">2017-05-03T12:55:27-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-05-11T09:43:31-04:00">2017-05-11T09:43:31-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">89.15%</span></span>
+    (<span class="covered_percent"><span class="yellow">89.23%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.72
+         1.75
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>12</b> files in total.
-    <b>129</b> relevant lines. 
-    <span class="green"><b>115</b> lines covered</span> and
+    <b>130</b> relevant lines. 
+    <span class="green"><b>116</b> lines covered</span> and
     <span class="red"><b>14</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -83,11 +83,11 @@
       <tr>
         <td class="strong"><a href="#b25f755234da0c02e65e4835de5dcd2bc6bd5432" class="src_link" title="app/controllers/landing_controller.rb">app/controllers/landing_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>5</td>
-        <td>3</td>
-        <td>3</td>
+        <td>7</td>
+        <td>4</td>
+        <td>4</td>
         <td>0</td>
-        <td>2.3</td>
+        <td>3.0</td>
       </tr>
       
       <tr>
@@ -143,7 +143,7 @@
       <tr>
         <td class="strong"><a href="#fb1626db20f5321534a7d524771ca93b4dd49ab8" class="src_link" title="app/models/organization.rb">app/models/organization.rb</a></td>
         <td class="red strong">64.71 %</td>
-        <td>37</td>
+        <td>35</td>
         <td>17</td>
         <td>11</td>
         <td>6</td>
@@ -827,8 +827,8 @@
     <h3>app/controllers/landing_controller.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>3</b> relevant lines. 
-      <span class="green"><b>3</b> lines covered</span> and
+      <b>4</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -842,25 +842,37 @@
           <code class="ruby">class LandingController &lt; ApplicationController</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="2">
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="3">
+        <li class="covered" data-hits="5" data-linenumber="4">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    @organizations = Organization.all</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="5">
           <span class="hits">5</span>
           
           <code class="ruby">    @featured = Offering.first</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="never" data-hits="" data-linenumber="6">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby">end</code>
@@ -1556,67 +1568,55 @@
           <code class="ruby">  def self.filter(filter)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="27">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="28">
-          
-          
-          <code class="ruby">    # OrganizationsCategory.joins(:organization).where(category: filter)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="29">
+        <li class="missed" data-hits="0" data-linenumber="27">
           
           
           <code class="ruby">    companies = []</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="30">
+        <li class="missed" data-hits="0" data-linenumber="28">
           
           
           <code class="ruby">    result = OrganizationsCategory.where(category_id: filter)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="31">
+        <li class="missed" data-hits="0" data-linenumber="29">
           
           
           <code class="ruby">    result.each do |r|</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="32">
+        <li class="missed" data-hits="0" data-linenumber="30">
           
           
           <code class="ruby">      companies &lt;&lt; Organization.find(r.organization_id)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="33">
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="34">
+        <li class="missed" data-hits="0" data-linenumber="32">
           
           
           <code class="ruby">    companies</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="35">
+        <li class="never" data-hits="" data-linenumber="33">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="36">
+        <li class="never" data-hits="" data-linenumber="34">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="37">
+        <li class="never" data-hits="" data-linenumber="35">
           
           
           <code class="ruby">end</code>
