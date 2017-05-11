@@ -193,7 +193,9 @@ nav.navbar.navbar-default.navbar-bottom {
 }
 
 .search-form-company-index {
-  margin-left: 5em;
+  text-align: center;
+  margin-bottom: 1.5em;
+  margin-top: 1em;
 }
 
 .pagination-orgs {
@@ -233,7 +235,7 @@ button#show-all-orgs.btn.btn-success a {
 
 select#category_category_id {
   height: 2.2em;
-  width: 25em;
+  width: 35em;
 }
 
 .label a {
@@ -258,6 +260,12 @@ div.tt-menu {
   background-color: white;
   width: 100%;
   opacity: 50%;
+}
+
+select#sort_sort_order {
+  padding-left: 2em;
+  width: 90%;
+  height: 2.2em;
 }
 /*!
  * jQuery UI CSS Framework 1.12.1

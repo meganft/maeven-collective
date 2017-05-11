@@ -33840,17 +33840,29 @@ $(document).ready(function() {
   // var possibles_matches =  $("#the-basics").data("source");
 
   var possibles_matches =
-
     ['Beyonce', 'Nora Ephron', 'Marie Forleo', 'Create + cultivate', 'Test', 'Apple'];
 
+  var possibles_matches_topics =
+    ['Apple', 'Social Media'];
+
+
   $('#site_search_company .typeahead').typeahead({
-    hint: true,
-    highlight: true,
-    minLength: 1
-  },
-  {
-    name: 'possibles_matches',
-    source: substringMatcher(possibles_matches)
+      hint: true,
+      highlight: true,
+      minLength: 1
+      },
+    { name: 'possibles_matches',
+      source: substringMatcher(possibles_matches)
+  });
+
+
+  $('#site_search_topic .typeahead').typeahead({
+      hint: true,
+      highlight: true,
+      minLength: 1
+      },
+    { name: 'possibles_matches_topics',
+      source: substringMatcher(possibles_matches_topics)
   });
 
 });
