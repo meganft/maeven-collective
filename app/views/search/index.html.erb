@@ -2,18 +2,25 @@
   <h3 style="text-align:center; padding-bottom: 20px; font-family: Raleway;">SEARCH RESULTS</h3>
   <div class="row">
     <div class="col-md-4 search-results-left">
-      <h4 style="text-align:left;">ALL</h4>
-      <h4 style="text-align:left;">DIGITAL COURSES</h4>
-      <h4 style="text-align:left;">CONFERENCES</h4>
-      <h4 style="text-align:left;">WEBINARS</h4>
+      <h4 style="text-align:left;"><a class="search-results-link" href='/search/results?q=<%=params[:q]%>'> ALL</h4>
+      <h4 style="text-align:left;"><a class="search-results-link" href='/search/results?cat=companies&q=<%=params[:q]%>'>COMPANIES</a></h4>
+      <h4 style="text-align:left;"><a class="search-results-link" href='/search/results?cat=learning&q=<%=params[:q]%>'>LEARNING</a></h4>
+      <h4 style="text-align:left;"><a class="search-results-link" href='/search/results?cat=resources&q=<%=params[:q]%>'>RESOURCES</h4>
+      <h4 style="text-align:left;"><a class="search-results-link" href='/search/results?cat=events&q=<%=params[:q]%>'>EVENTS</h4>
     </div>
     <div class="col-md-8 search-results-right">
       <div class="container">
-        <% @organizations.each do |organization| %>
-        <h4 style="font-weight:200;"><%= link_to organization.name.capitalize, organization_path(organization) %></h4>
-        <%= image_tag organization.avatar.url(:square) %>
-        <% organization.categories.each do |category| %>
-        <p><span class="label label-default"><%= link_to category.name, category_path(category) %></span></p>
+        <% if @results == nil %>
+          <h4> Sorry, there were no results.</h4>
+        <% else %>
+        <% @results.each do |result| %>
+        <h4 style="font-weight:200;"><%= link_to result.name.capitalize, organization_path(result) %></h4>
+        <%= image_tag result.avatar.url(:square) %>
+        <% if result.class == Organization %>
+          <% result.categories.each do |category| %>
+          <p><span class="label label-default"><%= link_to category.name, category_path(category) %></span></p>
+          <% end %>
+        <% end %>
         <% end %>
         <% end %>
       </div>

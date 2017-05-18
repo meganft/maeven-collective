@@ -12,7 +12,7 @@ class Offering < ApplicationRecord
 
   def self.search(term)
     tag = Tag.find_by(name: term)
-    includes(:tags).where('tags.id' => tag)
+    includes(:tags).where('tags.id' => tag) if tag != nil
   end
 
 end
