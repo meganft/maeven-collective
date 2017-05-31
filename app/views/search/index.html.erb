@@ -1,29 +1,43 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <div class="container">
+
   <h3 style="text-align:center; padding-bottom: 20px; font-family: Raleway;">SEARCH RESULTS</h3>
   <div class="row">
     <div class="col-md-4 search-results-left">
       <h4 style="text-align:left;"><a class="search-results-link" href='/search/results?q=<%=params[:q]%>'> ALL</h4>
       <h4 style="text-align:left;"><a class="search-results-link" href='/search/results?cat=companies&q=<%=params[:q]%>'>COMPANIES</a></h4>
       <h4 style="text-align:left;"><a class="search-results-link" href='/search/results?cat=learning&q=<%=params[:q]%>'>LEARNING</a></h4>
-      <h4 style="text-align:left;"><a class="search-results-link" href='/search/results?cat=resources&q=<%=params[:q]%>'>RESOURCES</h4>
-      <h4 style="text-align:left;"><a class="search-results-link" href='/search/results?cat=events&q=<%=params[:q]%>'>EVENTS</h4>
+      <h4 style="text-align:left;"><a class="search-results-link" href='/search/results?cat=resources&q=<%=params[:q]%>'>RESOURCES</a></h4>
+      <h4 style="text-align:left;"><a class="search-results-link" href='/search/results?cat=events&q=<%=params[:q]%>'>EVENTS</a></h4>
     </div>
+
     <div class="col-md-8 search-results-right">
-      <div class="container">
-        <% if @results == nil %>
-          <h4> Sorry, there were no results.</h4>
-        <% else %>
+
+    <div class="w3-dropdown-hover">
+      <button class="w3-button w3-black">Sort Results</button>
+      <div class="w3-dropdown-content w3-bar-block w3-border">
+        <a href='/search/results?sort=az&q=<%=params[:q]%>' class="w3-bar-item w3-button">Alphabetical (A-Z)</a>
+        <a href='/search/results?sort=za&q=<%=params[:q]%>' class="w3-bar-item w3-button">Alphabetical Z-A)</a>
+      </div>
+    </div>
+
+      <!-- <%= form_tag search_results_path, method: "get" do %>
+        <%= select("sort", "sort_order", ["Alphabetical (A-Z)","Alphabetical (Z-A)"], {prompt: 'Sort Results'}, {:onchange => "this.form.submit();"}) %>
+      <% end %> -->
+
+      <% if @results == nil %>
+        <h4> Sorry, there were no results.</h4>
+      <% else %>
         <% @results.each do |result| %>
         <h4 style="font-weight:200;"><%= link_to result.name.capitalize, organization_path(result) %></h4>
         <%= image_tag result.avatar.url(:square) %>
-        <% if result.class == Organization %>
-          <% result.categories.each do |category| %>
-          <p><span class="label label-default"><%= link_to category.name, category_path(category) %></span></p>
+          <% if result.class == Organization %>
+            <% result.categories.each do |category| %>
+            <p><span class="label label-default"><%= link_to category.name, category_path(category) %></span></p>
+            <% end %>
           <% end %>
         <% end %>
-        <% end %>
-        <% end %>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>

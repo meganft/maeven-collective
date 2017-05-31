@@ -8,7 +8,7 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row text-center">
     <div class="search-form-company-index">
       <%= form_tag organizations_path, :method => :get do %>
         <%= text_field_tag :search, params[:search], id: "index_search_company", size: "50", style: "float: none; position: relative; vertical-align: top; height:36px;", placeholder: "Search Companies" %>
@@ -18,7 +18,7 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row text-center" style="margin-top:1em;">
     <div class="col-md-6">
       <%= form_tag organizations_path, method: "get" do %>
         <%= select("category", "category_id", @categories.collect {|p| [ p.name, p.id ] }, {prompt: 'Filter By Category'}, {:onchange => "this.form.submit();"}) %>

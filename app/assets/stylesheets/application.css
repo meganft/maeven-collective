@@ -192,9 +192,7 @@ nav.navbar.navbar-default.navbar-bottom {
 }
 
 .search-form-company-index {
-  text-align: center;
-  margin-bottom: 1.5em;
-  margin-top: 1em;
+  margin-left: 5em;
 }
 
 .pagination-orgs {
@@ -234,7 +232,12 @@ button#show-all-orgs.btn.btn-success a {
 
 select#category_category_id {
   height: 2.2em;
-  width: 35em;
+  width: 25em;
+}
+
+select#sort_sort_order {
+  height: 2.2em;
+  width: 30em;
 }
 
 .label a {
@@ -261,8 +264,6 @@ div.tt-menu {
   opacity: 50%;
 }
 
-select#sort_sort_order {
-  padding-left: 2em;
+div.sort-company-list{
   width: 90%;
-  height: 2.2em;
 }
