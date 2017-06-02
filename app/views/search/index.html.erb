@@ -12,18 +12,32 @@
     </div>
 
     <div class="col-md-8 search-results-right">
+      <div class="row">
+        <div class="search-form-search-results" style="float:left; width:60%;">
+          <%= form_tag search_results_path, :method => :get do %>
+            <%= text_field_tag :q, params[:q], id: "index_search_results", size: "50", style: "height:2.4em; width:22em; margin-left:1em;", value: params[:q] %><%= submit_tag "Search", class: 'btn btn-info' %>
+          <% end %>
+        </div>
 
-    <div class="w3-dropdown-hover">
-      <button class="w3-button w3-black">Sort Results</button>
-      <div class="w3-dropdown-content w3-bar-block w3-border">
-        <a href='/search/results?sort=az&q=<%=params[:q]%>' class="w3-bar-item w3-button">Alphabetical (A-Z)</a>
-        <a href='/search/results?sort=za&q=<%=params[:q]%>' class="w3-bar-item w3-button">Alphabetical Z-A)</a>
-      </div>
+        <div class="dropdown-sort" style="float:right; width:30%;">
+          <button class="dropbtn">Sort Results <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true" style="text-align:right;"></span> </button>
+          <div class="dropdown-content">
+            <a href='/search/results?sort=az&q=<%=params[:q]%>'>Alphabetical (A-Z)</a>
+            <a href='/search/results?sort=za&q=<%=params[:q]%>'>Alphabetical Z-A)</a>
+          </div>
+        </div>
     </div>
 
-      <!-- <%= form_tag search_results_path, method: "get" do %>
-        <%= select("sort", "sort_order", ["Alphabetical (A-Z)","Alphabetical (Z-A)"], {prompt: 'Sort Results'}, {:onchange => "this.form.submit();"}) %>
-      <% end %> -->
+    <% if params[:cat] == "learning" %>
+      <div class="dropdown-sort">
+        <button class="dropbtn">Filter Results</button>
+        <div class="dropdown-content">
+          <a href='#'>By Format</a>
+          <a href='/search/results?cat=learning&q=<%=params[:q]%>&filter=format&format=conference'>Conference</a>
+          <a href='/search/results?cat=learning&q=<%=params[:q]%>&filter=topic'>By Topic</a>
+        </div>
+      </div>
+    <% end %>
 
       <% if @results == nil %>
         <h4> Sorry, there were no results.</h4>

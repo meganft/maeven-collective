@@ -16,6 +16,13 @@ class SearchController < ApplicationController
     if params[:cat] == "learning"
       @results = Offering.search(params["q"])
     end
+    if params[:cat] == "learning" && params[:filter]
+      if params[:filter] == "format"
+        if params[:format] == "conference"
+          @results = Offering.search(params["q"]).where(format: "Conference")
+        end
+      end
+    end
     if params[:cat] == "resources"
       @results = Offering.search(params["q"])
     end
