@@ -1,13 +1,10 @@
 class SearchController < ApplicationController
 
   def index
-    if params["qt"]
+    if params["qt"] && params["q"] == ""
       @results = Offering.search(params["qt"])
     end
-    if params["q"]
-      @results = Organization.by_search(params["q"])
-    end
-    if params["q"]
+    if params["q"] && params["qt"] == ""
       @results = Organization.by_search(params["q"])
     end
     if params[:cat] == "companies"
@@ -37,15 +34,19 @@ class SearchController < ApplicationController
   private
 
   def sort_results
-    if params[:az]
-      if params["q"]
-        @results = Organization.by_search(params["q"]).order('name ASC')
+    if params[:sort] == "az"
+      if params["qt"] && params["q"] == ""
+        @results = Offering.search(params["qt"]).order('offerings.name ASC')
       else
-        @results = Offering.search(params["qt"])
+        @results = Organization.by_search(params["q"]).reverse
       end
     end
-    if params[:za]
-      @results = Organization.by_search(params["q"]).order('name DESC')
+    if params[:sort] == "za"
+      if params["qt"] && params["q"] == ""
+        @results = Offering.search(params["qt"]).order('offerings.name DESC')
+      else
+        @results = Organization.by_search(params["q"])
+      end
     end
   end
 

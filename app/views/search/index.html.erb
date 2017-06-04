@@ -4,40 +4,60 @@
   <h3 style="text-align:center; padding-bottom: 20px; font-family: Raleway;">SEARCH RESULTS</h3>
   <div class="row">
     <div class="col-md-4 search-results-left">
-      <h4 style="text-align:left;"><a class="search-results-link" href='/search/results?q=<%=params[:q]%>'> ALL</h4>
-      <h4 style="text-align:left;"><a class="search-results-link" href='/search/results?cat=companies&q=<%=params[:q]%>'>COMPANIES</a></h4>
-      <h4 style="text-align:left;"><a class="search-results-link" href='/search/results?cat=learning&q=<%=params[:q]%>'>LEARNING</a></h4>
-      <h4 style="text-align:left;"><a class="search-results-link" href='/search/results?cat=resources&q=<%=params[:q]%>'>RESOURCES</a></h4>
+      <h4 style="text-align:left;"><a class="search-results-link" href='/search/results?q=<%=params[:q]%>&qt=<%= params[:qt] %>'> ALL</h4>
+      <h4 style="text-align:left;"><a class="search-results-link" href='/search/results?cat=companies&q=<%=params[:q]%>&qt=<%=params[:qt]%>&q=<%= params[:q]%>'>COMPANIES</a></h4>
+      <h4 style="text-align:left;"><a class="search-results-link" href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>'>LEARNING</a></h4>
+      <h4 style="text-align:left;"> <a class="search-results-link" href='/search/results?cat=resources&q=<%=params[:q]%>'>RESOURCES</a></h4>
       <h4 style="text-align:left;"><a class="search-results-link" href='/search/results?cat=events&q=<%=params[:q]%>'>EVENTS</a></h4>
     </div>
 
     <div class="col-md-8 search-results-right">
       <div class="row">
-        <div class="search-form-search-results" style="float:left; width:60%;">
+        <div class="search-form-search-results" style="float:left; width:50%;">
           <%= form_tag search_results_path, :method => :get do %>
-            <%= text_field_tag :q, params[:q], id: "index_search_results", size: "50", style: "height:2.4em; width:22em; margin-left:1em;", value: params[:q] %><%= submit_tag "Search", class: 'btn btn-info' %>
+            <%= text_field_tag :q, params[:q], id: "index_search_results", size: "50", style: "height:2.1em; width:17em; margin-left:1em;", value: params[:q] %><%= submit_tag "Search", class: 'btn btn-info btn-sm' %>
           <% end %>
         </div>
 
-        <div class="dropdown-sort" style="float:right; width:30%;">
+        <div class="dropdown-sort" style="float:right; width:20%;">
           <button class="dropbtn">Sort Results <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true" style="text-align:right;"></span> </button>
           <div class="dropdown-content">
-            <a href='/search/results?sort=az&q=<%=params[:q]%>'>Alphabetical (A-Z)</a>
-            <a href='/search/results?sort=za&q=<%=params[:q]%>'>Alphabetical Z-A)</a>
+            <a href='/search/results?sort=az&q=<%=params[:q]%>&qt=<%=params[:qt]%>&cat=<%=params[:cat]%>'>Alphabetical (A-Z)</a>
+            <a href='/search/results?sort=za&q=<%=params[:q]%>&qt=<%=params[:qt]%>&cat=<%=params[:cat]%>'>Alphabetical (Z-A)</a>
           </div>
         </div>
-    </div>
 
     <% if params[:cat] == "learning" %>
-      <div class="dropdown-sort">
-        <button class="dropbtn">Filter Results</button>
+      <div class="dropdown-sort" style="float:right; width:15%;">
+        <button class="dropbtn">Filter Results By Format</button>
         <div class="dropdown-content">
-          <a href='#'>By Format</a>
-          <a href='/search/results?cat=learning&q=<%=params[:q]%>&filter=format&format=conference'>Conference</a>
-          <a href='/search/results?cat=learning&q=<%=params[:q]%>&filter=topic'>By Topic</a>
+          <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=format&format=conference'>Conference</a>
+          <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=format&format=webinar'>Webinar</a>
+        </div>
+      </div>
+      <div class="dropdown-sort" style="float:right; width:15%;">
+        <button class="dropbtn">Filter Results By Topic</button>
+        <div class="dropdown-content">
+          <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=topic&format=socialmedia'>Social Media</a>
+          <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=topic&format=business'>Business</a>
         </div>
       </div>
     <% end %>
+
+
+
+    <% if params[:cat] == "companies" %>
+      <div class="dropdown-sort" style="float:right; width:22%;">
+        <button class="dropbtn">Filter Results By Topic</button>
+        <div class="dropdown-content">
+          <a href='/search/results?cat=companies&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=topic&topic=topic1'>Topic 1</a>
+          <a href='/search/results?cat=companies&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=topic&topic=topic2'>Topic 2</a>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+
 
       <% if @results == nil %>
         <h4> Sorry, there were no results.</h4>

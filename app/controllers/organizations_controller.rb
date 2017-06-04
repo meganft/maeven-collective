@@ -32,7 +32,7 @@ class OrganizationsController < ApplicationController
     end
 
     def search_orgs
-      @organizations = Organization.by_search(params[:search])
+      @organizations = Organization.by_search(params[:search]).order('name ASC')
       @organizations = @organizations.paginate(:page => params[:page], :per_page => 15)
     end
 
