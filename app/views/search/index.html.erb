@@ -5,10 +5,10 @@
   <div class="row">
     <div class="col-md-4 search-results-left">
       <h4 style="text-align:left;"><a class="search-results-link" href='/search/results?q=<%=params[:q]%>&qt=<%= params[:qt] %>'> ALL</h4>
-      <h4 style="text-align:left;"><a class="search-results-link" href='/search/results?cat=companies&q=<%=params[:q]%>&qt=<%=params[:qt]%>&q=<%= params[:q]%>'>COMPANIES</a></h4>
+      <h4 style="text-align:left;"><a class="search-results-link" href='/search/results?cat=companies&q=<%=params[:q]%>&qt=<%=params[:qt]%>'>COMPANIES</a></h4>
       <h4 style="text-align:left;"><a class="search-results-link" href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>'>LEARNING</a></h4>
-      <h4 style="text-align:left;"> <a class="search-results-link" href='/search/results?cat=resources&q=<%=params[:q]%>'>RESOURCES</a></h4>
-      <h4 style="text-align:left;"><a class="search-results-link" href='/search/results?cat=events&q=<%=params[:q]%>'>EVENTS</a></h4>
+      <h4 style="text-align:left;"> <a class="search-results-link" href='/search/results?cat=resources&q=<%=params[:q]%>&qt=<%=params[:qt]%>'>RESOURCES</a></h4>
+      <h4 style="text-align:left;"><a class="search-results-link" href='/search/results?cat=events&q=<%=params[:q]%>&qt=<%=params[:qt]%>'>EVENTS</a></h4>
     </div>
 
     <div class="col-md-8 search-results-right">
@@ -43,6 +43,42 @@
         </div>
       </div>
     <% end %>
+
+    <% if params[:cat] == "resources" %>
+      <div class="dropdown-sort" style="float:right; width:15%;">
+        <button class="dropbtn">Filter Results By Format</button>
+        <div class="dropdown-content">
+          <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=format&format=conference'>Conference</a>
+          <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=format&format=webinar'>Webinar</a>
+        </div>
+      </div>
+      <div class="dropdown-sort" style="float:right; width:15%;">
+        <button class="dropbtn">Filter Results By Topic</button>
+        <div class="dropdown-content">
+          <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=topic&format=socialmedia'>Social Media</a>
+          <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=topic&format=business'>Business</a>
+        </div>
+      </div>
+    <% end %>
+
+    <% if params[:cat] == "events" %>
+      <div class="dropdown-sort" style="float:right; width:15%;">
+        <button class="dropbtn">Filter Results By Location</button>
+        <div class="dropdown-content">
+          <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=location&location=denver'>Denver</a>
+          <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=location&location=newyork'>New York</a>
+        </div>
+      </div>
+      <div class="dropdown-sort" style="float:right; width:15%;">
+        <button class="dropbtn">Filter Results By Topic</button>
+        <div class="dropdown-content">
+          <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=topic&topic=socialmedia'>Social Media</a>
+          <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=topic&topic=business'>Business</a>
+        </div>
+      </div>
+    <% end %>
+
+
 
 
 
