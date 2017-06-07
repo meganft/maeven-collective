@@ -17,10 +17,10 @@ $(document).ready(function() {
   // var possibles_matches =  $("#the-basics").data("source");
 
   var possibles_matches =
-    ['Beyonce', 'Nora Ephron', 'Marie Forleo', 'Create + cultivate', 'Test', 'Apple'];
+    ['Beyonce', 'Nora Ephron', 'Marie Forleo', 'Create + cultivate', 'Test', 'Apple', 'She is fierce hq', 'A beautiful mess'];
 
   var possibles_matches_topics =
-    ['Apple', 'Social Media'];
+    ['Apple', 'Social Media', 'Instagram', 'Business', 'Twitter'];
 
 
   $('#site_search_company .typeahead').typeahead({
