@@ -193,9 +193,7 @@ nav.navbar.navbar-default.navbar-bottom {
 }
 
 .search-form-company-index {
-  text-align: center;
-  margin-bottom: 1.5em;
-  margin-top: 1em;
+  margin-left: 5em;
 }
 
 .pagination-orgs {
@@ -235,7 +233,12 @@ button#show-all-orgs.btn.btn-success a {
 
 select#category_category_id {
   height: 2.2em;
-  width: 35em;
+  width: 25em;
+}
+
+select#sort_sort_order {
+  height: 2.2em;
+  width: 30em;
 }
 
 .label a {
@@ -262,10 +265,54 @@ div.tt-menu {
   opacity: 50%;
 }
 
-select#sort_sort_order {
-  padding-left: 2em;
+div.sort-company-list{
   width: 90%;
-  height: 2.2em;
+}
+
+.dropbtn {
+  background-color: white;
+  color: grey;
+  padding: 5px;
+  font-size: 1em;
+  border: 1px solid black;
+  cursor: pointer;
+  width: 90%;
+  text-align: left;
+  font-size: 0.9em;
+}
+
+.dropdown-sort {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  width: 50%;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+.dropdown-content a:hover {background-color: grey}
+
+.dropdown-sort:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-sort:hover .dropbtn {
+  background-color: black;
 }
 /*!
  * jQuery UI CSS Framework 1.12.1
