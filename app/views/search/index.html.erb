@@ -5,10 +5,10 @@
   <div class="row">
     <div class="col-md-4 search-results-left">
       <h4 style="text-align:left;"><a class="search-results-link" href='/search/results?q=<%=params[:q]%>&qt=<%= params[:qt] %>'> ALL</h4>
-      <h4 style="text-align:left;"><a class="search-results-link" href='/search/results?cat=companies&q=<%=params[:q]%>&qt=<%=params[:qt]%>'>COMPANIES</a></h4>
-      <h4 style="text-align:left;"><a class="search-results-link" href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>'>LEARNING</a></h4>
-      <h4 style="text-align:left;"> <a class="search-results-link" href='/search/results?cat=resources&q=<%=params[:q]%>&qt=<%=params[:qt]%>'>RESOURCES</a></h4>
-      <h4 style="text-align:left;"><a class="search-results-link" href='/search/results?cat=events&q=<%=params[:q]%>&qt=<%=params[:qt]%>'>EVENTS</a></h4>
+      <h4 style="text-align:left; padding-top: 1em;"><a class="search-results-link" href='/search/results?cat=companies&q=<%=params[:q]%>&qt=<%=params[:qt]%>'>COMPANIES</a></h4>
+      <h4 style="text-align:left; padding-top: 1em;"><a class="search-results-link" href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>'>LEARNING</a></h4>
+      <h4 style="text-align:left; padding-top: 1em;"> <a class="search-results-link" href='/search/results?cat=resources&q=<%=params[:q]%>&qt=<%=params[:qt]%>'>RESOURCES</a></h4>
+      <h4 style="text-align:left; padding-top: 1em;"><a class="search-results-link" href='/search/results?cat=events&q=<%=params[:q]%>&qt=<%=params[:qt]%>'>EVENTS</a></h4>
     </div>
 
     <div class="col-md-8 search-results-right">
@@ -100,17 +100,41 @@
 
         <% @results.each do |result| %>
         <% if result.class == Organization %><span style="color:#D6707D">
-        <h4 style="font-weight:200;"><%= image_tag result.avatar.url(:square) %> <span style="text-align:center"><%= link_to result.name.capitalize, organization_path(result) %></span> </h4>
-        <% end %>
-        <% if result.class == Offering %><span style="color:#7aaf4b">
-        <h4 style="font-weight:200;"><%= image_tag result.avatar.url(:square) %> <span style="text-align:center"><%= link_to result.name.capitalize, organization_path(result) %></span> </h4>
-        <% end %>
+          <div class="media">
+            <div class="media-left" style="padding-top:3em;">
+              <a href="#">
+                <%= image_tag result.avatar.url(:square), class: "media-object", size: "250x250" %>
+              </a>
+            </div>
+
+            <div class="media-body" style="padding-top:5em;">
+              <h4 class="media-heading"><%= link_to result.name.capitalize, organization_path(result) %></span></h4>
+              <% result.categories.each do |category| %>
+                <span class="label label-default"><%= link_to category.name, category_path(category) %></span>
+              <% end %>
+            </div>
+          </div>
         </span>
-          <% if result.class == Organization %>
-            <% result.categories.each do |category| %>
-            <p><span class="label label-default"><%= link_to category.name, category_path(category) %></span></p>
-            <% end %>
-          <% end %>
+        <% end %>
+
+        <% if result.class == Offering %><span style="color:#7aaf4b">
+          <div class="media">
+            <div class="media-left" style="padding-top:3em;">
+              <a href="#">
+                <%= image_tag result.avatar.url(:square), class: "media-object", size: "250x250" %>
+              </a>
+            </div>
+            <div class="media-body" style="padding-top:5em;">
+              <h4 class="media-heading"><%= link_to result.name.capitalize, organization_path(result) %></span></h4>
+              <% result.tags.each do |tag| %>
+                <span class="label label-default"><%= link_to tag.name, topics_path %></span>
+              <% end %>
+            </div>
+          </div>
+        </span>
+        <% end %>
+
+
         <% end %>
 
       <% end %>
