@@ -21,19 +21,19 @@
 
       <% @organizations.each do |organization| %>
       <div class="panel panel-default">
-        <div class="panel-heading"><h4><%= link_to organization.name.capitalize, admin_organization_path(organization) %></h4></div>
+        <div class="panel-heading"><h4><%= link_to organization.name.titleize, admin_organization_path(organization) %></h4></div>
           <div class="panel-body">
             <div class="row">
               <div class="col-md-6">
                 <%= image_tag organization.avatar.url(:square) %>
-                <h5><%= organization.description %></h5>
+                <h5></h5>
                 <%= link_to "Edit This Organization", edit_admin_organization_path(organization), class: "btn btn-warning btn-sm" %>
               </div>
               <div class="col-md-6">
-                <h4><%= organization.name.capitalize %>'s Current Offerings are:</h4>
+                <h4><%= organization.name.titleize %>'s current offerings are:</h4>
                 <% organization.offerings.each do |offering| %>
-                <h5><%= link_to offering.name, admin_offering_path(offering) %></h5>
-                <p><%= offering.price %> <%= offering.location %> <%= offering.format %></p>
+                <h5><%= link_to offering.name.titleize, admin_offering_path(offering) %></h5>
+                <p> <%= offering.format %></p>
                 <% end %>
                 <h5><%= link_to "Add an offering for this organization", admin_new_offering_path(organization), class: "btn btn-info btn-sm" %></h5>
               </div>

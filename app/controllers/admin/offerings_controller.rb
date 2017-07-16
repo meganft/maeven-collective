@@ -41,6 +41,14 @@ class Admin::OfferingsController < ApplicationController
     @offering = Offering.find(params[:id])
     @offerings_tags = @offering.offerings_tags.new
     @offering.update(offering_params)
+    tags = params[:offering][:offerings_tag][:tag_id]
+    @offering.tags = []
+    tags = tags.reject {|t| t.empty? }
+    if !tags.empty?
+      tags.each do |id|
+        @offering.tags << Tag.find(id)
+      end
+    end
     flash[:success] = "Successfully updated #{@offering.name}"
     redirect_to admin_offering_path(@offering)
   end

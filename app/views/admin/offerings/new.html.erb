@@ -7,7 +7,7 @@
         <div class="col-sm-6">
           <div class="panel panel-default">
             <div class="panel-body less-padding">
-              <h3 class="form-title">Create a new offering for organization <%= @organization.name %></h3>
+              <h3 class="form-title">Create a new offering for organization <%= @organization.name.titleize %></h3>
             </div>
             <div class="panel-footer panel-pad">
               <%= form_for [:admin, @offering], url: {action: "create", organization_id: @organization.id}, class: "form-group" do |f| %>

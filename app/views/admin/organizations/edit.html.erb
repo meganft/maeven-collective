@@ -7,7 +7,7 @@
         <div class="col-sm-6">
           <div class="panel panel-default">
             <div class="panel-body less-padding">
-              <h3 class="form-title">Update <%= @organization.name.capitalize %></h3>
+              <h3 class="form-title">Update <%= @organization.name.titleize %></h3>
             </div>
             <div class="panel-footer panel-pad">
               <%= form_for [:admin, @organization], class: "form-group" do |f| %>
@@ -32,19 +32,29 @@
                 <div class="form-group">
                   <%= f.text_area :history, class: "form-control login-items", placeholder: "Company Background", id: "History" %>
                 </div>
-                <div class="panel panel-default">
-                  Current photo for this organization is: <%= image_tag @organization.avatar.url(:square) %>
+
+                <div class="panel panel-info">
+                  <div class="panel-heading">
+                  Current photo for this organization is:
+                  </div>
+                  <div class="panel-body">
+                      <%= image_tag @organization.avatar.url(:square) %>
+                    </div>
+                  </div>
                 </div>
+
                 <div class="panel panel-warning">
                   <div class="panel-heading">Upload a new photo for this organization:</div>
                     <div class="panel-body"><%= f.file_field :avatar %></div>
                 </div>
+
                 <div class="panel panel-info">
                   <div class="panel-heading">
-                  Current categories for this organization are: <%= @organization.categories.each do |category| %>
+                  Current categories for this offering are: <% @organization.categories.each do |category| %>
                   </div>
-                  <div class="panel-body"><%= category.name %></div>
-                  <% end %>
+                  <div class="panel-body"><%= category.name %>
+                    <% end %>
+                  </div>
                 </div>
                 </div>
 
@@ -60,9 +70,9 @@
                 <% end %>
                 <button type="submit" class="btn btn-info" id="submitnewbutton" >Update Organization</button></p>
               <% end %>
+              <p><%= link_to " << Back to Your Dashboard", admin_dashboard_path, class: "btn btn-success btn-sm"%></p>
               </div>
             </div>
-            <p><%= link_to " << Back to Your Dashboard", admin_dashboard_path, class: "btn btn-success btn-sm"%></p>
           </div>
           <div class="col-sm-3">
           </div>
