@@ -39,6 +39,7 @@ class Admin::OrganizationsController < ApplicationController
     @organizations_categories = @organization.organizations_categories
     @organization.update(organization_params)
     categories = params[:organization][:organizations_categories][:category_id]
+    @organization.categories = []
     categories = categories.reject {|t| t.empty? }
     if !categories.empty?
       categories.each do |id|
@@ -46,7 +47,7 @@ class Admin::OrganizationsController < ApplicationController
       end
     end
     flash[:success] = "Successfully updated #{@organization.name}"
-    redirect_to admin_dashboard_path
+    redirect_to admin_organization_path(@organization)
   end
 
   private
