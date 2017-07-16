@@ -33,7 +33,7 @@
                 <h4><%= organization.name.titleize %>'s current offerings are:</h4>
                 <% organization.offerings.each do |offering| %>
                 <h5><%= link_to offering.name.titleize, admin_offering_path(offering) %></h5>
-                <p><%= offering.price %> <%= offering.location %> <%= offering.format %></p>
+                <p> <%= offering.format %></p>
                 <% end %>
                 <h5><%= link_to "Add an offering for this organization", admin_new_offering_path(organization), class: "btn btn-info btn-sm" %></h5>
               </div>

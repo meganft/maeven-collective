@@ -8,7 +8,7 @@ class Admin::TagsController < ApplicationController
   def create
     @tag = Tag.new(tag_params)
     if @tag.save
-      redirect_to admin_dashboard_path(current_user)
+      redirect_to new_admin_tag_path
       flash[:success] = "Created new tag #{@tag.name}"
     else
       flash.now[:error] = "Please try again."

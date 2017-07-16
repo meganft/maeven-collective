@@ -42,17 +42,43 @@
                   <%= f.text_area :description, class: "form-control login-items", placeholder: "Description", id: "description" %>
                 </div>
 
+                <div class="panel panel-info">
+                  <div class="panel-heading">
+                  Current photo for this offering is:
+                  </div>
+                  <div class="panel-body">
+                    <% if @offering.avatar_file_name == nil  %>
+                      <%= image_tag @offering.organization.avatar.url(:square) %>
+                    <% else %>
+                      <%= image_tag @offering.avatar.url(:square) %>
+                      <% end %>
+                    </div>
+                  </div>
+                </div>
+
+
                 <div class="panel panel-warning">
                   <div class="panel-heading">Upload a new photo for this offering:</div>
                     <div class="panel-body"><%= f.file_field :avatar %></div>
                 </div>
+
+                <div class="panel panel-info">
+                  <div class="panel-heading">
+                  Current tags for this offering are: <% @offering.tags.each do |tag| %>
+                  </div>
+                  <div class="panel-body"><%= tag.name %>
+                    <% end %>
+                  </div>
+                </div>
+                </div>
+
                 <div class="panel panel-warning">
                 <%= f.fields_for @offerings_tags do |u| %>
-                <div class="panel-heading">Choose new tags for this offering</div>
+                <div class="panel-heading">Choose tags for this offering</div>
                   <p class="form-group second">
                     <div class="panel-body">
-                    <%= u.collection_radio_buttons :tag_id, @tags, :id, :name do |u| %>
-                    <p><%= u.radio_button %> <%= u.label %></p>
+                    <%= u.collection_check_boxes :tag_id, @tags, :id, :name,  {:multiple => true} do |u| %>
+                    <p><%= u.check_box %> <%= u.label %></p>
                   <% end %></p>
                   </div>
                 <% end %>

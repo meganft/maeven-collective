@@ -8,7 +8,7 @@ class Admin::CategoriesController < ApplicationController
   def create
     @category = Category.new(category_params)
     if @category.save
-      redirect_to admin_dashboard_path(current_user)
+      redirect_to new_admin_category_path
       flash[:success] = "Created new category #{@category.name}"
     else
       flash.now[:error] = "Please try again."
