@@ -1,9 +1,9 @@
 <div class="container">
-  <h2 style="text-align:center; color: pink;"><%= @offering.name.capitalize %></h2>
+  <h2 style="text-align:center; color: pink;"><%= @offering.name.titleize %></h2>
   <hr>
   <div class="row">
     <div class="col-md-6">
-      <h4>This offering is from <%= link_to @offering.organization.name.capitalize, organization_path(@offering.organization) %></h4>
+      <h4>This offering is from <%= link_to @offering.organization.name.titleize, organization_path(@offering.organization) %></h4>
       <% if @offering.avatar_file_name == nil  %>
         <%= image_tag @offering.organization.avatar.url(:square) %>
       <% else %>
@@ -11,7 +11,7 @@
         <% end %>
       </div>
     <div class="col-md-6">
-      <h4><strong><%= @offering.name.capitalize %></strong></h4>
+      <h4><strong><%= @offering.name.titleize %></strong></h4>
       <h5>Description: <%= @offering.description %></h5>
       <h5>Location: <%= @offering.location %></h5>
       <h5>Date: <%= @offering.date %></h5>
