@@ -12,7 +12,7 @@
     <h5><%= @offering.payment_options %></h5>
     <h5><%= @offering.materials %></h5>
     <h5><%= @offering.website %></h5>
-    <h4>This offering is from <%= link_to @offering.organization.name.capitalize, admin_organization_path(@offering.organization) %></h4>
+    <h4>This offering is from <%= link_to @offering.organization.name.titleize, admin_organization_path(@offering.organization) %></h4>
     <% @offering.tags.each do |tag| %>
     <span class="label label-default"><%= tag.name %></span>
     <% end %>
