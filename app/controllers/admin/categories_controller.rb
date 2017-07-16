@@ -16,6 +16,23 @@ class Admin::CategoriesController < ApplicationController
     end
   end
 
+  def edit
+    @category = Category.find(params[:id])
+  end
+
+  def update
+    @category = Category.find(params[:id])
+    @category.update(category_params)
+    flash[:success] = "Successfully updated #{@category.name}"
+    redirect_to new_admin_category_path
+  end
+
+  def destroy
+    @category = Category.find(params[:id])
+    @category.destroy
+    redirect_to new_admin_category_path
+    flash[:success] = "Successfully deleted #{@category.name}."
+  end
 
   private
     def category_params
