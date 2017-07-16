@@ -16,6 +16,24 @@ class Admin::TagsController < ApplicationController
     end
   end
 
+  def edit
+    @tag = Tag.find(params[:id])
+  end
+
+  def update
+    @tag = Tag.find(params[:id])
+    @tag.update(tag_params)
+    flash[:success] = "Successfully updated #{@tag.name}"
+    redirect_to new_admin_tag_path
+  end
+
+  def destroy
+    @tag = Tag.find(params[:id])
+    @tag.destroy
+    redirect_to new_admin_tag_path
+    flash[:success] = "Successfully deleted #{@tag.name}."
+  end
+
   private
     def tag_params
       params.require(:tag).permit(:name)

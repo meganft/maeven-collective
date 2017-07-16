@@ -26,7 +26,7 @@ Rails.application.routes.draw do
     get '/:organization/offering/new', to: 'offerings#new', as: 'new_offering'
     post '/:organization/offering/new', to: 'offerings#create'
     resources :offerings, only: [:new, :create, :show, :destroy, :edit, :update]
-    resources :tags, only: [:new, :create]
+    resources :tags
     resources :categories
   end
 
