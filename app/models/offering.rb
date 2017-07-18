@@ -1,7 +1,7 @@
 class Offering < ApplicationRecord
   belongs_to :organization
-  has_many :offerings_tags
-  has_many :tags, through: :offerings_tags
+  has_many :offerings_tags, :dependent => :nullify
+  has_many :tags, through: :offerings_tags, :dependent => :nullify
 
   has_attached_file :avatar, styles: {
     thumb: '100x100>',
