@@ -57,7 +57,7 @@ class Admin::OfferingsController < ApplicationController
     @offering = Offering.find(params[:id])
     @offering.destroy
     redirect_to admin_organization_path(@offering.organization)
-    flash[:success] = "Successfully deleted #{@offering.name}."
+    flash[:success] = "Successfully deleted #{@offering.name} from #{@offering.organization}."
   end
 
   private
