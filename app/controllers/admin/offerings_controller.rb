@@ -18,7 +18,7 @@ class Admin::OfferingsController < ApplicationController
       end
     end
     if @offering.save
-      redirect_to admin_dashboard_path(current_user)
+      redirect_to admin_organization_path(@offering.organization)
       flash[:success] = "Created new offering #{@offering.name}"
     else
       flash.now[:error] = "Please try again."
@@ -57,7 +57,7 @@ class Admin::OfferingsController < ApplicationController
     @offering = Offering.find(params[:id])
     @offering.destroy
     redirect_to admin_organization_path(@offering.organization)
-    flash[:success] = "Successfully deleted #{@offering.name} from #{@offering.organization}."
+    flash[:success] = "Successfully deleted #{@offering.name} from #{@offering.organization.name}."
   end
 
   private
