@@ -11,17 +11,26 @@
     <form accept-charset="UTF-8" action="/search/results" id="new_site_search" method="get" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"></div>
       <div class="input-group">
         <div class="pull-left">
+
         <div class="company-search-input-container">
-          <%= content_tag :div, id: "site_search_company" do %>
-            <input class="typeahead" type="text" placeholder="Enter a company name...", name="q" size="50" style="float: none; position: relative; vertical-align: top; height:36px">
-          <% end %>
+          <div id="scrollable-dropdown-menu">
+            <%= content_tag :div, id: "site_search_company" do %>
+              <input class="typeahead" type="text" placeholder="Enter a company name...", name="q" size="50" style="float: none; position: relative; vertical-align: top; height:36px">
+            <% end %>
+          </div>
         </div>
 
         <div class="topic-search-input-container hidden">
-          <%= content_tag :div, id: "site_search_topic" do %>
-            <input class="typeahead" type="text" placeholder="Enter a Topic", name="qt", size="50" style="float: none; position: relative; vertical-align: top; height:36px">
-          <% end %>
+            <%= content_tag :div, id: "site_search_format" do %>
+              <input class="typeahead" type="text" placeholder="I'm searching for...", name="qf", size="40" style="float: left; position: relative; vertical-align: top; height:36px">
+            <% end %>
+            <div class="pull-right">
+              <%= content_tag :div, id: "site_search_topic" do %>
+                <input class="typeahead" type="text" placeholder="about..", name="qt" size="20" style="float: right; height:36px">
+              <% end %>
+            </div>
         </div>
+
       </div>
 
         <div class="pull-right">

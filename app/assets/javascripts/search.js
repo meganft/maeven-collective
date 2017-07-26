@@ -22,6 +22,10 @@ $(document).ready(function() {
   var possibles_matches_topics =
     ['Apple', 'Social Media', 'Instagram', 'Business', 'Twitter'];
 
+  var possibles_matches_formats =
+    ['Conference', 'Online Course'];
+
+
 
   $('#site_search_company .typeahead').typeahead({
       hint: true,
@@ -40,6 +44,15 @@ $(document).ready(function() {
       },
     { name: 'possibles_matches_topics',
       source: substringMatcher(possibles_matches_topics)
+  });
+
+  $('#site_search_format .typeahead').typeahead({
+      hint: true,
+      highlight: true,
+      minLength: 1
+      },
+    { name: 'possibles_matches_formats',
+      source: substringMatcher(possibles_matches_formats)
   });
 
 });
