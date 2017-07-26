@@ -1,16 +1,24 @@
+<div class="page-header">
+  <h2 id="index-page-header"> The Maeven Collective</h2>
+</div>
+
 <div class="jumbotron">
+  <div class="index-sub-nav">
+      <span id="sub-nav-learn"><%= link_to "LEARN"%></span><span id="sub-nav-resources"><%= link_to "RESOURCES"%><span><tag id="sub-nav-favorites"><%= link_to "MY FAVORITES" %></span>
+  </div>
+
   <div class="search-form-landing">
     <form accept-charset="UTF-8" action="/search/results" id="new_site_search" method="get" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"></div>
       <div class="input-group">
         <div class="pull-left">
         <div class="company-search-input-container">
-          <%= content_tag :div, id: "site_search_company", data: {source: @organizations.to_json} do %>
-            <input class="typeahead" type="text" placeholder="Enter a Company Name", name="q" size="50" style="float: none; position: relative; vertical-align: top; height:36px">
+          <%= content_tag :div, id: "site_search_company" do %>
+            <input class="typeahead" type="text" placeholder="Enter a company name...", name="q" size="50" style="float: none; position: relative; vertical-align: top; height:36px">
           <% end %>
         </div>
 
         <div class="topic-search-input-container hidden">
-          <%= content_tag :div, id: "site_search_topic", data: {source: @organizations.to_json} do %>
+          <%= content_tag :div, id: "site_search_topic" do %>
             <input class="typeahead" type="text" placeholder="Enter a Topic", name="qt", size="50" style="float: none; position: relative; vertical-align: top; height:36px">
           <% end %>
         </div>
@@ -23,7 +31,7 @@
 
   </form>
     <div class="toggle-input-container">
-      <a href="#" class="toggle-input-topic">Search by Topic Instead</a>
+      <a href="#" class="toggle-input-topic">Search by Format & Type Instead</a>
       <a href="#" class="toggle-input-company hidden">Search by Company Instead</a>
     </div>
   </div>

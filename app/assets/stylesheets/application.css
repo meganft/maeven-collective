@@ -15,11 +15,47 @@
  *= require jquery-ui
  */
 
-a.navbar-brand {
-  font-size: 2em !important;
-  font-weight: 200;
+#index-page-header {
+  font-size: 2em;
+  font-weight: lighter;;
+  text-align: center;
   font-family: 'Raleway', sans-serif;
+
 }
+
+.navbar.navbar-default.navbar-top {
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.navbar.navbar-default.navbar-collapse {
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+div.collapse.navbar-collapse {
+  background-color: white;
+}
+
+.index-sub-nav {
+  text-align: center;
+  font-size: 1.1em;
+}
+
+#sub-nav-learn {
+  padding-right: 14em;
+}
+
+#sub-nav-resources {
+
+}
+
+#sub-nav-favorites {
+  padding-left: 12em;
+}
+
 
 .carousel-inner {
   max-height: 300px;
@@ -73,20 +109,26 @@ a.navbar-brand {
 }
 
 .jumbotron {
-  background-image: url("pink-green-flowers.jpg");
+  /*background-image: url("pink-green-flowers.jpg");
   background-repeat: no-repeat;
   background-position: center;
   -webkit-background-size: cover;
   background-size: cover;
   height: 29em;
-  z-index: -1;
-  margin-top: -1.5em;
+  z-index: -1;*/
+  /*margin-top: -1.5em;*/
+  margin-top: 1em;
+  background-color: white !important;
+}
+
+.page-header {
+  border: none !important;
 }
 
 .search-form-landing{
   background-color: none;
   opacity: 80%;
-  margin-top: 9%;
+  margin-top: 5%;
   margin-right: 30%;
   margin-left: 30%;
 }
@@ -97,7 +139,7 @@ a.navbar-brand {
 }
 
 .pull-left {
-  margin-left: 10px;
+  margin-left: 1px;
   margin-top: 5px;
 }
 
@@ -117,11 +159,11 @@ input#site_search_topic {
 }
 
 .toggle-input-topic {
-  color: white;
+  color: grey;
 }
 
 .toggle-input-company {
-  color: white;
+  color: grey;
 }
 
 .get-started {
@@ -262,6 +304,11 @@ div.tt-menu {
   background-color: white;
   width: 100%;
   opacity: 50%;
+  border: 1px solid grey;
+}
+
+div.tt-suggestion {
+  padding-left: 5px;
 }
 
 div.sort-company-list{
