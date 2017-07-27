@@ -17,10 +17,9 @@
 
 #index-page-header {
   font-size: 2em;
-  font-weight: lighter;;
+  font-weight: lighter;
   text-align: center;
-  font-family: 'Raleway', sans-serif;
-
+  font-family: 'Lora', serif;
 }
 
 .navbar.navbar-default.navbar-top {
@@ -42,18 +41,31 @@ div.collapse.navbar-collapse {
 .index-sub-nav {
   text-align: center;
   font-size: 1.1em;
+  font-family: 'Raleway', serif;
+
 }
 
 #sub-nav-learn {
   padding-right: 14em;
 }
 
-#sub-nav-resources {
+#sub-nav-learn a{
+  color: black !important;
+}
 
+#sub-nav-resources {
+}
+
+#sub-nav-resources a{
+  color: black !important;
 }
 
 #sub-nav-favorites {
   padding-left: 12em;
+}
+
+#sub-nav-favorites a{
+  color: black !important;
 }
 
 
@@ -96,6 +108,14 @@ div.collapse.navbar-collapse {
   background-color: #458226 !important;
 }
 
+.btn-info {
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+  width: 8em !important;
+}
+
+
 #index-header {
   font-family: 'Caveat', cursive;
   font-weight: 400;
@@ -129,8 +149,8 @@ div.collapse.navbar-collapse {
   background-color: none;
   opacity: 80%;
   margin-top: 5%;
-  margin-right: 30%;
-  margin-left: 30%;
+  margin-right: 10%;
+  margin-left: 20%;
 }
 
 .pull-right {
@@ -151,23 +171,66 @@ input#site_search_topic {
   height: 2.5em;
 }
 
+#site_search_format{
+  display: inline;
+}
+
+#site_search_topic{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.topic-search-input-container{
+  width: 100%;
+}
+
 .toggle-input-container {
-  margin-left: 1em !important;
+  display: block;
   margin-top: 1em !important;
-  font-weight: bold;
-  opacity: 90%;
+  font-family: 'Helvetica Neue';
+  color: grey;
 }
 
 .toggle-input-topic {
   color: grey;
+  display: inline-block;
+  font-size: 0.9em;
+  padding-left: 0.3em;
 }
 
 .toggle-input-company {
   color: grey;
+  display: inline-block;
+  font-size: 0.9em;
+  padding-left: 0.3em;
 }
 
 .get-started {
   text-align: center;
+}
+
+::-webkit-input-placeholder {
+  font-style: italic;
+  font-size: 0.92em;
+  padding-left: 0.3em;
+}
+
+:-moz-placeholder {
+  font-style: italic;
+  font-size: 0.92em;
+  padding-left: 0.3em;
+}
+
+::-moz-placeholder {
+  font-style: italic;
+  font-size: 0.92em;
+  padding-left: 0.3em;
+}
+
+:-ms-input-placeholder {
+  font-style: italic;
+  font-size: 0.92em;
+  padding-left: 0.3em;
 }
 
 #laptop-pic {
