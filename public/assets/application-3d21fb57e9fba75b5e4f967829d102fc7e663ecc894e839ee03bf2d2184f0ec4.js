@@ -34395,10 +34395,14 @@ $(document).ready(function() {
   // var possibles_matches =  $("#the-basics").data("source");
 
   var possibles_matches =
-    ['Beyonce', 'Nora Ephron', 'Marie Forleo', 'Create + cultivate', 'Test', 'Apple', 'She is fierce hq', 'A beautiful mess'];
+    ['Apple', 'A beautiful mess', 'Beyonce', 'Create + cultivate', 'Marie Forleo',  'Nora Ephron', 'She is fierce hq', 'Test'];
 
   var possibles_matches_topics =
     ['Apple', 'Social Media', 'Instagram', 'Business', 'Twitter'];
+
+  var possibles_matches_formats =
+    ['Conference', 'Online Course'];
+
 
 
   $('#site_search_company .typeahead').typeahead({
@@ -34418,6 +34422,15 @@ $(document).ready(function() {
       },
     { name: 'possibles_matches_topics',
       source: substringMatcher(possibles_matches_topics)
+  });
+
+  $('#site_search_format .typeahead').typeahead({
+      hint: true,
+      highlight: true,
+      minLength: 1
+      },
+    { name: 'possibles_matches_formats',
+      source: substringMatcher(possibles_matches_formats)
   });
 
 });
