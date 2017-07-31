@@ -1,53 +1,55 @@
-<div class="col-md-12">
-  <h3 id="featured-courses">FEATURED COURSES</h1>
-    <div class="well">
+<div class="container">
+  <div class="col-md-12">
       <div id="myCarousel" class="carousel slide">
         <div class="carousel-inner">
           <div class="item active">
             <div class="row">
-              <div class="col-sm-3">
-                <% if @featured.avatar_file_name == nil  %>
-                  <%= link_to image_tag @featured.organization.avatar.url(:square), class: "img-responsive" %>
-                <% else %>
-                  <%= link_to image_tag @featured.avatar.url(:square), class: "img-responsive" %>
-                  <% end %>
-                  <p><%= @featured.name.capitalize %></p>
-              </div>
-              <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
-              </div>
-              <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
-              </div>
-              <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
-              </div>
+              <% @featured_first.each do |offering| %>
+                <div class="col-sm-3">
+                  <% if offering.avatar_file_name == nil  %>
+                    <%= link_to image_tag offering.organization.avatar.url(:square), class: "center-block", size:'200x200' %>
+                  <% else %>
+                    <%= link_to image_tag offering.avatar.url(:square), class: "center-block", size:'200x200' %>
+                    <% end %>
+                  <h5 class="carousel-title"><%= offering.name.upcase %></h5>
+                </div>
+              <% end %>
             </div>
           </div>
+
           <div class="item">
             <div class="row">
-              <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
-              </div>
-              <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
-              </div>
-              <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
-              </div>
-              <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
-              </div>
+              <% @featured_second.each do |offering| %>
+                <div class="col-sm-3">
+                  <% if offering.avatar_file_name == nil  %>
+                    <%= link_to image_tag offering.organization.avatar.url(:square), class: "center-block", size:'200x200'%>
+                  <% else %>
+                    <%= link_to image_tag offering.avatar.url(:square), class: "center-block", size:'200x200' %>
+                    <% end %>
+                    <h5 class="carousel-title"><%= offering.name.upcase %></h5>
+                </div>
+              <% end %>
             </div>
           </div>
+
+
           <div class="item">
             <div class="row">
-              <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
-              </div>
-              <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
-              </div>
-              <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
-              </div>
-              <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
-              </div>
+              <% @featured_third.each do |offering| %>
+                <div class="col-sm-3">
+                  <% if offering.avatar_file_name == nil  %>
+                    <%= link_to image_tag offering.organization.avatar.url(:square), class: "center-block", size:'200x200' %>
+                  <% else %>
+                    <%= link_to image_tag offering.avatar.url(:square), class: "center-block", size:'200x200' %>
+                    <% end %>
+                    <h5 class="carousel-title"><%= offering.name.upcase %></h5>
+                </div>
+              <% end %>
             </div>
           </div>
         </div>
-          <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
-          <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
         </div>
     </div>
 </div>
