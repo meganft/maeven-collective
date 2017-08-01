@@ -30,7 +30,7 @@ $(document).ready(function() {
   $('#site_search_company .typeahead').typeahead({
       hint: true,
       highlight: true,
-      minLength: 1,
+      minLength: 0,
       },
     { name: 'possibles_matches',
       source: substringMatcher(possibles_matches_companies),
@@ -41,7 +41,7 @@ $(document).ready(function() {
   $('#site_search_topic .typeahead').typeahead({
       hint: true,
       highlight: true,
-      minLength: 1
+      minLength: 0
       },
     { name: 'possibles_matches_topics',
       source: substringMatcher(possibles_matches_topics),
@@ -51,7 +51,7 @@ $(document).ready(function() {
   $('#site_search_format .typeahead').typeahead({
       hint: true,
       highlight: true,
-      minLength: 1
+      minLength: 0
       },
     { name: 'possibles_matches_formats',
       source: substringMatcher(possibles_matches_formats),
