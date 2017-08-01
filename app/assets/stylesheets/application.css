@@ -72,7 +72,7 @@ div.collapse.navbar-collapse {
 
 
 .carousel-inner {
-  max-height: 300px;
+  height: 23em;
 }
 
 #admin-header-dashboard {
@@ -129,6 +129,7 @@ div.collapse.navbar-collapse {
 #maeven-landing {
   color: #D6707D;
 }
+
 
 .jumbotron {
   /*background-image: url("pink-green-flowers.jpg");
@@ -254,6 +255,13 @@ input#site_search_topic {
 .carousel-title {
   text-align: center;
   font-family: "Raleway", serif;
+}
+
+.center-block-img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 4em;
 }
 
 .hidden  {
