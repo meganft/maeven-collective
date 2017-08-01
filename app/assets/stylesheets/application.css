@@ -23,6 +23,11 @@
   margin-top: -2%;
 }
 
+#index-page-header a {
+  color: black;
+  text-decoration: none;
+}
+
 
 .navbar.navbar-default.navbar-top {
   border: 0;
