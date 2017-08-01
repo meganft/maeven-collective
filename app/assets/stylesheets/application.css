@@ -20,7 +20,7 @@
   font-weight: lighter;
   text-align: center;
   font-family: 'Lora', serif;
-  margin-top: -2%;
+  margin-top: -4%;
 }
 
 #index-page-header a {
@@ -161,6 +161,10 @@ div.collapse.navbar-collapse {
   margin-right: 20%;
   margin-left: 20%;
   width: 80%;
+}
+
+.glyphicon-send:before{
+  color: #5bc0de;
 }
 
 .pull-right {
