@@ -399,10 +399,12 @@ div.sort-company-list{
   width: 90%;
 }
 
-#scrollable-dropdown-menu .tt-dropdown-menu {
-  max-height: 150px;
+
+#scrollable-dropdown-menu .tt-menu {
+  max-height: 110px;
   overflow-y: auto;
 }
+
 
 .dropbtn {
   background-color: white;

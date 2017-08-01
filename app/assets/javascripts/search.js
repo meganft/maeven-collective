@@ -16,24 +16,25 @@ $(document).ready(function() {
 
   // var possibles_matches =  $("#the-basics").data("source");
 
-  var possibles_matches =
-    ['Apple', 'A beautiful mess', 'Beyonce', 'Create + cultivate', 'Marie Forleo',  'Nora Ephron', 'She is fierce hq', 'Test'];
+  var possibles_matches_companies =
+    ['Apple', 'A beautiful mess', 'Beyonce', 'Create + cultivate', 'Marie Forleo',  'Nora Ephron', 'She is fierce hq', 'Yellow Collective'];
 
   var possibles_matches_topics =
     ['Apple', 'Social Media', 'Instagram', 'Business', 'Twitter'];
 
   var possibles_matches_formats =
-    ['Conference', 'Online Course'];
+    ['Conference', 'Consulting', 'Online Course', 'Resources', 'Workshop' ];
 
 
 
   $('#site_search_company .typeahead').typeahead({
       hint: true,
       highlight: true,
-      minLength: 1
+      minLength: 1,
       },
     { name: 'possibles_matches',
-      source: substringMatcher(possibles_matches)
+      source: substringMatcher(possibles_matches_companies),
+      limit: '10'
   });
 
 
@@ -43,7 +44,8 @@ $(document).ready(function() {
       minLength: 1
       },
     { name: 'possibles_matches_topics',
-      source: substringMatcher(possibles_matches_topics)
+      source: substringMatcher(possibles_matches_topics),
+      limit: '10'
   });
 
   $('#site_search_format .typeahead').typeahead({
@@ -52,7 +54,8 @@ $(document).ready(function() {
       minLength: 1
       },
     { name: 'possibles_matches_formats',
-      source: substringMatcher(possibles_matches_formats)
+      source: substringMatcher(possibles_matches_formats),
+      limit: '10'
   });
 
 });
