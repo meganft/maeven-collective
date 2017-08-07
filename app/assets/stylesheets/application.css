@@ -312,6 +312,24 @@ nav.navbar.navbar-default.navbar-bottom {
   font-size: 1.4em;
 }
 
+#view-all-left a {
+  color: black;
+  margin-left: 25%;
+  font-size: 1.3em;
+  font-weight: normal;
+}
+
+#view-all-right a {
+  color: black;
+  margin-left: 80%;
+  font-size: 1.3em;
+  font-weight: normal;
+}
+
+.read-more {
+  font-weight: bold;
+}
+
 .dropdown:hover .dropdown-menu {
   display: block;
 }
