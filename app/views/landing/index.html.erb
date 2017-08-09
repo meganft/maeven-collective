@@ -56,13 +56,16 @@
 <div class="container" style="padding-top:8em;">
   <div class="row">
     <div class="col-md-8">
+      <h4 class="mid-index-title">RECENT NEWS</h4>
+      <hr>
 
       <div class="row">
         <div class="col-md-5">
           <%= image_tag "pink-juice.jpg", size: "300x200" %>
         </div>
         <div class="col-md-7">
-          <p>Orci porta non pulvinar neque laoreet suspendisse. Arcu bibendum at varius vel pharetra vel turpis nunc eget. Sed turpis tincidunt id aliquet risus feugiat in. Sed cras ornare arcu dui. Sed cras ornare arcu dui vivamus arcu felis bibendum. Mauris vitae ultricies leo integer malesuada nunc vel risus commodo. Semper viverra nam libero justo laoreet sit amet cursus sit. Facilisis volutpat est velit egestas dui id.</p>
+          <h5 class="mid-index-sub-title">Example Title</h5>
+          <p class="mid-index-p">Orci porta non pulvinar neque laoreet suspendisse. Arcu bibendum at varius vel pharetra vel turpis nunc eget. Sed turpis tincidunt id aliquet risus feugiat in. Sed cras ornare arcu dui. Sed cras ornare arcu dui vivamus arcu felis bibendum. Mauris vitae ultricies leo integer malesuada nunc vel risus commodo. Semper viverra nam libero justo laoreet sit amet cursus sit. Facilisis volutpat est velit egestas dui id.</p>
           <p class="read-more"><%= link_to "read more..." %></p>
         </div>
       </div>
@@ -72,66 +75,74 @@
           <%= image_tag "wood-coffee.png", size: "300x200" %>
         </div>
         <div class="col-md-7">
-          <p>Ac feugiat sed lectus vestibulum mattis ullamcorper velit. Dignissim sodales ut eu sem integer vitae justo. Massa ultricies mi quis hendrerit dolor magna eget est lorem. Etiam dignissim diam quis enim. Commodo sed egestas egestas fringilla phasellus faucibus. Morbi blandit cursus risus at ultrices mi tempus imperdiet nulla. Purus ut faucibus pulvinar elementum integer enim neque. </p>
+          <h5 class="mid-index-sub-title">Example Title 2</h5>
+          <p class="mid-index-p">Ac feugiat sed lectus vestibulum mattis ullamcorper velit. Dignissim sodales ut eu sem integer vitae justo. Massa ultricies mi quis hendrerit dolor magna eget est lorem. Etiam dignissim diam quis enim. Commodo sed egestas egestas fringilla phasellus faucibus. Morbi blandit cursus risus at ultrices mi tempus imperdiet nulla. Purus ut faucibus pulvinar elementum integer enim neque. </p>
           <p class="read-more"><%= link_to "read more..." %></p>
         </div>
       </div>
     </div>
 
-    <h4 style="margin-top:-1em; margin-left:78%">WAYS TO LEARN</h4>
     <div class="col-md-4">
-       <%= image_tag "typewriter.jpg", size: "350x180"  %>
-        <h4>Courses</h4>
+      <h4 class="mid-index-title">WAYS TO LEARN</h4>
+      <hr>
+       <%= image_tag "courses-overlay.jpg", size: "350x210"  %>
     </div>
-    <div class="col-md-4">
-      <%= image_tag "computer-tea.jpg", size: "350x180"  %>
-        <h4>Workshops</h4>
+    <br>
+    <div class="col-md-4" style="margin-top:1em;">
+      <%= image_tag "workshops.jpg", size: "350x210"  %>
     </div>
   </div>
-  <h5><tag id="view-all-left"><%= link_to "VIEW ALL" %> <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></tag>
-<tag id="view-all-right"><%= link_to "VIEW ALL" %> <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></tag>
-</h5>
+</div>
+<div class="row">
+  <div class="col-md-8">
+    <span id="view-all-left"><%= link_to "VIEW ALL" %> <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></span>
+  </div>
+  <div class="col-md-4">
+    <span id="view-all-right"><%= link_to "VIEW ALL" %> <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></span>
+  </div>
 </div>
 
 
 <div class="container">
-  <h2 id="popular-topics">POPULAR TOPICS<h2>
+  <h2 class="decorated"><span>POPULAR TOPICS<span></h2>
   <div class="blog-attend">
     <div class="row" style="display:inline">
       <div class="col-md-6" style="text-align:center">
           <%= image_tag "sunglasses.jpg", size: "450x300" %>
-        <h4 >Instagram Marketing</h4>
+        <h4 class="pop-topics">Instagram Marketing</h4>
         <span class="hidden">Icon made by Freepik from www.flaticon.com </span>
       </div>
       <div class="col-md-6" style="text-align:center">
         <label id="laptop-pic"> <%= image_tag "floral-vase.jpg", size: "450x300"  %></label>
-          <h4 >Copywriting</h4>
+          <h4 class="pop-topics" >Copywriting</h4>
         <span class="hidden">Icon made by Freepik from www.flaticon.com </span>
       </div>
     </div>
+    <span class="view-all-topics"><%= link_to  "VIEW ALL", root_path, class: "btn-btn-default" %> <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></span>
   </div>
 </div>
 
-<div class="container">
+<div class="container" style="margin-top:3em;">
+  <hr class="hr-1">
   <h4 id="what-is-maeven">What is The Maeven Collective?</h4>
   <div class="row" style="display:inline">
     <div class="col-md-3" style="text-align:center">
-        <%= image_tag "computer-location.png", size: "150x150" %>
+        <i class="fa fa-female fa-5x" aria-hidden="true"></i>
       <p>Ut eu sem integer vitae justo eget. In pellentesque massa placerat duis. Non consectetur a erat nam at lectus. Lacinia quis vel eros donec ac odio. </p>
       <span class="hidden">Icon made by Freepik from www.flaticon.com </span>
     </div>
     <div class="col-md-3" style="text-align:center">
-      <%= image_tag "computer-lock.png", size: "150x150"  %>
+    <i class="fa fa-globe fa-5x" aria-hidden="true"></i>
         <P>Elit duis tristique sollicitudin nibh sit amet. Pellentesque nec nam aliquam sem et tortor consequat. Porttitor eget dolor morbi non arcu risus. </P>
       <span class="hidden">Icon made by Freepik from www.flaticon.com </span>
     </div>
     <div class="col-md-3" style="text-align:center">
-      <%= image_tag "computer-location.png", size: "150x150" %>
+      <i class="fa fa-camera-retro fa-5x"></i>
         <p>Est placerat in egestas erat imperdiet sed euismod nisi. Et tortor consequat id porta. Ac felis donec et odio pellentesque diam volutpat commodo. </p>
         <span class="hidden">Icon made by Freepik from www.flaticon.com </span>
     </div>
     <div class="col-md-3" style="text-align:center">
-       <%= image_tag "computer-lock.png", size: "150x150"  %>
+      <i class="fa fa-address-book fa-5x" aria-hidden="true"></i>
         <p>Est placerat in egestas erat imperdiet sed euismod nisi. Et tortor consequat id porta. Ac felis donec et odio pellentesque diam volutpat commodo. </p>
       <span class="hidden">Icon made by Freepik from www.flaticon.com </span>
     </div>
