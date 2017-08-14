@@ -100,10 +100,17 @@
   <% else %>
   <div class="row" style="padding-top:7em;">
     <% @results.each do |result| %>
-    <div class="col-md-4">
-        <a href="#">
-          <%= image_tag result.avatar.url(:square), size: "250x250" %>
-        </a>
+      <div class="col-md-4">
+        <div class="image">
+        	<div class="icon-remove blue delete">
+            <%= image_tag result.avatar.url(:square), class: "search-image", size: "300x250" %>
+            <% if result.class == Organization %>
+        		  <button type="button" disabled><i class="delete-button"><%= link_to "", root_path, class: "#{result.class.name.downcase}" %></i></button>
+            <% else  %>
+          		<button type="button" disabled><i class="delete-button"><%= link_to "", root_path, class: "#{result.format.name.downcase}" %></i></button>
+            <% end %>
+        	</div>
+        </div>
         <h4><%= link_to result.name.titleize, organization_path(result) %></h4>
         <% result.categories.each do |category| %>
           <span class="label label-default"><%= link_to category.name, category_path(category) %></span>

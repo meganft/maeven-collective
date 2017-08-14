@@ -48,6 +48,20 @@ class SearchController < ApplicationController
         @results = Organization.by_search(params["q"])
       end
     end
+    if params[:sort] == "price"
+      if params["qt"] && params["q"] == ""
+        @results = Offering.search(params["qt"]).order('offerings.price DESC')
+      else
+        @results = Organization.by_search(params["q"])
+      end
+    end
+    if params[:sort] == "new"
+      if params["qt"] && params["q"] == ""
+        @results = Offering.search(params["qt"])
+      else
+        @results = Organization.by_search(params["q"])
+      end
+    end
   end
 
 
