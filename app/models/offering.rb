@@ -15,4 +15,8 @@ class Offering < ApplicationRecord
     includes(:tags).where('tags.id' => tag) if tag != nil
   end
 
+  def self.search_format(term)
+    where("format LIKE ?", "%#{term.downcase}%")
+  end
+
 end

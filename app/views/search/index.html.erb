@@ -1,143 +1,136 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+<div class="jumbotron">
+  <div class="index-sub-nav">
+      <class id="sub-nav-learn"><%= link_to "LEARN"%> <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></class>
+      <class id="sub-nav-resources"> <%= link_to "RESOURCES"%> <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span><class>
+      <class id="sub-nav-favorites"> <%= link_to "MY FAVORITES" %> <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></class>
+  </div>
+
+  <div class="search-form-landing">
+    <form accept-charset="UTF-8" action="/search/results" id="new_site_search" method="get" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"></div>
+      <div class="input-group">
+        <div class="pull-left">
+
+        <div class="company-search-input-container hidden">
+          <div id="scrollable-dropdown-menu">
+            <%= content_tag :div, id: "site_search_company" do %>
+              <input class="typeahead" type="text" placeholder="Enter a company name...", name="q" size="70" style="float: none; position: relative; vertical-align:top; height:36px">
+            <% end %>
+          </div>
+        </div>
+
+        <div class="topic-search-input-container">
+            <%= content_tag :div, id: "site_search_format" do %>
+              <input class="typeahead" type="text" placeholder="I'm searching for...", name="qf", size="43" style="float:left; position: relative; vertical-align: top; height:36px; display:inline">
+            <% end %>
+            <%= content_tag :div, id: "site_search_topic" do %>
+              <input class="typeahead" type="text" placeholder="about..", name="qt" size="27" style="height:36px; vertical-align: top; ">
+            <% end %>
+        </div>
+      </div>
+        <div class="pull-right">
+          <input class="btn btn-info btn-homepage" name="commit" type="submit" value="search">
+
+    <!-- <div class="toggle-input-container"> -->
+      <a href="#" class="toggle-input-topic hidden">Search by format + topic</a>
+      <a href="#" class="toggle-input-company">Search by company </a>
+    </div>
+    <!-- </div> -->
+    </div>
+  </div>
+</form>
+</div>
+
+
+
 <div class="container">
-
-  <h3 style="text-align:center; padding-bottom: 20px; font-family: Raleway;">SEARCH RESULTS</h3>
-  <div class="row">
-    <div class="col-md-4 search-results-left">
-      <h4 style="text-align:left;"><a class="search-results-link" href='/search/results?q=<%=params[:q]%>&qt=<%= params[:qt] %>'> ALL</h4>
-      <h4 style="text-align:left; padding-top: 1em;"><a class="search-results-link" href='/search/results?cat=companies&q=<%=params[:q]%>&qt=<%=params[:qt]%>'>COMPANIES</a></h4>
-      <h4 style="text-align:left; padding-top: 1em;"><a class="search-results-link" href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>'>LEARNING</a></h4>
-      <h4 style="text-align:left; padding-top: 1em;"> <a class="search-results-link" href='/search/results?cat=resources&q=<%=params[:q]%>&qt=<%=params[:qt]%>'>RESOURCES</a></h4>
-      <h4 style="text-align:left; padding-top: 1em;"><a class="search-results-link" href='/search/results?cat=events&q=<%=params[:q]%>&qt=<%=params[:qt]%>'>EVENTS</a></h4>
+  <div class="dropdown-sort" style="float:left; width:19%;">
+    <button class="dropbtn">PRICE  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></button>
+    <div class="dropdown-content">
+      <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=price&price=free'>Free</a>
+      <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=price&proce=25'>Under $25</a>
     </div>
+  </div>
 
-    <div class="col-md-8 search-results-right">
-      <div class="row">
-        <div class="search-form-search-results" style="float:left; width:50%;">
-          <%= form_tag search_results_path, :method => :get do %>
-            <%= text_field_tag :q, params[:q], id: "index_search_results", size: "50", style: "height:2.1em; width:17em; margin-left:1em;", value: params[:q] %><%= submit_tag "Search", class: 'btn btn-info btn-sm' %>
+  <div class="dropdown-sort" style="float:left; width:19%;">
+    <button class="dropbtn">LOCATION <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></button>
+    <div class="dropdown-content">
+      <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=location&location=denver'>Denver</a>
+      <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=location&location=boston'>Boston</a>
+    </div>
+  </div>
+
+  <div class="dropdown-sort" style="float:left; width:20%;">
+    <button class="dropbtn">TOPIC <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></button>
+    <div class="dropdown-content">
+      <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=topic&format=socialmedia'>Social Media</a>
+      <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=topic&format=business'>Business</a>
+    </div>
+  </div>
+
+  <div class="dropdown-sort" style="float:left; width:19%;">
+    <button class="dropbtn">FORMAT <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></button>
+    <div class="dropdown-content">
+      <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=format&format=conference'>Conference</a>
+      <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=format&format=webinar'>Webinar</a>
+    </div>
+  </div>
+
+  <div class="dropdown-sort" style="float:left; width:19%;">
+    <button class="dropbtn">LENGTH <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></button>
+    <div class="dropdown-content">
+      <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=length&length=weekly'>Daily</a>
+      <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=lenght&length=daily'>Weekly</a>
+    </div>
+  </div>
+</div>
+
+<div style="float:right; width:30%; padding-top:3em; font-family:Lora;">
+  <span id="sort-results"> Sort by: </span>
+  <button class="sort-order"> <a href='/search/results?sort=az&q=<%=params[:q]%>&qt=<%=params[:qt]%>&cat=<%=params[:cat]%>'>A - Z </a> </button>
+  <button class="sort-order"> <a href='/search/results?sort=za&q=<%=params[:q]%>&qt=<%=params[:qt]%>&cat=<%=params[:cat]%>'>Z - A </a> </button>
+  <button class="sort-order"> <a href='/search/results?sort=price&q=<%=params[:q]%>&qt=<%=params[:qt]%>&cat=<%=params[:cat]%>'>PRICE </a> </button>
+  <button class="sort-order"> <a href='/search/results?sort=new&q=<%=params[:q]%>&qt=<%=params[:qt]%>&cat=<%=params[:cat]%>'>NEWEST </a> </button>
+</div>
+
+<div class="container">
+  <% if @results == nil %>
+  <h4> Sorry, there were no results.</h4>
+  <% else %>
+  <div class="row" style="padding-top:7em;">
+    <% @results.each do |result| %>
+      <div class="col-md-4">
+        <div class="image">
+        	<div class="icon-remove blue delete">
+            <%= image_tag result.avatar.url(:square), class: "search-image", size: "300x250" %>
+            <% if result.class == Organization %>
+        		  <button type="button" disabled><i class="delete-button"><%= link_to "", root_path, class: "#{result.class.name.downcase}" %></i></button>
+            <% else  %>
+          		<button type="button" disabled><i class="delete-button"><%= link_to "", root_path, class: "#{result.format.name.downcase}" %></i></button>
+            <% end %>
+        	</div>
+        </div>
+        <h4 class="result-name"><%= link_to result.name.titleize, organization_path(result) %></h4>
+        <% if result.class == Organization %>
+          <% result.categories.each do |category| %>
+            <span class="label label-default"><%= link_to category.name, category_path(category) %></span>
           <% end %>
-        </div>
-
-        <div class="dropdown-sort" style="float:right; width:20%;">
-          <button class="dropbtn">Sort Results <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true" style="text-align:right;"></span> </button>
-          <div class="dropdown-content">
-            <a href='/search/results?sort=az&q=<%=params[:q]%>&qt=<%=params[:qt]%>&cat=<%=params[:cat]%>'>Alphabetical (A-Z)</a>
-            <a href='/search/results?sort=za&q=<%=params[:q]%>&qt=<%=params[:qt]%>&cat=<%=params[:cat]%>'>Alphabetical (Z-A)</a>
-          </div>
-        </div>
-
-    <% if params[:cat] == "learning" %>
-      <div class="dropdown-sort" style="float:right; width:15%;">
-        <button class="dropbtn">Filter Results By Format</button>
-        <div class="dropdown-content">
-          <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=format&format=conference'>Conference</a>
-          <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=format&format=webinar'>Webinar</a>
-        </div>
-      </div>
-      <div class="dropdown-sort" style="float:right; width:15%;">
-        <button class="dropbtn">Filter Results By Topic</button>
-        <div class="dropdown-content">
-          <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=topic&format=socialmedia'>Social Media</a>
-          <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=topic&format=business'>Business</a>
-        </div>
-      </div>
-    <% end %>
-
-    <% if params[:cat] == "resources" %>
-      <div class="dropdown-sort" style="float:right; width:15%;">
-        <button class="dropbtn">Filter Results By Format</button>
-        <div class="dropdown-content">
-          <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=format&format=conference'>Conference</a>
-          <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=format&format=webinar'>Webinar</a>
-        </div>
-      </div>
-      <div class="dropdown-sort" style="float:right; width:15%;">
-        <button class="dropbtn">Filter Results By Topic</button>
-        <div class="dropdown-content">
-          <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=topic&format=socialmedia'>Social Media</a>
-          <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=topic&format=business'>Business</a>
-        </div>
-      </div>
-    <% end %>
-
-    <% if params[:cat] == "events" %>
-      <div class="dropdown-sort" style="float:right; width:15%;">
-        <button class="dropbtn">Filter Results By Location</button>
-        <div class="dropdown-content">
-          <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=location&location=denver'>Denver</a>
-          <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=location&location=newyork'>New York</a>
-        </div>
-      </div>
-      <div class="dropdown-sort" style="float:right; width:15%;">
-        <button class="dropbtn">Filter Results By Topic</button>
-        <div class="dropdown-content">
-          <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=topic&topic=socialmedia'>Social Media</a>
-          <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=topic&topic=business'>Business</a>
-        </div>
-      </div>
-    <% end %>
-
-
-
-
-
-    <% if params[:cat] == "companies" %>
-      <div class="dropdown-sort" style="float:right; width:22%;">
-        <button class="dropbtn">Filter Results By Topic</button>
-        <div class="dropdown-content">
-          <a href='/search/results?cat=companies&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=topic&topic=topic1'>Topic 1</a>
-          <a href='/search/results?cat=companies&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=topic&topic=topic2'>Topic 2</a>
-        </div>
-      </div>
-    <% end %>
-
-  </div>
-
-      <% if @results == nil %>
-        <h4> Sorry, there were no results.</h4>
-      <% else %>
-
-        <% @results.each do |result| %>
-        <% if result.class == Organization %><span style="color:#D6707D">
-          <div class="media">
-            <div class="media-left" style="padding-top:3em;">
-              <a href="#">
-                <%= image_tag result.avatar.url(:square), class: "media-object", size: "250x250" %>
-              </a>
-            </div>
-
-            <div class="media-body" style="padding-top:5em;">
-              <h4 class="media-heading"><%= link_to result.name.titleize, organization_path(result) %></span></h4>
-              <% result.categories.each do |category| %>
-                <span class="label label-default"><%= link_to category.name, category_path(category) %></span>
-              <% end %>
-            </div>
-          </div>
-        </span>
+        <% elsif  %>
+          <% result.tags.each do |tag| %>
+            <span class="label label-default"><%= link_to tag.name, category_path(category) %></span>
+          <% end %>
         <% end %>
-
-        <% if result.class == Offering %><span style="color:#7aaf4b">
-          <div class="media">
-            <div class="media-left" style="padding-top:3em;">
-              <a href="#">
-                <%= image_tag result.avatar.url(:square), class: "media-object", size: "250x250" %>
-              </a>
-            </div>
-            <div class="media-body" style="padding-top:5em;">
-              <h4 class="media-heading"><%= link_to result.name.titleize, organization_path(result) %></span></h4>
-              <% result.tags.each do |tag| %>
-                <span class="label label-default"><%= link_to tag.name, topics_path %></span>
-              <% end %>
-            </div>
-          </div>
-        </span>
+        
+        <% if result.class == Offering %>
+          <% result.organization.each do |org| %>
+          <%= org.name.titleize %>
+          <% end %>
         <% end %>
+      </div>
+    <% end %>
 
-
-        <% end %>
-
-      <% end %>
-    </div>
-  </div>
+  <% end %>
+</div>
 </div>
