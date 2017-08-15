@@ -106,9 +106,9 @@
         	<div class="icon-remove blue delete">
             <%= image_tag result.avatar.url(:square), class: "search-image", size: "300x250" %>
             <% if result.class == Organization %>
-        		  <button type="button" disabled><i class="delete-button"><%= link_to "", root_path, class: "#{result.class.name.downcase}" %></i></button>
+        		  <i class="delete-button"><%= link_to "", root_path, class: "#{result.class.name.downcase}" %></i>
             <% else  %>
-          		<button type="button" disabled><i class="delete-button"><%= link_to "", root_path, class: "#{result.format.name.downcase}" %></i></button>
+          		<i class="delete-button"><%= link_to "", root_path, class: "#{result.format.name.downcase}" %></i>
             <% end %>
         	</div>
         </div>
@@ -122,7 +122,7 @@
             <span class="label label-default"><%= link_to tag.name, category_path(category) %></span>
           <% end %>
         <% end %>
-        
+
         <% if result.class == Offering %>
           <% result.organization.each do |org| %>
           <%= org.name.titleize %>

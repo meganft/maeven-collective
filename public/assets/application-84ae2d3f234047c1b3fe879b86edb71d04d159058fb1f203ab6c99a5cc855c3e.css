@@ -567,7 +567,7 @@ hr.hr-1 {
 .image:before {
   vertical-align: middle;
   min-height: 150px;
-  }
+}
 
 .image {
   -moz-box-sizing: border-box;
@@ -575,21 +575,22 @@ hr.hr-1 {
   margin-bottom: 10px;
   padding: 10px;
 }
-
-.delete {
-	position: relative;
-	vertical-align: middle;
+/*
+.graphic-container {
+	position: static;
+	vertical-align: baseline;
 	display: inline-block;
-}
+}*/
 
 .delete .delete-button .organization {
   background-color: #D6707D;
   position:absolute;
-  top:0;
-  left:0;
-  height: 30px;
-  width: 30px;
+  bottom: 100;
+  left: 0;
+  height: 33px;
+  width: 33px;
   border-radius: 90%;
+  opacity: 0.7;
 }
 
 .delete .delete-button .course {
@@ -597,9 +598,10 @@ hr.hr-1 {
   position:absolute;
   top:0;
   left:0;
-  height: 30px;
-  width: 30px;
+  height: 33px;
+  width: 33px;
   border-radius: 90%;
+  opacity: 0.7;
 }
 
 #sort-results {
