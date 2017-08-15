@@ -47,7 +47,7 @@
 
 <div class="container">
   <div class="dropdown-sort" style="float:left; width:19%;">
-    <button class="dropbtn">Filter Results By Price</button>
+    <button class="dropbtn">PRICE  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></button>
     <div class="dropdown-content">
       <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=price&price=free'>Free</a>
       <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=price&proce=25'>Under $25</a>
@@ -55,7 +55,7 @@
   </div>
 
   <div class="dropdown-sort" style="float:left; width:19%;">
-    <button class="dropbtn">Filter Results By Location</button>
+    <button class="dropbtn">LOCATION <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></button>
     <div class="dropdown-content">
       <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=location&location=denver'>Denver</a>
       <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=location&location=boston'>Boston</a>
@@ -63,7 +63,7 @@
   </div>
 
   <div class="dropdown-sort" style="float:left; width:20%;">
-    <button class="dropbtn">Filter Results By Topic</button>
+    <button class="dropbtn">TOPIC <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></button>
     <div class="dropdown-content">
       <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=topic&format=socialmedia'>Social Media</a>
       <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=topic&format=business'>Business</a>
@@ -71,7 +71,7 @@
   </div>
 
   <div class="dropdown-sort" style="float:left; width:19%;">
-    <button class="dropbtn">Filter Results By Format</button>
+    <button class="dropbtn">FORMAT <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></button>
     <div class="dropdown-content">
       <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=format&format=conference'>Conference</a>
       <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=format&format=webinar'>Webinar</a>
@@ -79,7 +79,7 @@
   </div>
 
   <div class="dropdown-sort" style="float:left; width:19%;">
-    <button class="dropbtn">Filter Results By Length</button>
+    <button class="dropbtn">LENGTH <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></button>
     <div class="dropdown-content">
       <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=length&length=weekly'>Daily</a>
       <a href='/search/results?cat=learning&q=<%=params[:q]%>&qt=<%=params[:qt]%>&filter=lenght&length=daily'>Weekly</a>
@@ -87,11 +87,12 @@
   </div>
 </div>
 
-<div style="float:right; width:30%; padding-top:3em;">
-  Sort results <button> <a href='/search/results?sort=az&q=<%=params[:q]%>&qt=<%=params[:qt]%>&cat=<%=params[:cat]%>'>A - Z </a> </button>
-  <button> <a href='/search/results?sort=za&q=<%=params[:q]%>&qt=<%=params[:qt]%>&cat=<%=params[:cat]%>'>Z - A </a> </button>
-  <button> <a href='/search/results?sort=price&q=<%=params[:q]%>&qt=<%=params[:qt]%>&cat=<%=params[:cat]%>'>Price </a> </button>
-  <button> <a href='/search/results?sort=new&q=<%=params[:q]%>&qt=<%=params[:qt]%>&cat=<%=params[:cat]%>'>Newest </a> </button>
+<div style="float:right; width:30%; padding-top:3em; font-family:Lora;">
+  <span id="sort-results"> Sort by: </span>
+  <button class="sort-order"> <a href='/search/results?sort=az&q=<%=params[:q]%>&qt=<%=params[:qt]%>&cat=<%=params[:cat]%>'>A - Z </a> </button>
+  <button class="sort-order"> <a href='/search/results?sort=za&q=<%=params[:q]%>&qt=<%=params[:qt]%>&cat=<%=params[:cat]%>'>Z - A </a> </button>
+  <button class="sort-order"> <a href='/search/results?sort=price&q=<%=params[:q]%>&qt=<%=params[:qt]%>&cat=<%=params[:cat]%>'>PRICE </a> </button>
+  <button class="sort-order"> <a href='/search/results?sort=new&q=<%=params[:q]%>&qt=<%=params[:qt]%>&cat=<%=params[:cat]%>'>NEWEST </a> </button>
 </div>
 
 <div class="container">
@@ -111,9 +112,21 @@
             <% end %>
         	</div>
         </div>
-        <h4><%= link_to result.name.titleize, organization_path(result) %></h4>
-        <% result.categories.each do |category| %>
-          <span class="label label-default"><%= link_to category.name, category_path(category) %></span>
+        <h4 class="result-name"><%= link_to result.name.titleize, organization_path(result) %></h4>
+        <% if result.class == Organization %>
+          <% result.categories.each do |category| %>
+            <span class="label label-default"><%= link_to category.name, category_path(category) %></span>
+          <% end %>
+        <% elsif  %>
+          <% result.tags.each do |tag| %>
+            <span class="label label-default"><%= link_to tag.name, category_path(category) %></span>
+          <% end %>
+        <% end %>
+        
+        <% if result.class == Offering %>
+          <% result.organization.each do |org| %>
+          <%= org.name.titleize %>
+          <% end %>
         <% end %>
       </div>
     <% end %>

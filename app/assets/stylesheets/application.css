@@ -503,21 +503,25 @@ div.sort-company-list{
 
 
 .dropbtn {
-  background-color: white;
-  color: grey;
+  background-color: black;
+  color: white;
   padding: 5px;
-  font-size: 1em;
+  font-size: 0.85em;
   border: 1px solid black;
   cursor: pointer;
   width: 90%;
   text-align: left;
   font-size: 0.9em;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Raleway', serif;
 }
 
 .dropdown-sort {
   position: relative;
   display: inline-block;
   width: 50%;
+  font-size: 0.9em;
 }
 
 .dropdown-content {
@@ -527,7 +531,8 @@ div.sort-company-list{
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  width: 50%;
+  width: 90%;
+  font-size: 0.85em;
 }
 
 .dropdown-content a {
@@ -545,7 +550,8 @@ div.sort-company-list{
 }
 
 .dropdown-sort:hover .dropbtn {
-  background-color: black;
+  background-color: white;
+  color: black;
 }
 
 hr.hr-1 {
@@ -576,7 +582,7 @@ hr.hr-1 {
 }
 
 .delete .delete-button .organization {
-  background-color: blue;
+  background-color: #D6707D;
   position:absolute;
   top:0;
   left:0;
@@ -593,4 +599,29 @@ hr.hr-1 {
   height: 30px;
   width: 30px;
   border-radius: 90%;
+}
+
+#sort-results {
+  font-style: italic;
+  font-size: 0.9em;
+  padding-right: 1em;
+}
+
+button.sort-order{
+  color: #b59a76;
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 0.9em;
+  padding-right: 1em;
+}
+
+
+button.sort-order a:hover {
+  color: #2aabd2;
+}
+
+.result-name {
+  font-size: 1.2em;
+  font-family: 'Raleway', serif;
 }
