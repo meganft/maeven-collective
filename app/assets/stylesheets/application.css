@@ -566,6 +566,7 @@ hr.hr-1 {
 .image:before {
   vertical-align: middle;
   min-height: 150px;
+  overflow: visible;
 }
 
 .image {
@@ -583,22 +584,27 @@ hr.hr-1 {
 
 .delete .delete-button .organization {
   background-color: #D6707D;
-  position:absolute;
-  bottom: 100;
+  position: absolute;
+  top: -15px;
+  right: 0;
+  bottom: 0;
   left: 0;
-  height: 33px;
-  width: 33px;
+  height: 35px;
+  width: 35px;
   border-radius: 90%;
   opacity: 0.7;
+  z-index: 1;
 }
 
 .delete .delete-button .course {
   background-color: grey;
   position:absolute;
-  top:0;
-  left:0;
-  height: 33px;
-  width: 33px;
+  top: -15px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 35px;
+  width: 35px;
   border-radius: 90%;
   opacity: 0.7;
 }

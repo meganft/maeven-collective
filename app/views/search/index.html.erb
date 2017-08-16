@@ -101,7 +101,7 @@
   <% else %>
   <div class="row" style="padding-top:7em;">
     <% @results.each do |result| %>
-      <div class="col-md-4">
+      <div class="col-md-4" style="overflow:visible">
         <div class="image">
         	<div class="icon-remove blue delete">
             <%= image_tag result.avatar.url(:square), class: "search-image", size: "300x250" %>
