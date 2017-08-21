@@ -1,28 +1,77 @@
+<div class="jumbotron">
+  <div class="index-sub-nav">
+      <class id="sub-nav-learn"><%= link_to "LEARN"%> <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></class>
+      <class id="sub-nav-resources"> <%= link_to "RESOURCES"%> <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span><class>
+      <class id="sub-nav-favorites"> <%= link_to "MY FAVORITES" %> <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></class>
+  </div>
+
+  <div class="search-form-landing">
+    <form accept-charset="UTF-8" action="/search/results" id="new_site_search" method="get" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"></div>
+      <div class="input-group">
+        <div class="pull-left">
+
+        <div class="company-search-input-container hidden">
+          <div id="scrollable-dropdown-menu">
+            <%= content_tag :div, id: "site_search_company" do %>
+              <input class="typeahead" type="text" placeholder="Enter a company name...", name="q" size="70" style="float: none; position: relative; vertical-align:top; height:36px">
+            <% end %>
+          </div>
+        </div>
+
+        <div class="topic-search-input-container">
+            <%= content_tag :div, id: "site_search_format" do %>
+              <input class="typeahead" type="text" placeholder="I'm searching for...", name="qf", size="43" style="float:left; position: relative; vertical-align: top; height:36px; display:inline">
+            <% end %>
+            <%= content_tag :div, id: "site_search_topic" do %>
+              <input class="typeahead" type="text" placeholder="about..", name="qt" size="27" style="height:36px; vertical-align: top; ">
+            <% end %>
+        </div>
+      </div>
+        <div class="pull-right">
+          <input class="btn btn-info btn-homepage" name="commit" type="submit" value="search">
+
+    <!-- <div class="toggle-input-container"> -->
+      <a href="#" class="toggle-input-topic hidden">Search by format + topic</a>
+      <a href="#" class="toggle-input-company">Search by company </a>
+    </div>
+    <!-- </div> -->
+    </div>
+  </div>
+</form>
+</div>
+
 <div class="container">
-  <h2 style="text-align:center; color: pink;"><%= @offering.name.titleize %></h2>
-  <hr>
   <div class="row">
-    <div class="col-md-6">
-      <h4>This offering is from <%= link_to @offering.organization.name.titleize, organization_path(@offering.organization) %></h4>
+    <div class="col-md-8">
+      <p><%= @offering.format %> | <% @offering.tags.each do |t| %> <%= t.name %> <% end %></p>
+      <h4><%= @offering.name.titleize %></h2>
+      <p>This offering is from <%= link_to @offering.organization.name.titleize, organization_path(@offering.organization) %></p>
       <% if @offering.avatar_file_name == nil  %>
         <%= image_tag @offering.organization.avatar.url(:square) %>
       <% else %>
         <%= image_tag @offering.avatar.url(:square) %>
         <% end %>
+      <%= @offering.description %>
+        <span style="border:1x solid black;">
+          <h4><strong><%= @offering.name.titleize %></strong></h4>
+          <h5>Description: <%= @offering.description %></h5>
+          <h5>Location: <%= @offering.location %></h5>
+          <h5>Date: <%= @offering.date %></h5>
+          <h5>Length: <%= @offering.length %></h5>
+          <h5>Format: <%= @offering.format %></h5>
+          <h5>Price: <%= @offering.price %></h5>
+          <h5>Payment Info: <%= @offering.payment_options %></h5>
+          <h5>Materials and Resources: <%= @offering.materials %></h5>
+          <h5>Website: <%= link_to "Website", @offering.website, target: :_blank %></h5>
+          <h5>From <%= @offering.organization.name %></h5>
+        </span>
       </div>
-    <div class="col-md-6">
-      <h4><strong><%= @offering.name.titleize %></strong></h4>
-      <h5>Description: <%= @offering.description %></h5>
-      <h5>Location: <%= @offering.location %></h5>
-      <h5>Date: <%= @offering.date %></h5>
-      <h5>Length: <%= @offering.length %></h5>
-      <h5>Format: <%= @offering.format %></h5>
-      <h5>Price: <%= @offering.price %></h5>
-      <h5>Payment Info: <%= @offering.payment_options %></h5>
-      <h5>Materials and Resources: <%= @offering.materials %></h5>
-      <h5>Website: <%= link_to "Website", @offering.website, target: :_blank %></h5>
-      <h5>From <%= @offering.organization.name %></h5>
-
+    <div class="col-md-4" style="text-align:left;">
+      <div class="well" id="reserve-spot-div">
+      <h4 id="reserve-spot-title">RESERVE SPOT | <%= @offering.price %></h4>
+      <p id="buy-tickets">Buy -></p>
+    </div>
+    <%= image_tag "map.jpg", size: "360x170"  %>
       <% @offering.tags.each do |tag| %>
         <h4><span class="label label-default"><%= tag.name %></span></h4>
       <% end %>

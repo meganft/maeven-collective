@@ -633,3 +633,21 @@ button.sort-order a:hover {
   font-size: 1.2em;
   font-family: 'Raleway', serif;
 }
+
+div#reserve-spot-div.well {
+  background-color: #ffedd9;
+  background-image: none;
+  border-radius: 0;
+  border: none;
+  height: 130px;
+}
+
+#reserve-spot-title{
+  font-family: 'Raleway', serif;
+  text-align: center;
+}
+
+#buy-tickets {
+  font-weight: bold;
+  text-align: center;
+}
