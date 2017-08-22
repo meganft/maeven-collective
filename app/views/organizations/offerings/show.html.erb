@@ -52,8 +52,9 @@
         <%= image_tag @offering.avatar.url(:square) %>
         <% end %>
       <%= @offering.description %>
-        <span style="border:1x solid black;">
-          <h4><strong><%= @offering.name.titleize %></strong></h4>
+      <br>
+        <div class="well" id="offering-details">
+          <h4 class="decorated"><strong>DETAILS</strong></h4>
           <h5>Description: <%= @offering.description %></h5>
           <h5>Location: <%= @offering.location %></h5>
           <h5>Date: <%= @offering.date %></h5>
@@ -64,12 +65,12 @@
           <h5>Materials and Resources: <%= @offering.materials %></h5>
           <h5>Website: <%= link_to "Website", @offering.website, target: :_blank %></h5>
           <h5>From <%= @offering.organization.name %></h5>
-        </span>
       </div>
+    </div>
     <div class="col-md-4" style="text-align:left;">
       <div class="well" id="reserve-spot-div">
       <h4 id="reserve-spot-title">RESERVE SPOT | <%= @offering.price %></h4>
-      <p id="buy-tickets">Buy -></p>
+      <p id="buy-tickets">Buy  <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></p>
     </div>
     <%= image_tag "map.jpg", size: "360x170"  %>
       <% @offering.tags.each do |tag| %>
