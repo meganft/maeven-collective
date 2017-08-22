@@ -4,6 +4,7 @@
         <div class="carousel-inner">
           <div class="item active">
             <div class="row">
+              <% if @featured_first != nil %>
               <% @featured_first.each do |offering| %>
                 <div class="col-sm-4">
                   <% if offering.avatar_file_name == nil  %>
@@ -14,11 +15,13 @@
                   <h5 class="carousel-title"><%= offering.name.upcase %></h5>
                 </div>
               <% end %>
+              <% end %>
             </div>
           </div>
 
           <div class="item">
             <div class="row">
+              <% if @featured_second != nil %>
               <% @featured_second.each do |offering| %>
                 <div class="col-sm-4">
                   <% if offering.avatar_file_name == nil  %>
@@ -29,24 +32,12 @@
                     <h5 class="carousel-title"><%= offering.name.upcase %></h5>
                 </div>
               <% end %>
+              <% end %>
             </div>
           </div>
 
 
-          <!-- <div class="item">
-            <div class="row">
-              <% @featured_third.each do |offering| %>
-                <div class="col-sm-3">
-                  <% if offering.avatar_file_name == nil  %>
-                    <%= link_to image_tag offering.organization.avatar.url(:square), class: "center-block", size:'200x200' %>
-                  <% else %>
-                    <%= link_to image_tag offering.avatar.url(:square), class: "center-block", size:'200x200' %>
-                    <% end %>
-                    <h5 class="carousel-title"><%= offering.name.upcase %></h5>
-                </div>
-              <% end %>
-            </div>
-          </div> -->
+
         </div>
           <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a>
           <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
