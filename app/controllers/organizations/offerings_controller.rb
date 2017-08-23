@@ -4,6 +4,7 @@ class Organizations::OfferingsController < ApplicationController
     @offering = Offering.find(params[:id])
     @similar = Offering.search_format(@offering.format)
     @similar.delete(@offering) if @similar.include?(@offering)
+    @similar = @similar[0..2]
   end
 
 end

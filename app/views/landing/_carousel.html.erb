@@ -12,7 +12,7 @@
                   <% else %>
                     <%= link_to image_tag offering.avatar.url(:square), class: "center-block-img", size:'290x220' %>
                     <% end %>
-                  <h5 class="carousel-title"><%= offering.name.upcase %></h5>
+                  <h5 class="carousel-title"><%= link_to offering.name.upcase,  organizations_offering_path(offering) %></h5>
                 </div>
               <% end %>
               <% end %>
@@ -29,13 +29,12 @@
                   <% else %>
                     <%= link_to image_tag offering.avatar.url(:square), class: "center-block-img", size:'290x220' %>
                     <% end %>
-                    <h5 class="carousel-title"><%= offering.name.upcase %></h5>
+                    <h5 class="carousel-title"><%= link_to offering.name.upcase,  organizations_offering_path(offering) %></h5>
                 </div>
               <% end %>
               <% end %>
             </div>
           </div>
-
 
         </div>
           <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a>

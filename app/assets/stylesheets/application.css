@@ -275,6 +275,17 @@ input#site_search_topic {
   font-family: "Raleway", serif;
 }
 
+.carousel-title a {
+  color: black;
+}
+
+.carousel-title a:hover {
+  color: #f9d982;
+  font-family: "Raleway", serif;
+  font-style: italic;
+  text-decoration: none;
+}
+
 .center-block-img {
   display: block;
   margin-right: auto;

@@ -62,8 +62,10 @@
             <h5>PRICE: <span style='font-weight:normal; padding-left:1em'><%= @offering.price %></span></h5>
             <h5>PAYMENT OPTIONS: </h5>
             <ul>
-              <% @offering.payment_options.split(';').each do |p| %>
-              <li><%= p.titleize %></li>
+              <% if @offering.materials != nil %>
+                <% @offering.payment_options.split(';').each do |p| %>
+                <li><%= p.titleize %></li>
+                <% end %>
               <% end %>
           </ul>
       </div>
@@ -89,15 +91,19 @@
       <%= image_tag "map.jpg", size: "360x170"  %>
     </div>
     <h5 id="similar-offerings"> <%= pluralize('similar', @offering.format.downcase) %>  </h5>
-    <% @similar.each do |offering| %>
-      <div class="well similar-offerings">
-        <% if @offering.avatar_file_name == nil  %>
-          <%= image_tag @offering.organization.avatar.url, size: "100x100" %>
-        <% else %>
-          <%= image_tag @offering.avatar.url, size: "100x100" %>
-        <% end %>
-        <h5 style="text-align:left"><%= offering.name %> <span style="padding-right:0.5em;"></span>  | <span style="padding-left:0.5em;"></span> <%= offering.organization.name %></h5>
-      </div>
+    <% if @similar != nil %>
+      <% @similar.each do |similar| %>
+        <div class="well similar-offerings">
+          <% if similar.avatar_file_name == nil  %>
+            <% if similar.organization != nil %>
+              <%= image_tag(similar.organization.avatar.url, size: "100x100") %>
+            <% end %>
+          <% else %>
+            <%= image_tag(similar.avatar.url, size: "100x100") %>
+          <% end %>
+          <h5 style="text-align:left"><%= similar.name %> <span style="padding-right:0.5em;"></span>  | <span style="padding-left:0.5em;"></span> <% if similar.organization != nil %><%= similar.organization.name %> <% end %> </h5>
+        </div>
+      <% end %>
     <% end %>
     </div>
   </div>
