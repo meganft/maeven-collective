@@ -656,6 +656,7 @@ div#reserve-spot-div.well {
   border-radius: 0;
   border: none;
   height: 130px;
+  overflow: auto;
 }
 
 #reserve-spot-title{
