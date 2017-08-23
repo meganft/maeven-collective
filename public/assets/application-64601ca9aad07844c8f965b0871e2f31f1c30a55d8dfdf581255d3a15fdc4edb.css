@@ -106,14 +106,19 @@ div.collapse.navbar-collapse {
 }
 
 .btn-primary {
-  font-family: 'Caveat', cursive;
-  background-color: #7aaf4b !important;
+  background-color: #f9d982 !important;
   background-image: none !important;
-  border: 1px solid #7aaf4b  !important;
+  border: 1px solid #f9d982  !important;
+  color: black !important;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
 }
 
 .btn-primary:hover {
-  background-color: #458226 !important;
+  background-color: #2aabd2 !important;
+  border: 1px solid #2aabd2  !important;
+
 }
 
 .btn-homepage {
@@ -633,6 +638,78 @@ button.sort-order a:hover {
 .result-name {
   font-size: 1.2em;
   font-family: 'Raleway', serif;
+}
+
+div#reserve-spot-div.well {
+  background-color: #ffedd9;
+  background-image: none;
+  border-radius: 0;
+  border: none;
+  height: 130px;
+}
+
+#reserve-spot-title{
+  font-family: 'Raleway', serif;
+  text-align: center;
+  padding-top: 1em;
+}
+
+#buy-tickets {
+  font-weight: bold;
+  text-align: center;
+}
+
+
+div#offering-details.well {
+  border: 0.5px solid #d3d3d3;
+  background-color: white;
+  background-image: none;
+  border-radius: 0;
+  margin-top: 2em;
+  overflow: hidden;
+}
+
+#offering-details-title {
+  display: inline-block;
+  padding: 0 15px;
+  position: relative;
+  text-align: center;
+  font-family: 'Raleway', serif;
+  font-style: italic;
+
+}
+
+#offering-details-title:before,
+#offering-details-title:after {
+  background: #ddd;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  width: 700%;
+}
+#offering-details-title:before {
+  right: 100%;
+}
+#offering-details-title:after {
+  left: 100%;
+}
+
+#similar-offerings {
+  font-weight: bold;
+  text-align: center;
+  color: #B59A76;
+}
+
+div.well.similar-offerings {
+  border: 0.5px solid #d3d3d3;
+  background-color: white;
+  background-image: none;
+  border-radius: 0;
+  margin-top: 2em;
+  overflow: hidden;
+  text-align: center;
 }
 /*!
  * jQuery UI CSS Framework 1.12.1
