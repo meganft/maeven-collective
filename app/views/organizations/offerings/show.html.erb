@@ -76,8 +76,9 @@
           <% end %>
         </ul>
         <% end %>
+      </div>
+      <%= link_to "more about this company", organization_path(@offering.organization), class: "btn btn-primary " %>
 
-    </div>
     </div>
     <div class="col-md-4" style="text-align:left;">
       <div class="well" id="reserve-spot-div">
@@ -96,8 +97,6 @@
           <%= image_tag @offering.avatar.url, size: "100x100" %>
         <% end %>
         <h5 style="text-align:left"><%= offering.name %> <span style="padding-right:0.5em;"></span>  | <span style="padding-left:0.5em;"></span> <%= offering.organization.name %></h5>
-
-
       </div>
     <% end %>
     </div>

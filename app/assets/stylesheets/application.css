@@ -105,14 +105,19 @@ div.collapse.navbar-collapse {
 }
 
 .btn-primary {
-  font-family: 'Caveat', cursive;
-  background-color: #7aaf4b !important;
+  background-color: #f9d982 !important;
   background-image: none !important;
-  border: 1px solid #7aaf4b  !important;
+  border: 1px solid #f9d982  !important;
+  color: black !important;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
 }
 
 .btn-primary:hover {
-  background-color: #458226 !important;
+  background-color: #2aabd2 !important;
+  border: 1px solid #2aabd2  !important;
+
 }
 
 .btn-homepage {
