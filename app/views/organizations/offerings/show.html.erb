@@ -101,7 +101,7 @@
           <% else %>
             <%= image_tag(similar.avatar.url, size: "100x100") %>
           <% end %>
-          <h5 style="text-align:left"><%= similar.name %> <span style="padding-right:0.5em;"></span>  | <span style="padding-left:0.5em;"></span> <% if similar.organization != nil %><%= similar.organization.name %> <% end %> </h5>
+          <h5 style="text-align:left;"><span style="padding-right:0.5em; font-family:'Lora', serif;"><%= similar.name.upcase %> </span>  | <span style="padding-left:0.5em;"></span> <% if similar.organization != nil %><%= similar.organization.name %> <% end %> </h5>
         </div>
       <% end %>
     <% end %>
