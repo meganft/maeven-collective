@@ -660,4 +660,48 @@ div#offering-details.well {
   background-image: none;
   border-radius: 0;
   margin-top: 2em;
+  overflow: hidden;
+}
+
+#offering-details-title {
+  display: inline-block;
+  padding: 0 15px;
+  position: relative;
+  text-align: center;
+  font-family: 'Raleway', serif;
+  font-style: italic;
+
+}
+
+#offering-details-title:before,
+#offering-details-title:after {
+  background: #ddd;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  width: 700%;
+}
+#offering-details-title:before {
+  right: 100%;
+}
+#offering-details-title:after {
+  left: 100%;
+}
+
+#similar-offerings {
+  font-weight: bold;
+  text-align: center;
+  color: #B59A76;
+}
+
+div.well.similar-offerings {
+  border: 0.5px solid #d3d3d3;
+  background-color: white;
+  background-image: none;
+  border-radius: 0;
+  margin-top: 2em;
+  overflow: hidden;
+  text-align: center;
 }

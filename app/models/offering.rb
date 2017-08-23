@@ -16,7 +16,9 @@ class Offering < ApplicationRecord
   end
 
   def self.search_format(term)
-    where("format LIKE ?", "%#{term.downcase}%")
+    d = where("format LIKE ?", "#{term.downcase}" )
+    c =  where("format LIKE ?", "#{term.capitalize}")
+    d+c
   end
 
 end
