@@ -32,4 +32,10 @@ class Organization < ApplicationRecord
     companies
   end
 
+  def self.search_similar(org)
+    if org.categories != []
+      joins(:categories).where("category_id = #{org.categories.first.id}")
+    end
+  end
+
 end
