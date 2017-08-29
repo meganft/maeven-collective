@@ -26,8 +26,9 @@
           		</div>
           		<div class="tab-pane" id="tab-offerings">
                 <ul>
-                  <li>offering 1</li>
-                  <li>offering 2</li>
+                  <% @organization.offerings.each do |offering| %>
+                    <li> <%= offering.name %> </li>
+                  <% end %>
                 </ul>
           		</div>
               <div class="tab-pane" id="tab-events">
