@@ -43,3 +43,44 @@
 <div class="page-header">
   <h2 id="index-page-header"><p><span class="glyphicon glyphicon-send" aria-hidden="true"></p></span> <%= link_to "THE MAEVEN COLLECTIVE", root_path %> </h2>
 </div>
+<div class="jumbotron">
+  <div class="index-sub-nav">
+      <class id="sub-nav-learn"><%= link_to "LEARN"%> <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></class>
+      <class id="sub-nav-resources"> <%= link_to "RESOURCES"%> <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span><class>
+      <class id="sub-nav-favorites"> <%= link_to "MY FAVORITES" %> <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></class>
+  </div>
+
+  <div class="search-form-landing">
+    <form accept-charset="UTF-8" action="/search/results" id="new_site_search" method="get" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"></div>
+      <div class="input-group">
+        <div class="pull-left">
+
+        <div class="company-search-input-container hidden">
+          <div id="scrollable-dropdown-menu">
+            <%= content_tag :div, id: "site_search_company" do %>
+              <input class="typeahead" type="text" placeholder="Enter a company name...", name="q" size="70" style="float: none; position: relative; vertical-align:top; height:36px">
+            <% end %>
+          </div>
+        </div>
+
+        <div class="topic-search-input-container">
+            <%= content_tag :div, id: "site_search_format" do %>
+              <input class="typeahead" type="text" placeholder="I'm searching for...", name="qf", size="43" style="float:left; position: relative; vertical-align: top; height:36px; display:inline">
+            <% end %>
+            <%= content_tag :div, id: "site_search_topic" do %>
+              <input class="typeahead" type="text" placeholder="about..", name="qt" size="27" style="height:36px; vertical-align: top; ">
+            <% end %>
+        </div>
+      </div>
+        <div class="pull-right">
+          <input class="btn btn-info btn-homepage" name="commit" type="submit" value="search">
+
+    <!-- <div class="toggle-input-container"> -->
+      <a href="#" class="toggle-input-topic hidden">Search by format + topic</a>
+      <a href="#" class="toggle-input-company">Search by company </a>
+    </div>
+    <!-- </div> -->
+    </div>
+  </div>
+</form>
+</div>
