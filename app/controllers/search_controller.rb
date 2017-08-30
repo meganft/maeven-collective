@@ -1,16 +1,13 @@
 class SearchController < ApplicationController
 
   def index
+
     if params["qt"] &&  params["qf"] && params["q"] == ""
       results_tag = Offering.search(params["qt"])
       results_format = Offering.search_format(params["qf"])
-      if results_tag == nil || []
-        @results = results_format
-      elsif results_format == nil || []
-        @results = results_tag
-      else
-        @results = results_tag + results_format
-      end
+
+      @results = results_tag + results_format
+      # end
     end
     if params["q"] && params["qt"] == "" && params["qf"] == ""
       @results = Organization.by_search(params["q"])

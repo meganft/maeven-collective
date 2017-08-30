@@ -11,7 +11,7 @@ class Offering < ApplicationRecord
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
   def self.search(term)
-    tag = Tag.find_by(name: term)
+    tag = Tag.find_by(name: term.downcase || term.capitalize)
     includes(:tags).where('tags.id' => tag) if tag != nil
   end
 
