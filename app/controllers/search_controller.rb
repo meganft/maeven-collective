@@ -5,8 +5,8 @@ class SearchController < ApplicationController
     if params["qt"] &&  params["qf"] && params["q"] == ""
       results_tag = Offering.search(params["qt"])
       results_format = Offering.search_format(params["qf"])
-      puts results_format
-      puts results_tag
+      puts "format" results_format
+      puts "tag" results_tag
 
       @results = results_tag + results_format
       # end
