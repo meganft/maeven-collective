@@ -65,10 +65,10 @@
         		  <i class="delete-button"><%= link_to "", root_path, class: "#{result.class.name.downcase}" %></i>
             <% else  %>
           		<i class="delete-button"><%= link_to "", root_path, class: "#{result.name.downcase}" %></i>
+              <h4 class="result-name"><%= link_to result.name.titleize, organization_path(result) %></h4>
             <% end %>
         	</div>
         </div>
-        <h4 class="result-name"><%= link_to result.name.titleize, organization_path(result) %></h4>
         <% if result.class == Organization %>
           <% result.categories.each do |category| %>
             <span class="label label-default"><%= link_to category.name, category_path(category) %></span>
@@ -80,7 +80,7 @@
         <% end %>
 
         <% if result.class == Offering %>
-          <% result.organization.name.titleize %>
+          <% link_to result.organization.name.titleize, organizations_offering_path(result) %>
         <% end %>
       </div>
     <% end %>
