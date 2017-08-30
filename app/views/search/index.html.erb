@@ -63,9 +63,10 @@
             <%= image_tag result.avatar.url(:square), class: "search-image", size: "300x250" %>
             <% if result.class == Organization %>
         		  <i class="delete-button"><%= link_to "", root_path, class: "#{result.class.name.downcase}" %></i>
+              <h4 class="result-name"><%= link_to result.name.titleize, organization_path(result) %></h4>
             <% else  %>
           		<i class="delete-button"><%= link_to "", root_path, class: "#{result.name.downcase}" %></i>
-              <h4 class="result-name"><%= link_to result.name.titleize, organization_path(result) %></h4>
+              <h4 class="result-name"><%= link_to result.name.titleize, organizations_offering_path(result) %></h4>
             <% end %>
         	</div>
         </div>
@@ -80,7 +81,7 @@
         <% end %>
 
         <% if result.class == Offering %>
-          <% link_to result.organization.name.titleize, organizations_offering_path(result) %>
+          <% link_to result.name.titleize, organizations_offering_path(result) %>
         <% end %>
       </div>
     <% end %>
