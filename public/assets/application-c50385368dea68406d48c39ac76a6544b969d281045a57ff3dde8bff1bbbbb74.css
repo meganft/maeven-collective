@@ -672,6 +672,14 @@ div#reserve-spot-div.well {
 }
 
 
+div#offering-courses.well {
+  border: 0.5px solid #d3d3d3;
+  background-color: white;
+  background-image: none;
+  border-radius: 0;
+  overflow: hidden;
+}
+
 div#offering-details.well {
   border: 0.5px solid #d3d3d3;
   background-color: white;
@@ -681,6 +689,33 @@ div#offering-details.well {
   overflow: hidden;
 }
 
+#offering-courses-title {
+  display: inline-block;
+  padding: 0 15px;
+  position: relative;
+  text-align: center;
+  font-family: 'Raleway', serif;
+  font-style: italic;
+}
+
+#offering-courses-title:before,
+#offering-courses-title:after {
+  background: #ddd;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  width: 700%;
+}
+#offering-courses-title:before {
+  right: 100%;
+}
+#offering-courses-title:after {
+  left: 100%;
+}
+
+
 #offering-details-title {
   display: inline-block;
   padding: 0 15px;
@@ -688,7 +723,6 @@ div#offering-details.well {
   text-align: center;
   font-family: 'Raleway', serif;
   font-style: italic;
-
 }
 
 #offering-details-title:before,
