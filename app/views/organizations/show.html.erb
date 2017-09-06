@@ -15,9 +15,6 @@
           		<li>
                 <a href="#tab-events" data-toggle="tab">events</a>
           		</li>
-          		<li>
-                <a href="#tab-resources" data-toggle="tab">resources</a>
-          		</li>
             </ul>
 
           	<div class="tab-content clearfix" style="padding-top:30px; font-family:Helvetica; font-weight:lighter">
@@ -25,11 +22,46 @@
                 <p><%= @organization.history %></p>
           		</div>
           		<div class="tab-pane" id="tab-offerings">
-                <ul>
-                  <% @organization.offerings.each do |offering| %>
-                    <li> <%= offering.name %> </li>
-                  <% end %>
-                </ul>
+                <div class="well" id="offering-courses" >
+                  <h4 id="offering-courses-title"><strong>COURSES</strong></h4>
+                    <div class="row">
+                      <% if @courses != nil %>
+                        <% @courses.each do |course| %>
+                          <div class="col-md-4"><%= course.name %> </div>
+                          <div class="col-md-4"><% course.tags.each do  %>
+                          <%= tag.name %> <% end %></div>
+                          <div class="col-md-4"><%= course.date %> </div>
+                        <% end %>
+                      <% end %>
+                    </div>
+                </div>
+                <div class="well" id="offering-courses" >
+                  <h4 id="offering-courses-title"><strong>WORKSHOPS</strong></h4>
+                    <div class="row">
+                      <% if @workshops != nil %>
+                        <% @workshops.each do |workshop| %>
+                          <div class="col-md-4"><%= workshop.name %> </div>
+                          <div class="col-md-4"><% workshop.tags.each do  %>
+                          <%= tag.name %> <% end %></div>
+                          <div class="col-md-4"><%= workshop.date %> </div>
+                        <% end %>
+                      <% end %>
+                    </div>
+                </div>
+                <div class="well" id="offering-courses" >
+                  <h4 id="offering-courses-title"><strong>CONSULTING</strong></h4>
+                    <div class="row">
+                      <% if @consulting != nil %>
+                        <% @consulting.each do |consulting| %>
+                          <div class="col-md-4"><%= consulting.name %> </div>
+                          <div class="col-md-4"><% consulting.tags.each do  %>
+                          <%= tag.name %> <% end %></div>
+                          <div class="col-md-4"><%= consulting.date %> </div>
+                        <% end %>
+                      <% end %>
+                    </div>
+                </div>
+
           		</div>
               <div class="tab-pane" id="tab-events">
                 <ul>
@@ -37,18 +69,26 @@
                   <li>event 2</li>
                 </ul>
           		</div>
-                <div class="tab-pane" id="tab-resources">
-                  <ul>
-                    <li>resource 1</li>
-                    <li>resource 2</li>
-                  </ul>
-          		</div>
+
           	</div>
           </div>
           <br>
       <div class="well" id="offering-details">
         <h4 id="offering-details-title"><strong>BEHIND THE SCENES</strong></h4>
           <p style="font-family:Helvetica; font-weight:lighter">company history</p>
+      </div>
+      <div class="well" id="offering-details">
+        <h4 id="offering-details-title"><strong>OTHER RESOURCES</strong></h4>
+        <div class="row">
+          <% if @resources != nil %>
+            <% @resources.each do |resource| %>
+              <div class="col-md-4"><%= resource.name %> </div>
+              <div class="col-md-4"><% resource.tags.each do  %>
+              <%= tag.name %> <% end %></div>
+              <div class="col-md-4"><%= resource.date %> </div>
+            <% end %>
+          <% end %>
+        </div>
       </div>
   </div>
 
