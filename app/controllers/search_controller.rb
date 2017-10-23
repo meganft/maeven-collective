@@ -1,7 +1,6 @@
 class SearchController < ApplicationController
 
   def index
-
     if params["qt"] &&  params["qf"] && params["q"] == ""
       results_tag = Offering.search(params["qt"])
       results_format = Offering.search_format(params["qf"])
@@ -16,25 +15,6 @@ class SearchController < ApplicationController
     if params["q"] && params["qt"] == "" && params["qf"] == ""
       @results = Organization.by_search(params["q"])
     end
-    # if params[:cat] == "companies"
-    #   @results = Organization.by_search(params["q"])
-    # end
-    # if params[:cat] == "learning"
-    #   @results = Offering.search(params["q"])
-    # end
-    # if params[:cat] == "learning" && params[:filter]
-    #   if params[:filter] == "format"
-    #     if params[:format] == "conference"
-    #       @results = Offering.search(params["q"]).where(format: "Conference")
-    #     end
-    #   end
-    # end
-    # if params[:cat] == "resources"
-    #   @results = Offering.search(params["q"])
-    # end
-    # if params[:cat] == "events"
-    #   @results = Offering.search(params["q"])
-    # end
     if params[:sort]
       sort_results
     end
