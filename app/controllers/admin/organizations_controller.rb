@@ -9,11 +9,7 @@ class Admin::OrganizationsController < ApplicationController
     @organization = Organization.new(organization_params)
     categories = params[:organization][:organizations_category][:category_id]
     categories = categories.reject {|t| t.empty? }
-    if !categories.empty?
-      categories.each do |id|
-        @organization.categories << Category.find(id)
-      end
-    end
+    categories.each {|id| @organization.categories << Category.find(id) } if !categories.empty?
     if @organization.save
       redirect_to admin_dashboard_path(current_user)
       flash[:success] = "Created new organization #{@organization.name}"
@@ -36,16 +32,11 @@ class Admin::OrganizationsController < ApplicationController
   def update
     @categories = Category.all
     @organization = Organization.find(params[:id])
-    @organizations_categories = @organization.organizations_categories
     @organization.update(organization_params)
     categories = params[:organization][:organizations_categories][:category_id]
     @organization.categories = []
     categories = categories.reject {|t| t.empty? }
-    if !categories.empty?
-      categories.each do |id|
-        @organization.categories << Category.find(id)
-      end
-    end
+    categories.each {|id| @organization.categories << Category.find(id) } if !categories.empty?
     flash[:success] = "Successfully updated #{@organization.name}"
     redirect_to admin_organization_path(@organization)
   end

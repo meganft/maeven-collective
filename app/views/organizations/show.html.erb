@@ -25,8 +25,8 @@
                 <div class="well" id="offering-courses" >
                   <h4 id="offering-courses-title"><strong>COURSES</strong></h4>
                     <div class="row">
-                      <% if @courses != nil %>
-                        <% @courses.each do |course| %>
+                      <% if @organization.courses != nil %>
+                        <% @organization.courses.each do |course| %>
                           <div class="col-md-4"><%= course.name %> </div>
                           <div class="col-md-4"><% course.tags.each do  %>
                           <%= tag.name %> <% end %></div>
@@ -38,8 +38,8 @@
                 <div class="well" id="offering-courses" >
                   <h4 id="offering-courses-title"><strong>WORKSHOPS</strong></h4>
                     <div class="row">
-                      <% if @workshops != nil %>
-                        <% @workshops.each do |workshop| %>
+                      <% if @organization.workshops != nil %>
+                        <% @organization.workshops.each do |workshop| %>
                           <div class="col-md-4"><%= workshop.name %> </div>
                           <div class="col-md-4"><% workshop.tags.each do  %>
                           <%= tag.name %> <% end %></div>
@@ -51,8 +51,8 @@
                 <div class="well" id="offering-courses" >
                   <h4 id="offering-courses-title"><strong>CONSULTING</strong></h4>
                     <div class="row">
-                      <% if @consulting != nil %>
-                        <% @consulting.each do |consulting| %>
+                      <% if @organization.consulting != nil %>
+                        <% @organization.consulting.each do |consulting| %>
                           <div class="col-md-4"><%= consulting.name %> </div>
                           <div class="col-md-4"><% consulting.tags.each do  %>
                           <%= tag.name %> <% end %></div>

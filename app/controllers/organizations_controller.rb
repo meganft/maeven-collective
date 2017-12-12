@@ -3,9 +3,6 @@ class OrganizationsController < ApplicationController
   def show
     @organization = Organization.find(params[:id])
     @similar = Organization.search_similar(@organization)
-    @courses = @organization.offerings.where("LOWER(format) LIKE?", "course" || "online course" || "online Course")
-    @workshops = @organization.offerings.where("LOWER(format) LIKE?", "workshop")
-    @consulting = @organization.offerings.where("LOWER(format) LIKE?", "consulting")
   end
 
   def index

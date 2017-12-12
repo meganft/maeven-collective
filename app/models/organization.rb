@@ -38,4 +38,16 @@ class Organization < ApplicationRecord
     end
   end
 
+  def courses
+    self.offerings.where("LOWER(format) LIKE?", "course" || "online course" || "online Course")
+  end
+
+  def workshops
+    self.offerings.where("LOWER(format) LIKE?", "workshop")
+  end
+
+  def consulting
+    self.offerings.where("LOWER(format) LIKE?", "consulting")
+  end
+
 end

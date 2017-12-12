@@ -4,34 +4,34 @@
         <div class="carousel-inner">
           <div class="item active">
             <div class="row">
-              <% if @featured_first != nil %>
-              <% @featured_first.each do |offering| %>
-                <div class="col-sm-4">
-                  <% if offering.avatar_file_name == nil  %>
-                    <%= link_to image_tag offering.organization.avatar.url(:square), class: "center-block-img", size:'290x220' %>
-                  <% else %>
-                    <%= link_to image_tag offering.avatar.url(:square), class: "center-block-img", size:'290x220' %>
-                    <% end %>
-                  <h5 class="carousel-title"><%= link_to offering.name.upcase,  organizations_offering_path(offering) %></h5>
-                </div>
-              <% end %>
+              <% if @offerings[0..2] %>
+                <% @offerings[0..2].each do |offering| %>
+                  <div class="col-sm-4">
+                    <% if offering.avatar_file_name == nil  %>
+                      <%= link_to image_tag offering.organization.avatar.url(:square), class: "center-block-img", size:'290x220' %>
+                    <% else %>
+                      <%= link_to image_tag offering.avatar.url(:square), class: "center-block-img", size:'290x220' %>
+                      <% end %>
+                    <h5 class="carousel-title"><%= link_to offering.name.upcase,  organizations_offering_path(offering) %></h5>
+                  </div>
+                <% end %>
               <% end %>
             </div>
           </div>
 
           <div class="item">
             <div class="row">
-              <% if @featured_second != nil %>
-              <% @featured_second.each do |offering| %>
-                <div class="col-sm-4">
-                  <% if offering.avatar_file_name == nil  %>
-                    <%= link_to image_tag offering.organization.avatar.url(:square), class: "center-block-img", size:'290x220'%>
-                  <% else %>
-                    <%= link_to image_tag offering.avatar.url(:square), class: "center-block-img", size:'290x220' %>
-                    <% end %>
-                    <h5 class="carousel-title"><%= link_to offering.name.upcase,  organizations_offering_path(offering) %></h5>
-                </div>
-              <% end %>
+              <% if @offerings[3..5] %>
+                <% @offerings[3..5].each do |offering| %>
+                  <div class="col-sm-4">
+                    <% if offering.avatar_file_name == nil  %>
+                      <%= link_to image_tag offering.organization.avatar.url(:square), class: "center-block-img", size:'290x220'%>
+                    <% else %>
+                      <%= link_to image_tag offering.avatar.url(:square), class: "center-block-img", size:'290x220' %>
+                      <% end %>
+                      <h5 class="carousel-title"><%= link_to offering.name.upcase,  organizations_offering_path(offering) %></h5>
+                  </div>
+                <% end %>
               <% end %>
             </div>
           </div>

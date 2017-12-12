@@ -50,8 +50,8 @@
       <%= image_tag "map.jpg", size: "360x170"  %>
     </div>
     <h5 id="similar-offerings"> <%= pluralize('similar', @offering.format.downcase) %>  </h5>
-    <% if @similar != nil %>
-      <% @similar.each do |similar| %>
+    <% if @offering.similar != nil %>
+      <% @offering.similar.each do |similar| %>
         <div class="well similar-offerings">
           <% if similar.avatar_file_name == nil  %>
             <% if similar.organization != nil %>

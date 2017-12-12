@@ -21,4 +21,10 @@ class Offering < ApplicationRecord
     d+c
   end
 
+  def similar
+    similar = Offering.search_format(self.format)
+    similar.delete(self) if similar.include?(self)
+    similar = similar[0..2]
+  end
+
 end

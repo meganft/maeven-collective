@@ -12,11 +12,7 @@ class Admin::OfferingsController < ApplicationController
     @offering = @organization.offerings.new(offering_params)
     tags = params[:offering][:offerings_tag][:tag_id]
     tags = tags.reject {|t| t.empty? }
-    if !tags.empty?
-      tags.each do |id|
-        @offering.tags << Tag.find(id)
-      end
-    end
+    tags.each {|id| @offering.tags << Tag.find(id) } if !tags.empty?
     if @offering.save
       redirect_to admin_organization_path(@offering.organization)
       flash[:success] = "Created new offering #{@offering.name}"
@@ -44,11 +40,7 @@ class Admin::OfferingsController < ApplicationController
     tags = params[:offering][:offerings_tag][:tag_id]
     @offering.tags = []
     tags = tags.reject {|t| t.empty? }
-    if !tags.empty?
-      tags.each do |id|
-        @offering.tags << Tag.find(id)
-      end
-    end
+    tags.each {|id| @offering.tags << Tag.find(id) } if !tags.empty?
     flash[:success] = "Successfully updated #{@offering.name}"
     redirect_to admin_offering_path(@offering)
   end
