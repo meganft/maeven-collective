@@ -25,9 +25,10 @@ describe "As a logged in admin" do
     category.destroy
   end
 
-  xit "I cannot add a new organization without a name" do
+  it "I cannot add a new organization without a name" do
     user = User.create(first_name: "Bob", last_name: "Smith", email: "bob@example.com", password: "password", password_confirmation: "password", role: "admin")
     category = Category.create(name: "Instagram")
+    sample_org = Organization.create(name: 'Successful Org')
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 

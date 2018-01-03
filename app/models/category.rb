@@ -4,5 +4,4 @@ class Category < ApplicationRecord
 
   accepts_nested_attributes_for :organizations
 
-
 end

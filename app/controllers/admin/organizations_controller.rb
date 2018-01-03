@@ -9,8 +9,9 @@ class Admin::OrganizationsController < ApplicationController
   end
 
   def create
+    @categories = Category.all
     @organization = Organization.new(organization_params)
-    categories = params[:organization][:organizations_category][:category_id]
+    categories = params[:organization][:categories][:category_id]
     categories = categories.reject {|t| t.empty? }
     categories.each {|id| @organization.categories << Category.find(id) } if !categories.empty?
     if @organization.save
@@ -52,7 +53,6 @@ class Admin::OrganizationsController < ApplicationController
         :description,
         :history,
         :avatar,
-        :organizations_category,
         :categories,
         category_ids: [:id, :name])
     end
