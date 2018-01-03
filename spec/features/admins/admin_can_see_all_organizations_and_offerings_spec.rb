@@ -12,8 +12,8 @@ describe "Admin can visit dashboard" do
 
     expect(page).to have_content "Current Organizations"
     within(:css, "#current-organizations") do
-      expect(page).to have_content(organization_1.name.capitalize)
-      expect(page).to have_content(organization_2.name.capitalize)
+      expect(page).to have_content(organization_1.name)
+      expect(page).to have_content(organization_2.name)
     end
   end
 
