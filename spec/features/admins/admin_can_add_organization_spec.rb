@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "As a logged in admin" do
-  scenario "I can add a new organization" do
+  it "I can add a new organization" do
     user = User.create(first_name: "Bob", last_name: "Smith", email: "bob@example.com", password: "password", password_confirmation: "password", role: "admin")
     category = Category.create(name: "Instagram")
 
@@ -20,6 +20,9 @@ describe "As a logged in admin" do
     expect(page).to have_content("Created new organization Example")
     expect(current_path).to eq(admin_dashboard_path(user))
     expect(Organization.last.name).to eq("Example")
+
+    user.destroy
+    category.destroy
   end
 
   xit "I cannot add a new organization without a name" do
@@ -34,11 +37,9 @@ describe "As a logged in admin" do
     fill_in "organization[twitter]", with: "@example"
     fill_in "organization[instagram]", with: "@exampleinstagram"
     fill_in "organization[facebook]", with: "organization"
-    fill_in "organization[facebook]", with: "organization"
     find(:css, ".category-selection").set(true)
 
     click_on "Create Organization"
-
     expect(page).to have_content("Name can't be blank")
     expect(Organization.last.website).to_not eq("www.example.com")
   end

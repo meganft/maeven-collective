@@ -1,4 +1,7 @@
 class Admin::OrganizationsController < ApplicationController
+
+  before_action :set_organization, only: [:show, :edit, :update, :destroy]
+
   def new
     @organization = Organization.new
     @organizations_categories = @organization.organizations_categories.new
@@ -20,18 +23,15 @@ class Admin::OrganizationsController < ApplicationController
   end
 
   def show
-    @organization = Organization.find(params[:id])
   end
 
   def edit
-    @organization = Organization.find(params[:id])
     @organizations_categories = @organization.organizations_categories
     @categories = Category.all
   end
 
   def update
     @categories = Category.all
-    @organization = Organization.find(params[:id])
     @organization.update(organization_params)
     categories = params[:organization][:organizations_categories][:category_id]
     @organization.categories = []
@@ -42,8 +42,23 @@ class Admin::OrganizationsController < ApplicationController
   end
 
   private
+
     def organization_params
-      params.require(:organization).permit(:name, :website, :twitter, :instagram, :facebook, :description, :history, :avatar, :categories, category_ids: [:id, :name])
+      params.require(:organization).permit(:name,
+        :website,
+        :twitter,
+        :instagram,
+        :facebook,
+        :description,
+        :history,
+        :avatar,
+        :organizations_category,
+        :categories,
+        category_ids: [:id, :name])
+    end
+
+    def set_organization
+      @organization = Organization.find(params[:id])
     end
 
 end
