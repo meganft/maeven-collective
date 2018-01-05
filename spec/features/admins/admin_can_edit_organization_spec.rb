@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "As a logged in admin" do
-  xit "I can edit an organization" do
+  it "I can edit an organization" do
     user = User.create(first_name: "Bob", last_name: "Smith", email: "bob@example.com", password: "password", password_confirmation: "password", role: "admin")
     organization = Organization.create(name: "Sample Org 1", website: "www.sample1.com", twitter: "@example1", instagram: "@exampleinstagram1", facebook: "@facebook1")
 

@@ -59,7 +59,7 @@
                 </div>
 
                 <div class="panel panel-warning">
-                <%= f.fields_for :organizations_categories do |u| %>
+                <%= f.fields_for :categories do |u| %>
                 <div class="panel-heading">Choose new categories for this organization:</div>
                   <p class="form-group second">
                     <div class="panel-body"><%= u.collection_check_boxes :category_id, @categories, :id, :name, {multiple: true} do |u| %>
