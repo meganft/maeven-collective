@@ -24,12 +24,7 @@ class Organization < ApplicationRecord
   end
 
   def self.filter(filter)
-    companies = []
-    result = OrganizationsCategory.where(category_id: filter)
-    result.each do |r|
-      companies << Organization.find(r.organization_id)
-    end
-    companies
+    joins(:categories).where(:categories => {:id => filter})
   end
 
   def self.search_similar(org)
@@ -39,7 +34,7 @@ class Organization < ApplicationRecord
   end
 
   def courses
-    self.offerings.where("LOWER(format) LIKE?", "course" || "online course" || "online Course")
+    self.offerings.where("LOWER(format) LIKE?", "%course")
   end
 
   def workshops

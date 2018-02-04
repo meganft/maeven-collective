@@ -25,21 +25,21 @@ class SearchController < ApplicationController
   def sort_results
     if params[:sort] == "az"
       if params["qt"] && params["q"] == ""
-        @results = Offering.search(params["qt"]).order('offerings.name ASC')
+        @results = Offering.search(params["qt"])&.order('offerings.name ASC')
       else
-        @results = Organization.by_search(params["q"]).reverse
+        @results = Organization.by_search(params["q"])&.reverse
       end
     end
     if params[:sort] == "za"
       if params["qt"] && params["q"] == ""
-        @results = Offering.search(params["qt"]).order('offerings.name DESC')
+        @results = Offering.search(params["qt"])&.order('offerings.name DESC')
       else
         @results = Organization.by_search(params["q"])
       end
     end
     if params[:sort] == "price"
       if params["qt"] && params["q"] == ""
-        @results = Offering.search(params["qt"]).order('offerings.price DESC')
+        @results = Offering.search(params["qt"])&.order('offerings.price DESC')
       else
         @results = Organization.by_search(params["q"])
       end

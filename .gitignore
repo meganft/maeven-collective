@@ -21,10 +21,7 @@
 
 /config/application.yml
 
+/coverage/*
 coverage/*
-coverage/.resultset.json
 coverage/.last_run.json
 coverage/.resultset.json
-coverage/.last_run.json
-coverage/.resultset.json
-coverage/index.html

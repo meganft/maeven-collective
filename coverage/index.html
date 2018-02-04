@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.10.0/application.js' type='text/javascript'></script>    
     <link href='./assets/0.10.0/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" type="image/png" href="./assets/0.10.0/favicon_yellow.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.10.0/favicon_green.png" />
     <link rel="icon" type="image/png" href="./assets/0.10.0/favicon.png" />
   </head>
   
@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-01-05T16:31:58-05:00">2018-01-05T16:31:58-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-02-04T09:13:58-05:00">2018-02-04T09:13:58-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">80.95%</span></span>
+    (<span class="covered_percent"><span class="green">94.0%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.59
+         1.93
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>12</b> files in total.
-    <b>147</b> relevant lines. 
-    <span class="green"><b>119</b> lines covered</span> and
-    <span class="red"><b>28</b> lines missed </span>
+    <b>14</b> files in total.
+    <b>150</b> relevant lines. 
+    <span class="green"><b>141</b> lines covered</span> and
+    <span class="red"><b>9</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -132,26 +132,46 @@
       
       <tr>
         <td class="strong"><a href="#648d3526fa2289121c9b3d0fb729b9aea99a826d" class="src_link" title="app/models/offering.rb">app/models/offering.rb</a></td>
-        <td class="red strong">52.94 %</td>
-        <td>31</td>
-        <td>17</td>
-        <td>9</td>
-        <td>8</td>
-        <td>0.5</td>
+        <td class="green strong">100.0 %</td>
+        <td>32</td>
+        <td>18</td>
+        <td>18</td>
+        <td>0</td>
+        <td>2.6</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#13369ce4c404b38454cccc83e62de2908a9cfa66" class="src_link" title="app/models/offerings_tag.rb">app/models/offerings_tag.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>4</td>
+        <td>3</td>
+        <td>3</td>
+        <td>0</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#975de11d44595abdfbbe8d8bc6ff222b5c085f11" class="src_link" title="app/models/organization.rb">app/models/organization.rb</a></td>
-        <td class="red strong">57.69 %</td>
-        <td>53</td>
-        <td>26</td>
-        <td>15</td>
-        <td>11</td>
-        <td>0.6</td>
+        <td class="green strong">100.0 %</td>
+        <td>54</td>
+        <td>22</td>
+        <td>22</td>
+        <td>0</td>
+        <td>1.2</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#3e733c48b68bf661f851a6b952c0dda9d15359ff" class="src_link" title="app/models/organizations_category.rb">app/models/organizations_category.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>4</td>
+        <td>3</td>
+        <td>3</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#d1c361f36d16493b12a53b6b4c761cd47612c143" class="src_link" title="app/models/tag.rb">app/models/tag.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>4</td>
         <td>3</td>
@@ -1353,11 +1373,11 @@
         <div class="source_table" id="648d3526fa2289121c9b3d0fb729b9aea99a826d">
   <div class="header">
     <h3>app/models/offering.rb</h3>
-    <h4><span class="red">52.94 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>17</b> relevant lines. 
-      <span class="green"><b>9</b> lines covered</span> and
-      <span class="red"><b>8</b> lines missed.</span>
+      <b>18</b> relevant lines. 
+      <span class="green"><b>18</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -1391,7 +1411,7 @@
         <li class="never" data-hits="" data-linenumber="5">
           
           
-          <code class="ruby">  </code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
@@ -1448,14 +1468,14 @@
           <code class="ruby">  def self.search(term)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="15">
+        <li class="covered" data-hits="4" data-linenumber="15">
+          <span class="hits">4</span>
           
-          
-          <code class="ruby">    tag = Tag.find_by(name: term.downcase || term.capitalize)</code>
+          <code class="ruby">    tag = Tag.find_by(name: term.downcase &amp;&amp; term.capitalize)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="16">
-          
+        <li class="covered" data-hits="4" data-linenumber="16">
+          <span class="hits">4</span>
           
           <code class="ruby">    includes(:tags).where(&#39;tags.id&#39; =&gt; tag) if tag != nil</code>
         </li>
@@ -1478,73 +1498,121 @@
           <code class="ruby">  def self.search_format(term)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="20">
-          
+        <li class="covered" data-hits="6" data-linenumber="20">
+          <span class="hits">6</span>
           
           <code class="ruby">    d = where(&quot;format LIKE ?&quot;, &quot;#{term.downcase}&quot; )</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="21">
-          
+        <li class="covered" data-hits="6" data-linenumber="21">
+          <span class="hits">6</span>
           
           <code class="ruby">    c =  where(&quot;format LIKE ?&quot;, &quot;#{term.capitalize}&quot;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="22">
+        <li class="covered" data-hits="6" data-linenumber="22">
+          <span class="hits">6</span>
           
-          
-          <code class="ruby">    d+c</code>
+          <code class="ruby">    t =  where(&quot;format LIKE ?&quot;, &quot;#{term.titleize}&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="covered" data-hits="6" data-linenumber="23">
+          <span class="hits">6</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    d+c+t</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="24">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="25">
+        <li class="covered" data-hits="1" data-linenumber="26">
           <span class="hits">1</span>
           
           <code class="ruby">  def similar</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="26">
-          
+        <li class="covered" data-hits="2" data-linenumber="27">
+          <span class="hits">2</span>
           
           <code class="ruby">    similar = Offering.search_format(self.format)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="27">
-          
+        <li class="covered" data-hits="2" data-linenumber="28">
+          <span class="hits">2</span>
           
           <code class="ruby">    similar.delete(self) if similar.include?(self)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="28">
-          
+        <li class="covered" data-hits="2" data-linenumber="29">
+          <span class="hits">2</span>
           
           <code class="ruby">    similar = similar[0..2]</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="29">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="30">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="13369ce4c404b38454cccc83e62de2908a9cfa66">
+  <div class="header">
+    <h3>app/models/offerings_tag.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>3</b> relevant lines. 
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class OfferingsTag &lt; ApplicationRecord</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  belongs_to :offering</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  belongs_to :tag</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
           
           
           <code class="ruby">end</code>
@@ -1557,11 +1625,11 @@
         <div class="source_table" id="975de11d44595abdfbbe8d8bc6ff222b5c085f11">
   <div class="header">
     <h3>app/models/organization.rb</h3>
-    <h4><span class="red">57.69 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>26</b> relevant lines. 
-      <span class="green"><b>15</b> lines covered</span> and
-      <span class="red"><b>11</b> lines missed.</span>
+      <b>22</b> relevant lines. 
+      <span class="green"><b>22</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -1700,8 +1768,8 @@
           <code class="ruby">  def self.search(search)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="23">
-          
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
           
           <code class="ruby">    where(&quot;name LIKE ?&quot;, &quot;%#{search.downcase}%&quot;)</code>
         </li>
@@ -1724,163 +1792,169 @@
           <code class="ruby">  def self.filter(filter)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="27">
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    companies = []</code>
+          <code class="ruby">    joins(:categories).where(:categories =&gt; {:id =&gt; filter})</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="28">
+        <li class="never" data-hits="" data-linenumber="28">
           
           
-          <code class="ruby">    result = OrganizationsCategory.where(category_id: filter)</code>
+          <code class="ruby">    # companies = []</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="29">
+        <li class="never" data-hits="" data-linenumber="29">
           
           
-          <code class="ruby">    result.each do |r|</code>
+          <code class="ruby">    # result = OrganizationsCategory.where(category_id: filter)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="30">
+        <li class="never" data-hits="" data-linenumber="30">
           
           
-          <code class="ruby">      companies &lt;&lt; Organization.find(r.organization_id)</code>
+          <code class="ruby">    # result.each do |r|</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="31">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">    #   companies &lt;&lt; Organization.find(r.organization_id)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="32">
+        <li class="never" data-hits="" data-linenumber="32">
           
           
-          <code class="ruby">    companies</code>
+          <code class="ruby">    # end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="33">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    # companies</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="34">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="35">
+        <li class="covered" data-hits="1" data-linenumber="36">
           <span class="hits">1</span>
           
           <code class="ruby">  def self.search_similar(org)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="36">
-          
+        <li class="covered" data-hits="2" data-linenumber="37">
+          <span class="hits">2</span>
           
           <code class="ruby">    if org.categories != []</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="37">
-          
+        <li class="covered" data-hits="2" data-linenumber="38">
+          <span class="hits">2</span>
           
           <code class="ruby">      joins(:categories).where(&quot;category_id = #{org.categories.first.id}&quot;)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="38">
-          
-          
-          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="39">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="40">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="41">
+        <li class="covered" data-hits="1" data-linenumber="42">
           <span class="hits">1</span>
           
           <code class="ruby">  def courses</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="42">
+        <li class="covered" data-hits="2" data-linenumber="43">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">    self.offerings.where(&quot;LOWER(format) LIKE?&quot;, &quot;course&quot; || &quot;online course&quot; || &quot;online Course&quot;)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="43">
-          
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    self.offerings.where(&quot;LOWER(format) LIKE?&quot;, &quot;%course&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="44">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="45">
+        <li class="covered" data-hits="1" data-linenumber="46">
           <span class="hits">1</span>
           
           <code class="ruby">  def workshops</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="46">
-          
+        <li class="covered" data-hits="2" data-linenumber="47">
+          <span class="hits">2</span>
           
           <code class="ruby">    self.offerings.where(&quot;LOWER(format) LIKE?&quot;, &quot;workshop&quot;)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="47">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="48">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="49">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="49">
+        <li class="covered" data-hits="1" data-linenumber="50">
           <span class="hits">1</span>
           
           <code class="ruby">  def consulting</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="50">
-          
+        <li class="covered" data-hits="2" data-linenumber="51">
+          <span class="hits">2</span>
           
           <code class="ruby">    self.offerings.where(&quot;LOWER(format) LIKE?&quot;, &quot;consulting&quot;)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="51">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="52">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="53">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="54">
           
           
           <code class="ruby">end</code>
@@ -1920,6 +1994,48 @@
           <span class="hits">1</span>
           
           <code class="ruby">  belongs_to :category</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="d1c361f36d16493b12a53b6b4c761cd47612c143">
+  <div class="header">
+    <h3>app/models/tag.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>3</b> relevant lines. 
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Tag &lt; ApplicationRecord</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  has_many :offerings_tags, :dependent =&gt; :nullify</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  has_many :offerings, through: :offerings_tags, :dependent =&gt; :nullify</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">

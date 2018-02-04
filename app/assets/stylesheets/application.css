@@ -76,10 +76,6 @@ div.collapse.navbar-collapse {
 }
 
 
-.carousel-inner {
-  height: 20em;
-}
-
 #admin-header-dashboard {
   text-align: center;
 }
@@ -261,8 +257,13 @@ input#site_search_topic {
   text-align: center;
 }
 
+.carousel-inner {
+  height: 100%;
+}
+
 .carousel {
   margin-bottom: -3%;
+  height: 300px;
 }
 
 .carousel-control {
