@@ -10,7 +10,7 @@
                     <% if offering.avatar_file_name == nil  %>
                       <%= link_to image_tag(offering.organization.avatar.url(:square), size:'400x300'), organizations_offering_path(offering), class: "center-block-img" %>
                     <% else %>
-                      <%= link_to image_tag(offering.avatar.url(:square), size:'400x300'), class: "center-block-img" %>
+                      <%= link_to image_tag(offering.avatar.url(:square), size:'400x300'), organizations_offering_path(offering), class: "center-block-img" %>
                       <% end %>
                     <h5 class="carousel-title"><%= link_to offering.name.upcase,  organizations_offering_path(offering) %></h5>
                   </div>
@@ -25,9 +25,9 @@
                 <% @offerings[4..6].each do |offering| %>
                   <div class="col-sm-3">
                     <% if offering.avatar_file_name == nil  %>
-                      <%= link_to image_tag(offering.organization.avatar.url(:square), size:'400x300'),  class: "center-block-img" %>
+                      <%= link_to image_tag(offering.organization.avatar.url(:square), size:'400x300'), organizations_offering_path(offering), class: "center-block-img" %>
                     <% else %>
-                      <%= link_to image_tag(offering.avatar.url(:square), size:'400x300'), class: "center-block-img" %>
+                      <%= link_to image_tag(offering.avatar.url(:square), size:'400x300'), organizations_offering_path(offering),class: "center-block-img" %>
                       <% end %>
                       <h5 class="carousel-title"><%= link_to offering.name.upcase,  organizations_offering_path(offering) %></h5>
                   </div>
