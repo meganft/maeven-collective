@@ -2,6 +2,8 @@ class Organization < ApplicationRecord
   has_many :offerings
   has_many :organizations_categories
   has_many :categories, through: :organizations_categories
+  # after_save :set_slug
+
 
   scope :by_letter, ->(initial) {where("LOWER(name) LIKE \'#{initial.downcase}%\'").order(:name) }
 
@@ -44,5 +46,22 @@ class Organization < ApplicationRecord
   def consulting
     self.offerings.where("LOWER(format) LIKE?", "consulting")
   end
+  #
+  #
+  # def to_param
+  #   slug
+  # end
+  #
+  # def set_slug
+  #   binding.pry
+  #   slug = name.downcase.gsub(" ", "-")
+  # end
+
+  # private
+  #
+  # def set_slug
+  #   binding.pry
+  #   self.slug = self.name
+  # end
 
 end
