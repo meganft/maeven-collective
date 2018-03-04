@@ -163,7 +163,7 @@ div.collapse.navbar-collapse {
   width: 80%;
 }
 
-.glyphicon-send:before{
+.glyphicon-grain:before{
   color: #5bc0de;
 }
 
@@ -273,6 +273,7 @@ input#site_search_topic {
 
 .carousel-title {
   text-align: center;
+  margin-top: -40px;
   font-family: "Raleway", serif;
 }
 
@@ -291,7 +292,7 @@ input#site_search_topic {
   display: block;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 2em;
+  /* margin-top: 2em; */
 }
 
 .hidden  {
