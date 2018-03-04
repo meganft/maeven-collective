@@ -58,6 +58,8 @@ class Admin::OrganizationsController < ApplicationController
     end
 
     def set_organization
+      # @organization = Organization.find_by(slug: params[:slug])
+
       @organization = Organization.find(params[:id])
     end
 

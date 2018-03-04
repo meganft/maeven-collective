@@ -2,6 +2,7 @@ class OrganizationsController < ApplicationController
 
   def show
     @organization = Organization.find(params[:id])
+    # @organization = Organization.find_by(slug: params[:slug])
     @similar = Organization.search_similar(@organization)
   end
 
