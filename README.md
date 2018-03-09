@@ -3,8 +3,6 @@
 
 The maeven collective is an online database and community  for the female creative entrepreneur.
 
-The staging app can be accessed at https://themaevencollective.herokuapp.com/
-
 To run locally:
 ```
 git@github.com:meganft/maeven-collective.git
