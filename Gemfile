@@ -34,7 +34,12 @@ group :development, :test do
   gem 'launchy'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
+end
+
+group :test do
+  gem 'webmock'
   gem 'simplecov'
+  gem 'shoulda-matchers'
 end
 
 group :development do
