@@ -32,7 +32,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5'
   gem 'capybara'
   gem 'launchy'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'database_cleaner'
 end
 
