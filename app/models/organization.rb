@@ -50,6 +50,10 @@ class Organization < ApplicationRecord
   def events
     self.offerings.where("LOWER(format) LIKE?", "%event")
   end
+
+  def conferences
+    self.offerings.where("LOWER(format) LIKE?", "%conference")
+  end
   #
   #
   # def to_param
