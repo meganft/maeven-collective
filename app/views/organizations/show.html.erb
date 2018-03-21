@@ -24,16 +24,13 @@
           		<div class="tab-pane" id="tab-offerings">
                 <div class="well" id="offering-courses" >
                   <h4 id="offering-courses-title"><strong>COURSES</strong></h4>
-                    <div class="row">
-                      <% if @organization.courses != nil %>
-                        <% @organization.courses.each do |course| %>
-                          <div class="col-md-4"><%= course.name %> </div>
-                          <div class="col-md-4"><% course.tags.each do  %>
-                          <%= tag.name %> <% end %></div>
-                          <div class="col-md-4"><%= course.date %> </div>
-                        <% end %>
+                    <% if @organization.courses != nil %>
+                      <% @organization.courses.each do |course| %>
+                        <p><%= link_to course.name, organizations_offering_path(course) %> </p>
+                        <p><%= course.date.strftime("%m/%d/%Y") %>, for <%= course.length %> </p>
+
                       <% end %>
-                    </div>
+                    <% end %>
                 </div>
                 <div class="well" id="offering-courses" >
                   <h4 id="offering-courses-title"><strong>WORKSHOPS</strong></h4>
@@ -64,6 +61,13 @@
 
           		</div>
               <div class="tab-pane" id="tab-events">
+                <% if @organization.courses != nil %>
+                  <% @organization.courses.each do |course| %>
+                    <p><%= link_to course.name, organizations_offering_path(course) %> </p>
+                    <p><%= course.date.strftime("%m/%d/%Y") %>, for <%= course.length %> </p>
+
+                  <% end %>
+                <% end %>
                 <ul>
                   <li>event 1</li>
                   <li>event 2</li>
@@ -75,20 +79,13 @@
           <br>
       <div class="well" id="offering-details">
         <h4 id="offering-details-title"><strong>BEHIND THE SCENES</strong></h4>
-          <p style="font-family:Helvetica; font-weight:lighter">company history</p>
+          <p style="font-family:Helvetica; font-weight:lighter"> <%= @organization.description %> </p>
       </div>
       <div class="well" id="offering-details">
         <h4 id="offering-details-title"><strong>OTHER RESOURCES</strong></h4>
-        <div class="row">
-          <% if @resources != nil %>
-            <% @resources.each do |resource| %>
-              <div class="col-md-4"><%= resource.name %> </div>
-              <div class="col-md-4"><% resource.tags.each do  %>
-              <%= tag.name %> <% end %></div>
-              <div class="col-md-4"><%= resource.date %> </div>
-            <% end %>
-          <% end %>
-        </div>
+          <p style="font-family:Helvetica; font-weight:lighter"> Twitter: <%=  link_to @organization.twitter %> </p>
+          <p style="font-family:Helvetica; font-weight:lighter"> Instagram: <%=  link_to @organization.instagram %> </p>
+          <p style="font-family:Helvetica; font-weight:lighter"> Facebook: <%=  link_to @organization.facebook %> </p>
       </div>
   </div>
 
