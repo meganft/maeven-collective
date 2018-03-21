@@ -10,11 +10,9 @@
                 <a  href="#tab-info" data-toggle="tab">company info</a>
           		</li>
           		<li>
-                <a href="#tab-offerings" data-toggle="tab">offerings</a>
+                <a href="#tab-offerings" data-toggle="tab">events & happenings</a>
           		</li>
-          		<li>
-                <a href="#tab-events" data-toggle="tab">events</a>
-          		</li>
+          	
             </ul>
 
           	<div class="tab-content clearfix" style="padding-top:30px; font-family:Helvetica; font-weight:lighter">
@@ -46,20 +44,16 @@
                     </div>
                 </div>
                 <div class="well" id="offering-courses" >
-                  <h4 id="offering-courses-title"><strong>CONSULTING</strong></h4>
-                    <div class="row">
-                      <% if @organization.consulting != nil %>
-                        <% @organization.consulting.each do |consulting| %>
-                          <div class="col-md-4"><%= consulting.name %> </div>
-                          <div class="col-md-4"><% consulting.tags.each do  %>
-                          <%= tag.name %> <% end %></div>
-                          <div class="col-md-4"><%= consulting.date %> </div>
-                        <% end %>
+                  <h4 id="offering-courses-title"><strong>CONFERENCES</strong></h4>
+                    <% if @organization.conferences != nil %>
+                      <% @organization.conferences.each do |conference| %>
+                      <p><%= link_to conference.name, organizations_offering_path(conference) %> </p>
+                      <p><%= conference.date.strftime("%m/%d/%Y") %>, for <%= conference.length %> </p>
                       <% end %>
-                    </div>
+                    <% end %>
                 </div>
-
           		</div>
+
               <div class="tab-pane" id="tab-events">
                 <% if @organization.courses != nil %>
                   <% @organization.courses.each do |course| %>
