@@ -25,7 +25,7 @@ Organization.create!(
   facebook: Faker::Internet.domain_name,
   description: Faker::Company.catch_phrase,
   avatar: File.open(Rails.root.join('app/assets/images/seeds-company1.jpg')),
-  history: Faker::Hipster.sentence(4)
+  history: Faker::Hipster.paragraph(3)
 )
 Organization.create!(
   name: Faker::Company.name,
@@ -35,7 +35,7 @@ Organization.create!(
   facebook: Faker::Internet.domain_name,
   description: Faker::Company.catch_phrase,
   avatar: File.open(Rails.root.join('app/assets/images/seeds-company2.jpg')),
-  history: Faker::Hipster.sentence(4)
+  history: Faker::Hipster.paragraph(3)
 )
 Organization.create!(
   name: Faker::Company.name,
@@ -45,7 +45,7 @@ Organization.create!(
   facebook: Faker::Internet.domain_name,
   description: Faker::Company.catch_phrase,
   avatar: File.open(Rails.root.join('app/assets/images/seeds-company3.jpg')),
-  history: Faker::Hipster.sentence(4)
+  history: Faker::Hipster.paragraph(3)
 )
 Organization.create!(
   name: Faker::Company.name,
@@ -55,7 +55,7 @@ Organization.create!(
   facebook: Faker::Internet.domain_name,
   description: Faker::Company.catch_phrase,
   avatar: File.open(Rails.root.join('app/assets/images/seeds-company4.jpg')),
-  history: Faker::Hipster.sentence(4)
+  history: Faker::Hipster.paragraph(3)
 )
 Organization.create!(
   name: Faker::Company.name,
@@ -65,7 +65,7 @@ Organization.create!(
   facebook: Faker::Internet.domain_name,
   description: Faker::Company.catch_phrase,
   avatar: File.open(Rails.root.join('app/assets/images/seeds-company4.jpg')),
-  history: Faker::Hipster.sentence(4)
+  history: Faker::Hipster.paragraph(3)
 )
 Organization.create!(
   name: Faker::Company.name,
@@ -75,7 +75,7 @@ Organization.create!(
   facebook: Faker::Internet.domain_name,
   description: Faker::Company.catch_phrase,
   avatar: File.open(Rails.root.join('app/assets/images/seeds-company6.jpg')),
-  history: Faker::Hipster.sentence(4)
+  history: Faker::Hipster.paragraph(3)
 )
 Organization.create!(
   name: Faker::Company.name,
@@ -85,7 +85,7 @@ Organization.create!(
   facebook: Faker::Internet.domain_name,
   description: Faker::Company.catch_phrase,
   avatar: File.open(Rails.root.join('app/assets/images/seeds-company7.jpg')),
-  history: Faker::Hipster.sentence(4)
+  history: Faker::Hipster.paragraph(3)
 )
 Organization.create!(
   name: Faker::Company.name,
@@ -95,7 +95,7 @@ Organization.create!(
   facebook: Faker::Internet.domain_name,
   description: Faker::Company.catch_phrase,
   avatar: File.open(Rails.root.join('app/assets/images/seeds-company8.jpg')),
-  history: Faker::Hipster.sentence(4)
+  history: Faker::Hipster.paragraph(3)
 )
 
 Organization.all.each do |organization|
