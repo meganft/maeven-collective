@@ -14,6 +14,14 @@ $(document).ready(function() {
     };
   };
 
+  //
+  // var data_new = JSON.parse($("#dataorgs").data('source'));
+  // console.log('DATA_NEW', data_new)
+
+
+  // console.log ($("#dataorgs").data)
+  var data_matches = $('#orgscontainer').data('source');
+
   var possibles_matches_companies =
     ['Apple', 'A beautiful mess', 'Beyonce', 'Create + cultivate', 'Marie Forleo',  'Nora Ephron', 'She is fierce hq', 'Yellow Collective'];
 
@@ -29,8 +37,8 @@ $(document).ready(function() {
       highlight: true,
       minLength: 0,
       },
-    { name: 'possibles_matches',
-      source: substringMatcher(possibles_matches_companies),
+    { name: 'data_matches',
+      source: substringMatcher(data_matches),
       limit: '10'
   });
 

@@ -275,6 +275,8 @@ input#site_search_topic {
   text-align: center;
   margin-top: -40px;
   font-family: "Raleway", serif;
+  background-color: white;
+  opacity: 0.8;
 }
 
 .carousel-title a {
