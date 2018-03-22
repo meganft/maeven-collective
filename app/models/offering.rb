@@ -10,8 +10,8 @@ class Offering < ApplicationRecord
       square: '200x200',
       medium: '300x300>'
     },
-    :default_url => '/assets/missing.jpg'
-  s3_region: ENV["AWS_REGION"]
+    :default_url => '/assets/missing.jpg',
+    s3_region: ENV["AWS_REGION"]
 
 
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
