@@ -25,7 +25,7 @@ gem 'rails3-jquery-autocomplete'
 gem 'nifty-generators'
 gem 'jquery-ui-rails'
 gem 'twitter-typeahead-rails'
-
+gem 'faker'
 
 group :development, :test do
   gem 'byebug', platform: :mri

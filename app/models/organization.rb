@@ -36,7 +36,7 @@ class Organization < ApplicationRecord
   end
 
   def courses
-    self.offerings.where("LOWER(format) LIKE?", "%course")
+    self.offerings.where("LOWER(format) LIKE?", "%course" )
   end
 
   def workshops
@@ -45,6 +45,14 @@ class Organization < ApplicationRecord
 
   def consulting
     self.offerings.where("LOWER(format) LIKE?", "consulting")
+  end
+
+  def events
+    self.offerings.where("LOWER(format) LIKE?", "%event")
+  end
+
+  def conferences
+    self.offerings.where("LOWER(format) LIKE?", "%conference")
   end
   #
   #

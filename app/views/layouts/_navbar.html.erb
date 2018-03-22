@@ -41,6 +41,9 @@
       <class id="sub-nav-favorites"> <%= link_to "MY FAVORITES" %> <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></class>
   </div>
 
+<% @orgs = Organization.all.pluck(:name) %>
+<%= content_tag(:div, "", id: 'orgscontainer', data: {source: @orgs})%>
+
   <div class="search-form-landing">
     <form accept-charset="UTF-8" action="/search/results" id="new_site_search" method="get" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"></div>
       <div class="input-group">

@@ -57,10 +57,15 @@
   <% else %>
   <div class="row" style="padding-top:7em;">
     <% @results.each do |result| %>
-      <div class="col-md-4" style="overflow:visible">
+      <div class="col-md-4" style="overflow:scroll">
         <div class="image">
         	<div class="icon-remove blue delete">
-            <%= image_tag result.avatar.url(:square), class: "search-image", size: "300x250" %>
+            <% if result.avatar_file_name == nil  %>
+              <%= image_tag result.organization.avatar.url(:square), class: "search-image", size: "300x250" %>
+            <% else %>
+              <%= image_tag result.avatar.url(:square), class: "search-image", size: "300x250" %>
+            <% end %>
+            <%#= image_tag result.avatar.url(:square), class: "search-image", size: "300x250" %>
             <% if result.class == Organization %>
         		  <i class="delete-button"><%= link_to "", root_path, class: "#{result.class.name.downcase}" %></i>
               <h4 class="result-name"><%= link_to result.name.titleize, organization_path(result) %></h4>
