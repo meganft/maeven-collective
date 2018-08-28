@@ -21,8 +21,8 @@
 
           <div class="item">
             <div class="row">
-              <% if @offerings[4..6] %>
-                <% @offerings[4..6].each do |offering| %>
+              <% if @offerings[4..7] %>
+                <% @offerings[4..7].each do |offering| %>
                   <div class="col-sm-3">
                     <% if offering.avatar_file_name == nil  %>
                       <%= link_to image_tag(offering.organization.avatar.url(:square), size:'400x250'), organizations_offering_path(offering), class: "center-block-img" %>
