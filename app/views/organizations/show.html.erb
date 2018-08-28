@@ -58,7 +58,7 @@
                 <% if @organization.courses != nil %>
                   <% @organization.courses.each do |course| %>
                     <p><%= link_to course.name, organizations_offering_path(course) %> </p>
-                    <p><%= course&.date&.strftime("%m/%d/%Y") %>, for <%= course.length %> </p>
+                    <p><%= course.date.strftime("%m/%d/%Y") %>, for <%= course.length %> </p>
 
                   <% end %>
                 <% end %>
