@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get '/topics', to: 'tags#index'
 
   resources :users, only: [:new, :create, :show]
-  resources :organizations, only: [:index, :show]
+  resources :organizations, only: [:index, :show], param: :slug
   resources :categories, only: [:index, :show]
 
   namespace :organizations, only: [:show] do

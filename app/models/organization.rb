@@ -77,6 +77,10 @@ class Organization < ApplicationRecord
     self.offerings.where("LOWER(format) LIKE?", "%conference")
   end
 
+  def add_slug
+    update(slug: to_slug(self.name))
+  end
+
   # def to_slug(string)
   #   string.parameterize.truncate(80, omission: '')
   # end
@@ -84,16 +88,12 @@ class Organization < ApplicationRecord
   # def self.add_slugs
   #   update(slug: self.to_slug(name))
   # end
+  
+  def to_param
+    slug
+  end
   #
-  # def to_param
-  #   slug
-  # end
-  #
-  #
-  # def to_param
-  #   slug
-  # end
-  #
+
   # def set_slug
   #   binding.pry
   #   slug = name.downcase.gsub(" ", "-")
