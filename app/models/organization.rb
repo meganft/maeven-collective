@@ -55,6 +55,10 @@ class Organization < ApplicationRecord
   def conferences
     self.offerings.where("LOWER(format) LIKE?", "%conference")
   end
+
+  def self.add_slugs
+    update(slug: to_slug(name))
+  end
   #
   #
   # def to_param
