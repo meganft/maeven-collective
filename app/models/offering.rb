@@ -18,6 +18,7 @@
 #  avatar_file_size    :integer
 #  avatar_updated_at   :datetime
 #  length              :string
+#  slug                :string
 #
 # Indexes
 #
