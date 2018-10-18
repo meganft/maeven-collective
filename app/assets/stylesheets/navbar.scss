@@ -192,3 +192,12 @@ input {
     color: black;
   }
 }
+
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder {
+  font-style: italic !im;
+  font-size: 0.92em;
+  padding-left: 0.3em;
+}

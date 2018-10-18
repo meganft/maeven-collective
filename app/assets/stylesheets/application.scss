@@ -16,50 +16,11 @@
  */
 
 @import "navbar.scss";
+@import "buttons.scss";
+@import "carousel.scss";
 
 #admin-header-dashboard {
   text-align: center;
-}
-
-btn-success {
-  background-color: #d6707d !important;
-  background-image: none !important;
-  border: 1px solid #d6707d !important;
-  &:hover {
-    background-color: #bb5c68 !important;
-  }
-}
-
-.btn-warning {
-  background-color: #f9b961 !important;
-  background-image: none !important;
-  border: 1px solid #f9b961 !important;
-  &:hover {
-    background-color: #e4a651 !important;
-  }
-}
-
-.btn-primary {
-  background-color: #f9d982 !important;
-  background-image: none !important;
-  border: 1px solid #f9d982 !important;
-  color: black !important;
-  -webkit-border-radius: 0 !important;
-  -moz-border-radius: 0 !important;
-  border-radius: 0 !important;
-  &:hover {
-    background-color: #2aabd2 !important;
-    border: 1px solid #2aabd2 !important;
-  }
-}
-
-::-webkit-input-placeholder,
-:-moz-placeholder,
-::-moz-placeholder,
-:-ms-input-placeholder {
-  font-style: italic;
-  font-size: 0.92em;
-  padding-left: 0.3em;
 }
 
 #laptop-pic {
