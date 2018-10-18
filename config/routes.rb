@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   resources :categories, only: [:index, :show]
 
   namespace :organizations, only: [:show] do
-    resources :offerings, only: [:show]
+    resources :offerings, only: [:show], param: :slug
   end
 
   namespace :admin do

@@ -61,4 +61,12 @@ class Offering < ApplicationRecord
     similar = similar[0..2]
   end
 
+  def add_slug
+    update(slug: to_slug(self.name))
+  end
+
+  def to_param
+    slug
+  end
+
 end

@@ -81,29 +81,8 @@ class Organization < ApplicationRecord
     update(slug: to_slug(self.name))
   end
 
-  # def to_slug(string)
-  #   string.parameterize.truncate(80, omission: '')
-  # end
-  #
-  # def self.add_slugs
-  #   update(slug: self.to_slug(name))
-  # end
-  
   def to_param
     slug
   end
-  #
-
-  # def set_slug
-  #   binding.pry
-  #   slug = name.downcase.gsub(" ", "-")
-  # end
-
-  # private
-  #
-  # def set_slug
-  #   binding.pry
-  #   self.slug = self.name
-  # end
 
 end
