@@ -60,23 +60,22 @@
       <div class="col-md-4" style="overflow:scroll">
         <div class="image">
             <% if result.class == Organization %>
-
-              <%# if result.avatar_file_name == nil  %>
-                <%#= link_to image_tag result.organization.avatar.url(:square), class: "search-image", size: "300x250" %>
-              <%# else %>
-                <%= link_to image_tag(result.avatar.url(:square)), organization_path(result), class: "search-image" %>
-              <%# end %>
+              <%= link_to image_tag(result.avatar.url(:square)), organization_path(result), class: "search-image" %>
             <% end %>
-            <%#= image_tag result.avatar.url(:square), class: "search-image", size: "300x250" %>
-            <%# if result.class == Organization %>
-        		  <!-- <i class="delete-button"><%= link_to "", root_path, class: "#{result.class.name.downcase}" %></i> -->
-              <!-- <h4 class="result-name"><%= link_to result.name.titleize, organization_path(result) %></h4> -->
-            <%# else  %>
-          		<!-- <i class="delete-button"><%= link_to "", root_path, class: "#{result.name.downcase}" %></i> -->
-              <!-- <h4 class="result-name"><%= link_to result.name.titleize, organizations_offering_path(result) %></h4> -->
-            <%# end %>
+            <% if result.class == Offering %>
+              <% if result.avatar_file_name == nil  %>
+                <%= link_to image_tag(result.organization.avatar.url(:square)), organizations_offering_path(result), class: "search-image" %>
+              <% else %>
+                <%= link_to image_tag(result.avatar.url(:square)), organizations_offering_path(result), class: "search-image" %>
+              <% end %>
+            <% end %>
         </div>
-        <%= link_to result.name.titleize, organization_path(result) %><br>
+        <% if result.class == Organization %>
+          <%= link_to result.name.titleize, organization_path(result) %><br>
+        <% end %>
+        <% if result.class == Offering %>
+          <%= link_to result.name.titleize, organizations_offering_path(result) %><br>
+        <% end %>
 
         <% if result.class == Organization %>
           <% result.categories.each do |category| %>
