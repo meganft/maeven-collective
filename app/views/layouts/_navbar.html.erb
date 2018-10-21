@@ -1,14 +1,5 @@
 <nav class="navbar navbar-default navbar-top">
   <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/"></a>
-    </div>
 
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
@@ -37,23 +28,16 @@
 <div class="jumbotron">
   <div class="index-sub-nav">
 
-    <!-- <div class="index-sub-nav">
-      <button class="dropbtn">LEARN <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></button>
-      <div class="dropdown-content">
-        <a href='#'>Denver</a>
-      </div>
-    </div> -->
-
       <class id="sub-nav-learn"><%= link_to "LEARN"%> <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></class>
       <class id="sub-nav-resources"> <%= link_to "RESOURCES"%> <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span><class>
       <class id="sub-nav-favorites"> <%= link_to "MY FAVORITES" %> <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></class>
   </div>
 
-<% @orgs = Organization.all.pluck(:name) %>
-<%= content_tag(:div, "", id: 'orgscontainer', data: {source: @orgs})%>
+<% @orgs_data = Organization.all.pluck(:name) %>
+<%= content_tag(:div, "", id: 'orgscontainer', data: {source: @orgs_data})%>
 
   <div class="search-form-landing">
-    <form accept-charset="UTF-8" action="/search/results" id="new_site_search" method="get" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"></div>
+    <form accept-charset="UTF-8" action="/search/results" id="new_site_search" method="get" novalidate="novalidate">
       <div class="input-group">
         <div class="pull-left">
 
