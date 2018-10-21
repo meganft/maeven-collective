@@ -1,3 +1,30 @@
+# == Schema Information
+#
+# Table name: offerings
+#
+#  id                  :integer          not null, primary key
+#  name                :string
+#  format              :string
+#  location            :string
+#  price               :string
+#  organization_id     :integer
+#  description         :string
+#  date                :datetime
+#  payment_options     :string
+#  website             :string
+#  materials           :string
+#  avatar_file_name    :string
+#  avatar_content_type :string
+#  avatar_file_size    :integer
+#  avatar_updated_at   :datetime
+#  length              :string
+#  slug                :string
+#
+# Indexes
+#
+#  index_offerings_on_organization_id  (organization_id)
+#
+
 require 'rails_helper'
 
 describe Offering, type: :model do

@@ -1,3 +1,30 @@
+# == Schema Information
+#
+# Table name: offerings
+#
+#  id                  :integer          not null, primary key
+#  name                :string
+#  format              :string
+#  location            :string
+#  price               :string
+#  organization_id     :integer
+#  description         :string
+#  date                :datetime
+#  payment_options     :string
+#  website             :string
+#  materials           :string
+#  avatar_file_name    :string
+#  avatar_content_type :string
+#  avatar_file_size    :integer
+#  avatar_updated_at   :datetime
+#  length              :string
+#  slug                :string
+#
+# Indexes
+#
+#  index_offerings_on_organization_id  (organization_id)
+#
+
 class Offering < ApplicationRecord
   belongs_to :organization
   has_many :offerings_tags, :dependent => :nullify
@@ -33,6 +60,14 @@ class Offering < ApplicationRecord
     similar = Offering.search_format(self.format)
     similar.delete(self) if similar.include?(self)
     similar = similar[0..2]
+  end
+
+  def add_slug
+    update(slug: to_slug(self.name))
+  end
+
+  def to_param
+    slug
   end
 
 end
