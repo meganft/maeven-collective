@@ -1,0 +1,40 @@
+.col-md-4 {
+  text-align: center;
+}
+
+.carousel-inner {
+  height: 100%;
+}
+
+.carousel {
+  margin-bottom: -3%;
+  height: 310px;
+}
+
+.carousel-control {
+  padding-top: 10%;
+  width: 5%;
+  text-shadow: none;
+  opacity: 0.8;
+  top: -45px;
+  font-size: 31px;
+}
+
+.carousel-title {
+  text-align: center;
+  margin-top: 16px;
+  font-family: "Raleway", serif;
+  background-color: white;
+  opacity: 0.8;
+  margin-left: 24px;
+  a {
+    color: black;
+    &:hover {
+      color: #c39004;
+      font-family: "Raleway", serif;
+      /* font-style: italic; */
+      text-decoration: none;
+      padding-left: 2em;
+    }
+  }
+}

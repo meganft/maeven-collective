@@ -1,3 +1,24 @@
+# == Schema Information
+#
+# Table name: organizations
+#
+#  id                  :integer          not null, primary key
+#  name                :string
+#  website             :string
+#  instagram           :string
+#  twitter             :string
+#  facebook            :string
+#  created_at          :datetime         not null
+#  updated_at          :datetime         not null
+#  description         :string
+#  avatar_file_name    :string
+#  avatar_content_type :string
+#  avatar_file_size    :integer
+#  avatar_updated_at   :datetime
+#  history             :string
+#  slug                :string
+#
+
 require 'rails_helper'
 
 describe Organization, type: :model do

@@ -1,3 +1,24 @@
+# == Schema Information
+#
+# Table name: organizations
+#
+#  id                  :integer          not null, primary key
+#  name                :string
+#  website             :string
+#  instagram           :string
+#  twitter             :string
+#  facebook            :string
+#  created_at          :datetime         not null
+#  updated_at          :datetime         not null
+#  description         :string
+#  avatar_file_name    :string
+#  avatar_content_type :string
+#  avatar_file_size    :integer
+#  avatar_updated_at   :datetime
+#  history             :string
+#  slug                :string
+#
+
 class Organization < ApplicationRecord
   has_many :offerings
   has_many :organizations_categories
@@ -55,22 +76,13 @@ class Organization < ApplicationRecord
   def conferences
     self.offerings.where("LOWER(format) LIKE?", "%conference")
   end
-  #
-  #
-  # def to_param
-  #   slug
-  # end
-  #
-  # def set_slug
-  #   binding.pry
-  #   slug = name.downcase.gsub(" ", "-")
-  # end
 
-  # private
-  #
-  # def set_slug
-  #   binding.pry
-  #   self.slug = self.name
-  # end
+  def add_slug
+    update(slug: to_slug(self.name))
+  end
+
+  def to_param
+    slug
+  end
 
 end
