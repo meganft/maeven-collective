@@ -70,4 +70,12 @@ class Offering < ApplicationRecord
     slug
   end
 
+  def price_formatted
+    "$#{self.price}"
+  end
+
+  # def avatar
+  #   self.avatar_file_name ? avatar : self.organization.avatar
+  # end
+
 end
