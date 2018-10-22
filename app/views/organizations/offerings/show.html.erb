@@ -14,11 +14,11 @@
       <br>
         <div class="well" id="offering-details">
             <h4 id="offering-details-title"><strong>DETAILS</strong></h4>
-            <h5>DATE: <span style='font-weight:normal; padding-left:1em;'><%= @offering.date %></span></h5>
-            <h5>LOCATION:<span style='font-weight:normal; padding-left:1em'> <%= @offering.location %></span></h5>
-            <h5>LENGTH:<span style='font-weight:normal; padding-left:1em'> <%= @offering.length %></span></h5>
-            <h5>FORMAT: <span style='font-weight:normal; padding-left:1em'><%= @offering.format %></span></h5>
-            <h5>PRICE: <span style='font-weight:normal; padding-left:1em'><%= @offering.price %></span></h5>
+            <h5>DATE: <span class="offering-details-sub-header"><%= @offering.date.strftime("%m/%d/%Y") %></span></h5>
+            <h5>LOCATION: <span class="offering-details-sub-header"> <%= @offering.location %></span></h5>
+            <h5>LENGTH: <span class="offering-details-sub-header"> <%= @offering.length %></span></h5>
+            <h5>FORMAT: <span class="offering-details-sub-header"><%= @offering.format %></span></h5>
+            <h5>PRICE: <span class="offering-details-sub-header"><%= @offering.price_formatted %></span></h5>
             <h5>PAYMENT OPTIONS: </h5>
             <ul>
               <% if @offering.materials != nil %>
@@ -43,7 +43,7 @@
     </div>
     <div class="col-md-4" style="text-align:left;">
       <div class="well" id="reserve-spot-div">
-      <h4 id="reserve-spot-title">RESERVE SPOT | <%= @offering.price %></h4>
+      <h4 id="reserve-spot-title">RESERVE SPOT | <%= @offering.price_formatted %></h4>
       <p id="buy-tickets">  <%= link_to 'buy tickets', "#{@offering.organization.website}", target: '_blank' %>  <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></p>
 
     </div>
