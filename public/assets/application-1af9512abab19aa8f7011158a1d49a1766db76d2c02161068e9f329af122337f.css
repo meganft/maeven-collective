@@ -22,18 +22,33 @@ btn-success:hover {
 
 /* line 19, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/buttons.scss */
 .btn-primary {
-  background-color: #f9d982 !important;
+  background-color: #d8e2e0 !important;
   background-image: none !important;
-  border: 1px solid #f9d982 !important;
-  color: black !important;
+  border: 1px solid #d8e2e0 !important;
+  color: #4a5459 !important;
   -webkit-border-radius: 0 !important;
   -moz-border-radius: 0 !important;
   border-radius: 0 !important;
+  text-shadow: none !important;
 }
-/* line 27, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/buttons.scss */
+/* line 28, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/buttons.scss */
 .btn-primary:hover {
-  background-color: #2aabd2 !important;
-  border: 1px solid #2aabd2 !important;
+  background-color: transparent !important;
+  border: 1px solid #d8e2e0 !important;
+}
+
+/* line 34, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/buttons.scss */
+.btn-info {
+  background-color: #d7d6a0 !important;
+  background-image: none !important;
+  border: 1px solid #d7d6a0 !important;
+  text-shadow: none !important;
+}
+/* line 39, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/buttons.scss */
+.btn-info:hover {
+  background-color: transparent !important;
+  border: 1px solid #d7d6a0 !important;
+  color: #d7d6a0 !important;
 }
 /* line 1, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/carousel.scss */
 .col-md-4 {
@@ -68,27 +83,24 @@ btn-success:hover {
   font-family: "Raleway", serif;
   background-color: white;
   opacity: 0.8;
-  margin-left: 24px;
 }
-/* line 30, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/carousel.scss */
+/* line 29, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/carousel.scss */
 .carousel-title a {
   color: black;
 }
-/* line 32, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/carousel.scss */
+/* line 31, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/carousel.scss */
 .carousel-title a:hover {
   color: #c39004;
   font-family: "Raleway", serif;
-  /* font-style: italic; */
   text-decoration: none;
-  padding-left: 2em;
 }
 
-/* line 42, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/carousel.scss */
+/* line 39, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/carousel.scss */
 a.left.carousel-control {
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0, rgba(0, 0, 0, 0.0001) 50%) !important;
 }
 
-/* line 50, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/carousel.scss */
+/* line 47, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/carousel.scss */
 a.right.carousel-control {
   background-image: -webkit-linear-gradient(right, rgba(0, 0, 0, 0.5) 0, rgba(0, 0, 0, 0.0001) 50%) !important;
 }
@@ -212,7 +224,7 @@ nav.navbar.navbar-default.navbar-bottom {
 
 /* line 109, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/navbar.scss */
 .glyphicon-grain:before {
-  color: #5bc0de;
+  color: #d7d6a0;
 }
 
 /* line 113, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/navbar.scss */
@@ -445,7 +457,7 @@ nav.navbar.navbar-default.navbar-bottom {
 
 /* line 109, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/navbar.scss */
 .glyphicon-grain:before {
-  color: #5bc0de;
+  color: #d7d6a0;
 }
 
 /* line 113, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/navbar.scss */
@@ -510,18 +522,33 @@ btn-success:hover {
 
 /* line 19, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/buttons.scss */
 .btn-primary {
-  background-color: #f9d982 !important;
+  background-color: #d8e2e0 !important;
   background-image: none !important;
-  border: 1px solid #f9d982 !important;
-  color: black !important;
+  border: 1px solid #d8e2e0 !important;
+  color: #4a5459 !important;
   -webkit-border-radius: 0 !important;
   -moz-border-radius: 0 !important;
   border-radius: 0 !important;
+  text-shadow: none !important;
 }
-/* line 27, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/buttons.scss */
+/* line 28, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/buttons.scss */
 .btn-primary:hover {
-  background-color: #2aabd2 !important;
-  border: 1px solid #2aabd2 !important;
+  background-color: transparent !important;
+  border: 1px solid #d8e2e0 !important;
+}
+
+/* line 34, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/buttons.scss */
+.btn-info {
+  background-color: #d7d6a0 !important;
+  background-image: none !important;
+  border: 1px solid #d7d6a0 !important;
+  text-shadow: none !important;
+}
+/* line 39, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/buttons.scss */
+.btn-info:hover {
+  background-color: transparent !important;
+  border: 1px solid #d7d6a0 !important;
+  color: #d7d6a0 !important;
 }
 
 /* line 1, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/carousel.scss */
@@ -557,27 +584,24 @@ btn-success:hover {
   font-family: "Raleway", serif;
   background-color: white;
   opacity: 0.8;
-  margin-left: 24px;
 }
-/* line 30, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/carousel.scss */
+/* line 29, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/carousel.scss */
 .carousel-title a {
   color: black;
 }
-/* line 32, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/carousel.scss */
+/* line 31, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/carousel.scss */
 .carousel-title a:hover {
   color: #c39004;
   font-family: "Raleway", serif;
-  /* font-style: italic; */
   text-decoration: none;
-  padding-left: 2em;
 }
 
-/* line 42, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/carousel.scss */
+/* line 39, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/carousel.scss */
 a.left.carousel-control {
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0, rgba(0, 0, 0, 0.0001) 50%) !important;
 }
 
-/* line 50, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/carousel.scss */
+/* line 47, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/carousel.scss */
 a.right.carousel-control {
   background-image: -webkit-linear-gradient(right, rgba(0, 0, 0, 0.5) 0, rgba(0, 0, 0, 0.0001) 50%) !important;
 }
@@ -597,8 +621,8 @@ a.right.carousel-control {
 /* line 33, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 .center-block-img {
   display: block;
-  margin-right: auto;
-  margin-left: auto;
+  margin-right: 5px;
+  margin-left: 11px;
   /* margin-top: 2em; */
 }
 
@@ -610,20 +634,21 @@ a.right.carousel-control {
 /* line 44, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 .footer-icon {
   padding-left: 0.5em;
+  padding-top: 10px;
 }
 
-/* line 48, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 49, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 #featured-courses {
   font-family: "Raleway", sans-serif;
 }
 
-/* line 52, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 53, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 .pop-topics {
   font-weight: bold;
   font-family: "Lora", serif;
 }
 
-/* line 57, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 58, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 .decorated {
   overflow: hidden;
   text-align: center;
@@ -632,12 +657,12 @@ a.right.carousel-control {
   font-size: 1.6em;
   padding-top: 2em;
 }
-/* line 64, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 65, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 .decorated > span {
   position: relative;
   display: inline-block;
 }
-/* line 67, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 68, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 .decorated > span:before, .decorated > span:after {
   content: "";
   position: absolute;
@@ -647,16 +672,16 @@ a.right.carousel-control {
   /* half of limiter*/
   margin: 0 20px;
 }
-/* line 77, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 78, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 .decorated > span:before {
   right: 100%;
 }
-/* line 80, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 81, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 .decorated > span:after {
   left: 100%;
 }
 
-/* line 86, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 87, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 #what-is-maeven {
   text-align: center;
   font-family: "Raleway", sans-serif;
@@ -664,7 +689,7 @@ a.right.carousel-control {
   font-style: italic;
 }
 
-/* line 93, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 94, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 #view-all-left a {
   margin-left: 47%;
   color: black;
@@ -672,20 +697,20 @@ a.right.carousel-control {
   font-weight: normal;
 }
 
-/* line 100, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 101, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 #view-all-right {
   color: black;
   margin-right: 20%;
   font-weight: normal;
 }
-/* line 104, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 105, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 #view-all-right a {
   color: black;
   font-size: 1.3em;
   font-weight: normal;
 }
 
-/* line 111, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 112, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 .view-all-topics a {
   text-align: center;
   color: black;
@@ -694,61 +719,61 @@ a.right.carousel-control {
   font-weight: normal;
 }
 
-/* line 119, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 120, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 .read-more {
   font-weight: bold;
   font-family: "Lora", serif;
   text-decoration: underline;
 }
 
-/* line 125, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 126, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 .mid-index-title {
   font-family: "Raleway", serif;
   font-style: italic;
   font-size: 1.5em;
 }
 
-/* line 131, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 132, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 .mid-index-sub-title {
   font-weight: bold;
   font-family: "Lora", serif;
 }
 
-/* line 136, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 137, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 .mid-index-p {
   font-weight: lighter;
   font-family: Helvetica;
 }
 
-/* line 141, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 142, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 .dropdown:hover .dropdown-menu {
   display: block;
 }
 
-/* line 145, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 146, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 .featured-company {
   text-align: center;
   font-family: "Raleway", sans-serif;
 }
 
-/* line 150, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 151, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 .search-form-company-index {
   margin-left: 5em;
 }
 
-/* line 154, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 155, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 .pagination-orgs {
   padding-top: 1em;
   padding-left: 60em !important;
 }
-/* line 157, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 158, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 .pagination-orgs a {
   text-decoration: none;
   color: #105cb6;
   border: 1px solid #9aafe5;
   padding: 0.2em 0.5em;
 }
-/* line 163, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 164, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 .pagination-orgs .current {
   padding: 0.2em 0.5em;
   font-style: normal;
@@ -757,24 +782,24 @@ a.right.carousel-control {
   color: white;
   border: 1px solid #2e6ab1;
 }
-/* line 171, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 172, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 .pagination-orgs .disabled {
   padding: 0.2em 0.5em;
   color: #999999;
   border: 1px solid #dddddd;
 }
 
-/* line 178, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 179, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 button#show-all-orgs.btn.btn-success a {
   color: white;
 }
 
-/* line 182, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 183, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 .label a {
   color: white;
 }
 
-/* line 186, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 187, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 .row-eq-height {
   display: -webkit-box;
   display: -webkit-flex;
@@ -783,36 +808,36 @@ button#show-all-orgs.btn.btn-success a {
   flex-wrap: wrap;
 }
 
-/* line 194, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 195, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 .col-md-4 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* line 201, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 202, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 div.tt-menu {
   background-color: white;
   width: 100%;
   opacity: 50%;
   border: 1px solid grey;
 }
-/* line 207, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 208, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 div.tt-suggestion {
   padding-left: 5px;
 }
-/* line 210, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 211, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 div.sort-company-list {
   width: 90%;
 }
 
-/* line 215, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 216, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 #scrollable-dropdown-menu .tt-menu {
   max-height: 110px;
   overflow-y: auto;
 }
 
-/* line 220, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 221, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 hr.hr-1 {
   border: 0;
   height: 1px;
@@ -822,28 +847,28 @@ hr.hr-1 {
   background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
 }
 
-/* line 229, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 230, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 .image {
   -moz-box-sizing: border-box;
   border: 1px solid #dddddd;
   margin-bottom: 10px;
   padding: 10px;
 }
-/* line 230, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 231, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 .image:before {
   vertical-align: middle;
   min-height: 150px;
   overflow: visible;
 }
 
-/* line 241, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 242, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 #sort-results {
   font-style: italic;
   font-size: 0.9em;
   padding-right: 1em;
 }
 
-/* line 247, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 248, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 button.sort-order {
   color: #b59a76;
   background: none;
@@ -852,20 +877,20 @@ button.sort-order {
   font-size: 0.9em;
   padding-right: 1em;
 }
-/* line 254, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 255, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 button.sort-order a:hover {
   color: #2aabd2;
 }
 
-/* line 259, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 260, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 .result-name {
   font-size: 1.2em;
   font-family: "Raleway", serif;
 }
 
-/* line 264, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 265, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 div#reserve-spot-div.well {
-  background-color: #ffedd9;
+  background-color: #f1eee9;
   background-image: none;
   border-radius: 0;
   border: none;
@@ -873,20 +898,22 @@ div#reserve-spot-div.well {
   overflow: auto;
 }
 
-/* line 273, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 274, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 #reserve-spot-title {
   font-family: "Raleway", serif;
   text-align: center;
   padding-top: 1em;
+  color: #4a5459;
 }
 
-/* line 279, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 281, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 #buy-tickets {
   font-weight: bold;
   text-align: center;
+  color: #4a5459;
 }
 
-/* line 285, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 288, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 div#offering-courses.well {
   border: 0.5px solid #d3d3d3;
   background-color: white;
@@ -894,7 +921,7 @@ div#offering-courses.well {
   border-radius: 0;
   overflow: hidden;
 }
-/* line 292, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 295, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 div#offering-details.well {
   border: 0.5px solid #d3d3d3;
   background-color: white;
@@ -904,7 +931,7 @@ div#offering-details.well {
   overflow: hidden;
 }
 
-/* line 302, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 305, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 #offering-courses-title {
   display: inline-block;
   padding: 0 15px;
@@ -913,7 +940,7 @@ div#offering-details.well {
   font-family: "Raleway", serif;
   font-style: italic;
 }
-/* line 309, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 312, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 #offering-courses-title:before, #offering-courses-title:after {
   background: #ddd;
   content: "";
@@ -923,16 +950,16 @@ div#offering-details.well {
   top: 50%;
   width: 700%;
 }
-/* line 319, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 322, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 #offering-courses-title:before {
   right: 100%;
 }
-/* line 322, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 325, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 #offering-courses-title:after {
   left: 100%;
 }
 
-/* line 327, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 330, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 #offering-details-title {
   display: inline-block;
   padding: 0 15px;
@@ -941,7 +968,7 @@ div#offering-details.well {
   font-family: "Raleway", serif;
   font-style: italic;
 }
-/* line 334, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 337, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 #offering-details-title:before, #offering-details-title:after {
   background: #ddd;
   content: "";
@@ -951,23 +978,29 @@ div#offering-details.well {
   top: 50%;
   width: 700%;
 }
-/* line 344, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 347, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 #offering-details-title:before {
   right: 100%;
 }
-/* line 347, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 350, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 #offering-details-title:after {
   left: 100%;
 }
 
-/* line 352, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 355, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+.offering-details-sub-header {
+  font-weight: normal;
+  padding-left: 10px;
+}
+
+/* line 360, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 #similar-offerings {
   font-weight: bold;
   text-align: center;
   color: #b59a76;
 }
 
-/* line 358, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
+/* line 366, /Users/megantalbot/repos/maeven-collective/app/assets/stylesheets/application.scss */
 div.well.similar-offerings {
   border: 0.5px solid #d3d3d3;
   background-color: white;
