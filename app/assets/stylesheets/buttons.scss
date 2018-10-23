@@ -17,15 +17,28 @@ btn-success {
 }
 
 .btn-primary {
-  background-color: #f9d982 !important;
+  background-color: #d8e2e0 !important;
   background-image: none !important;
-  border: 1px solid #f9d982 !important;
-  color: black !important;
+  border: 1px solid #d8e2e0 !important;
+  color: #4a5459 !important;
   -webkit-border-radius: 0 !important;
   -moz-border-radius: 0 !important;
   border-radius: 0 !important;
+  text-shadow: none !important;
   &:hover {
-    background-color: #2aabd2 !important;
-    border: 1px solid #2aabd2 !important;
+    background-color: transparent !important;
+    border: 1px solid #d8e2e0 !important;
+  }
+}
+
+.btn-info {
+  background-color: #d7d6a0 !important;
+  background-image: none !important;
+  border: 1px solid #d7d6a0 !important;
+  text-shadow: none !important;
+  &:hover {
+    background-color: transparent !important;
+    border: 1px solid #d7d6a0 !important;
+    color: #d7d6a0 !important;
   }
 }

@@ -26,15 +26,12 @@
   font-family: "Raleway", serif;
   background-color: white;
   opacity: 0.8;
-  margin-left: 24px;
   a {
     color: black;
     &:hover {
       color: #c39004;
       font-family: "Raleway", serif;
-      /* font-style: italic; */
       text-decoration: none;
-      padding-left: 2em;
     }
   }
 }

@@ -31,8 +31,8 @@
 
 .center-block-img {
   display: block;
-  margin-right: auto;
-  margin-left: auto;
+  margin-right: 5px;
+  margin-left: 11px;
   /* margin-top: 2em; */
 }
 
@@ -42,6 +42,7 @@
 
 .footer-icon {
   padding-left: 0.5em;
+  padding-top: 10px;
 }
 
 #featured-courses {
@@ -261,7 +262,7 @@ button.sort-order {
 }
 
 div#reserve-spot-div.well {
-  background-color: #ffedd9;
+  background-color: #f1eee9;
   background-image: none;
   border-radius: 0;
   border: none;
@@ -273,11 +274,13 @@ div#reserve-spot-div.well {
   font-family: "Raleway", serif;
   text-align: center;
   padding-top: 1em;
+  color: #4a5459;
 }
 
 #buy-tickets {
   font-weight: bold;
   text-align: center;
+  color: #4a5459;
 }
 
 div {
@@ -346,6 +349,11 @@ div {
   &:after {
     left: 100%;
   }
+}
+
+.offering-details-sub-header {
+  font-weight: normal;
+  padding-left: 10px;
 }
 
 #similar-offerings {
