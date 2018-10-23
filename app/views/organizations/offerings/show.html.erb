@@ -14,7 +14,7 @@
       <br>
         <div class="well" id="offering-details">
             <h4 id="offering-details-title"><strong>DETAILS</strong></h4>
-            <h5>DATE: <span class="offering-details-sub-header"><%= @offering.date.strftime("%m/%d/%Y") %></span></h5>
+            <h5>DATE: <span class="offering-details-sub-header"><% if @offering.date %><%= @offering.date.strftime("%m/%d/%Y") %><% end %></span></h5>
             <h5>LOCATION: <span class="offering-details-sub-header"> <%= @offering.location %></span></h5>
             <h5>LENGTH: <span class="offering-details-sub-header"> <%= @offering.length %></span></h5>
             <h5>FORMAT: <span class="offering-details-sub-header"><%= @offering.format %></span></h5>
