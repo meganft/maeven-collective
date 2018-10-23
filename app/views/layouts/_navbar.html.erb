@@ -33,7 +33,6 @@
       <class id="sub-nav-favorites"> <%= link_to "MY FAVORITES" %> <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></class>
   </div>
 
-<% @orgs_data = Organization.all.pluck(:name) %>
 <%= content_tag(:div, "", id: 'orgscontainer', data: {source: @orgs_data})%>
 
   <div class="search-form-landing">
