@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
   helper_method :current_admin?
   helper_method :determine_authorization
-  before_filter :add_header_text
+  before_filter :add_orgs_data
 
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
@@ -25,5 +25,5 @@ class ApplicationController < ActionController::Base
   def add_orgs_data
     @orgs_data =Organization.all.pluck(:name)
   end
-  
+
 end
