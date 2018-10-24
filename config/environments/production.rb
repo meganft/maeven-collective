@@ -37,6 +37,8 @@ Rails.application.configure do
 
   config.assets.precompile += %w( alphabetical_paginate.js )
 
+  config.active_storage.service = :amazon
+
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 

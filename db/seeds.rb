@@ -104,7 +104,7 @@ Organization.all.each do |organization|
   number = [*1..10]
   offering = organization.offerings.create!(
     name: Faker::Hipster.sentence(3),
-    price: Faker::Commerce.price,
+    price: "$#{Faker::Commerce.price}",
     website: Faker::Internet.url('example.com'),
     description: Faker::Company.catch_phrase,
     format: Tag.all[0..2].sample.name,
