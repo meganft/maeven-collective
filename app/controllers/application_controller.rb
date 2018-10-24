@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
   end
 
   def add_orgs_data
-    @orgs_data = Organization.all.pluck(:name)
+    @orgs_data =Organization.all.pluck(:name)
   end
 
 end
