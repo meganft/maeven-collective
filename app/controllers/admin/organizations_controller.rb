@@ -15,7 +15,7 @@ class Admin::OrganizationsController < ApplicationController
     categories = categories.reject {|t| t.empty? }
     categories.each {|id| @organization.categories << Category.find(id) } if !categories.empty?
     if @organization.save
-      redirect_to admin_dashboard_path(current_user)
+      redirect_to admin_dashboard_path
       flash[:success] = "Created new organization #{@organization.name}"
     else
       flash.now[:error] = @organization.errors.full_messages.first
